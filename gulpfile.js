@@ -43,6 +43,7 @@ gulp.task('cuat', ['packNodeModules'], function() {
 		.pipe(gulp.dest('./cuat/css/'+base+'/')))
 
 	tasks.push(gulp.src('./public/js/**/*.js')
+		.pipe(replace(/\.\/public\/images\//g, '/images/'+base+'/'))
 		.pipe(gulp.dest('./cuat/javascript/'+base+'/')))
 
 	tasks.push(gulp.src('./public/images/**/*')
@@ -62,6 +63,7 @@ gulp.task('cuat', ['packNodeModules'], function() {
 		.pipe(replace(/<html.*>/g,'')).pipe(replace('</html>',''))
 		.pipe(replace(/<body.*>/g,'')).pipe(replace('</body>',''))
 		.pipe(replace(/<head.*>/g,'')).pipe(replace('</head>',''))
+		.pipe(replace(/<meta.*>/g, ''))
 		.pipe(replace(/<title>.*<\/title>/g, ''))
 		.pipe(gulp.dest('./cuat'))
 	)

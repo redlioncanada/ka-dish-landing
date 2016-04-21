@@ -1,4 +1,4 @@
-import {Component, View, Input, Output, EventEmitter} from 'angular2/core'
+import {Component, Input, Output, EventEmitter} from 'angular2/core'
 import {LoggerService} from './services/logger.service'
 import {GoogleApiService} from './services/googleapi.service'
 import {VideoPlayer} from './landing.video-player'

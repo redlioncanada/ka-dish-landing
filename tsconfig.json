@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "system",
+    "target": "ES5",
+    "module": "commonjs",
     "moduleResolution": "node",
     "sourceMap": true,
     "emitDecoratorMetadata": true,
@@ -10,7 +10,11 @@
     "noImplicitAny": false
   },
   "exclude": [
-    "node_modules",
-    "typings"
-  ]
+    "node_modules"
+  ],
+  "files": [
+    "app/app.ts"
+  ],
+  "compileOnSave": false,
+  "buildOnSave": false
 }

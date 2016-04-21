@@ -41,5 +41,5 @@ var BrowserDetect = {
     };
 BrowserDetect.init();
 $(window).ready(function() {
-    document.getElementsByTagName('rl-ka-dish-landing')[0].className+=' '+BrowserDetect.browser.toLowerCase()+BrowserDetect.version
+    document.getElementsByTagName('body')[0].className+=' browser-'+BrowserDetect.browser.toLowerCase()+BrowserDetect.version
 })
