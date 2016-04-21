@@ -74,7 +74,7 @@ System.register(['angular2/core', './services/logger.service', './services/googl
                         selector: 'videoplayer-selector',
                         template: "\n    \t<div (click)=\"select()\" class=\"{{selected ? 'selected' : ''}}\">\n\t\t\t<div class=\"ka-dish-landing-videoplayer-text\">\n\t\t\t\t<div class=\"ka-dish-landing-videoplayer-title\" [innerHTML]=\"data.ctaTitle\"></div>\n\t\t\t\t<div class=\"ka-dish-landing-videoplayer-button\">{{data.cta}}</div>\n\t\t\t</div>\n\t\t\t<img src=\"{{data.thumb}}\" alt=\"{{data.alt}}\"/>\n\t\t</div>\n    "
                     }), 
-                    __metadata('design:paramtypes', [logger_service_1.Logger, googleapi_service_1.GoogleApi])
+                    __metadata('design:paramtypes', [logger_service_1.LoggerService, googleapi_service_1.GoogleApiService])
                 ], VideoPlayerSelector);
                 return VideoPlayerSelector;
             })();

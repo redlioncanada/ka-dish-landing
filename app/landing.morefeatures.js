@@ -41,7 +41,7 @@ System.register(['angular2/core', './landing.morefeatures.feature', './services/
                         template: "\n    \t<div class=\"row {{!enabled ? 'hide' : ''}}\">\n\t\t\t<h2>{{title}}</h2>\n\t\t    <more-features-feature *ngFor=\"#feature of moreFeatures; #i=index\" [cta]=\"feature.cta\" [text]=\"feature.text\" [link]=\"feature.link\" [title]=\"feature.title\" [image]=\"feature.image\" [alt]=\"feature.alt\">\n\t\t    </more-features-feature>\n\t\t</div>\n    ",
                         directives: [landing_morefeatures_feature_1.MoreFeaturesFeature],
                     }), 
-                    __metadata('design:paramtypes', [appdata_service_1.AppData, logger_service_1.Logger])
+                    __metadata('design:paramtypes', [appdata_service_1.AppData, logger_service_1.LoggerService])
                 ], MoreFeatures);
                 return MoreFeatures;
             })();

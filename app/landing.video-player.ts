@@ -1,7 +1,7 @@
 import {Component} from 'angular2/core'
 import {VideoPlayerSelector} from './landing.video-player.selector'
 import {VideoPlayerPlayer} from './landing.video-player.player'
-import {Logger} from './services/logger.service'
+import {LoggerService} from './services/logger.service'
 import {AppData} from './services/appdata.service'
 
 @Component({
@@ -23,7 +23,7 @@ export class VideoPlayer {
 	public currentId = 0
 	private enabled: boolean
 
-	constructor(private appdata: AppData, private logger: Logger) {
+	constructor(private appdata: AppData, private logger: LoggerService) {
 		this.enabled = true
 		var data = appdata.get()
 		this.enabled = data.videoplayer.enabled

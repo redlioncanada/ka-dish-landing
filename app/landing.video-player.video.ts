@@ -1,5 +1,7 @@
 import {Component, Input} from 'angular2/core'
-import {Logger} from './services/logger.service'
+import {LoggerService} from './services/logger.service'
+
+declare var YT
 
 @Component({
 	selector: 'videoplayer-video',
@@ -16,7 +18,7 @@ export class VideoPlayerVideo {
 	public ready: boolean
 	public ended: boolean
 
-	constructor(private logger: Logger) {
+	constructor(private logger: LoggerService) {
 		this.ready = false
 		this.selected = true
 		this.ended = false

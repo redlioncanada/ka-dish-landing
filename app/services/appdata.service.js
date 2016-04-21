@@ -348,7 +348,7 @@ System.register(['angular2/core', './logger.service'], function(exports_1) {
                 };
                 AppData = __decorate([
                     core_1.Injectable(), 
-                    __metadata('design:paramtypes', [logger_service_1.Logger])
+                    __metadata('design:paramtypes', [logger_service_1.LoggerService])
                 ], AppData);
                 return AppData;
             })();

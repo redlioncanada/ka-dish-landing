@@ -132,7 +132,7 @@ System.register(['angular2/core', './services/logger.service'], function(exports
                         selector: 'videoplayer-video',
                         template: "\n    \t<iframe *ngIf=\"hasVideo()\" id=\"{{id}}\" src=\"http://www.youtube.com/embed/{{id}}?enablejsapi=1&playerapiid={{id}}&rel=0\" width=\"100%\" height=\"425\" allowfullscreen frameborder=\"0\"></iframe>\n\t\t<img *ngIf=\"hasImage()\" src=\"{{image}}\"/>\n    "
                     }), 
-                    __metadata('design:paramtypes', [logger_service_1.Logger])
+                    __metadata('design:paramtypes', [logger_service_1.LoggerService])
                 ], VideoPlayerVideo);
                 return VideoPlayerVideo;
             })();

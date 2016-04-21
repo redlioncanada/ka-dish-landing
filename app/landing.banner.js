@@ -42,7 +42,7 @@ System.register(['angular2/core', './landing.learn-more.button', './services/app
                         template: "\n    \t<div class=\"{{!enabled ? 'hide': ''}}\">\n\t\t\t<img src=\"{{image}}\"/>\n\t\t\t<learn-more-button [link]=\"link\" [text]=\"ctaText\"></learn-more-button>\n\t\t</div>\n    ",
                         directives: [landing_learn_more_button_1.LearnMoreButton],
                     }), 
-                    __metadata('design:paramtypes', [appdata_service_1.AppData, logger_service_1.Logger])
+                    __metadata('design:paramtypes', [appdata_service_1.AppData, logger_service_1.LoggerService])
                 ], Banner);
                 return Banner;
             })();

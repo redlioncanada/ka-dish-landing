@@ -1,6 +1,6 @@
 
 import {Injectable} from 'angular2/core';
-import {Logger} from './logger.service'
+import {LoggerService} from './logger.service'
 
 @Injectable()
 export class AppData {
@@ -8,7 +8,7 @@ export class AppData {
 	public language: string;
 	private init: boolean
 
-	constructor(private logger: Logger) {
+	constructor(private logger: LoggerService) {
 		this.language = this.getLanguage()
 		this.contents = {}
 		this.contents.en = {
@@ -27,33 +27,33 @@ export class AppData {
 			features: {
 				enabled: true,
 				features: [
-			        {
-			        	image: "./public/images/refer-landing-shopping-cart.png",
-			            title: "Buying Guide",
-			            alt: "Buying Guide",
-			            desc: "What to look for when you are buying",
-			            cta: "Click Here",
+					{
+						image: "./public/images/refer-landing-shopping-cart.png",
+						title: "Buying Guide",
+						alt: "Buying Guide",
+						desc: "What to look for when you are buying",
+						cta: "Click Here",
 						link: "https://www.google.ca/webhp?hl=en#hl=en&q=placeholder",
-			            type: "cart"
-					},
-			        {
-			        	image: "./public/images/refer-landing-star.png",
-			            title: "Ratings & Reviews",
-						alt: "Ratings and reviews",
-			            desc: "See what others are saying",
-			            cta: "Click Here",
-			            link: "http://www.kitchenaid.ca/en_CA/2_2_89/global_best-products.content.html",
-			            type: "star"
+						type: "cart"
 					},
 					{
-			        	image: "./public/images/refer-landing-mag-glass.png",
-			        	title: "Find Your KitchenAid",
+						image: "./public/images/refer-landing-star.png",
+						title: "Ratings & Reviews",
+						alt: "Ratings and reviews",
+						desc: "See what others are saying",
+						cta: "Click Here",
+						link: "http://www.kitchenaid.ca/en_CA/2_2_89/global_best-products.content.html",
+						type: "star"
+					},
+					{
+						image: "./public/images/refer-landing-mag-glass.png",
+						title: "Find Your KitchenAid",
 						alt: "Find your KitchenAid",
-			        	desc: "Need help finding your refrigerator?",
-			        	cta: "Click Here",
-			        	link: "http://findmy.kitchenaid.ca/#/question/Appliance",
-			        	type: "magnifier"
-			    	}
+						desc: "Need help finding your refrigerator?",
+						cta: "Click Here",
+						link: "http://findmy.kitchenaid.ca/#/question/Appliance",
+						type: "magnifier"
+					}
 				]
 			},
 			morefeatures: {
@@ -128,7 +128,7 @@ export class AppData {
 				},
 				products: [
 					{
-            			image: "./public/images/products/5-door.png",
+						image: "./public/images/products/5-door.png",
                         title: "Dishwasher<br/>With Window",
                         alt: "test",
                         desc: "Introducing an innovative new design, this dishwasher with window is a great aesthetic enhancement to your kitchen and allows you see when your dishes are done so you can move on to what’s next.",
@@ -136,8 +136,8 @@ export class AppData {
                         id: "dish-with-window",
                         ctaText: "Learn More"
                     },
-            		{
-            			image: "./public/images/products/built-in.png",
+					{
+						image: "./public/images/products/built-in.png",
                         title: "Fully Integrated",
                         alt: "test",
                         desc: "The controls are discreetly placed at the top of the dishwasher and remain hidden when the door is closed to provide a sleek and clean looking front. The sleek bar handle perfectly complements the design and provides easy access to open your dishwasher.",
@@ -145,8 +145,8 @@ export class AppData {
                         id: "fully-integrated",
                         ctaText: "Learn More"
                     },
-            		{
-            			image: "./public/images/products/french-door.png",
+					{
+						image: "./public/images/products/french-door.png",
                         title: "Front Control",
                         alt: "test",
                         desc: "The controls are located on the front and are easily accessible for use after you load your dishes. This model also comes with a pocket handle for a smoother finish and is great for smaller kitchens to allow for more space flexibility in front of the dishwasher.",
@@ -154,8 +154,8 @@ export class AppData {
                         id: "front-control",
                         ctaText: "Learn More"
                     },
-            		{
-            			image: "./public/images/products/side-by-side.png",
+					{
+						image: "./public/images/products/side-by-side.png",
                         title: "Panel Ready",
                         alt: "test",
                         desc: "The premium look to go with your dream kitchen. Custom panel-ready dishwashers have an unfinished door, so you can seamlessly match the custom panel to your cabinetry to give your kitchen a stylish and coordinated look.",
@@ -184,12 +184,12 @@ export class AppData {
 				enabled: true,
 				features: [
 					{
-			        	image: "./public/images/refer-landing-shopping-cart.png",
+						image: "./public/images/refer-landing-shopping-cart.png",
 						title: "Guide d’Achat",
-			            desc: "Éléments à considérer lorsque vous magasinez",
-			            cta: "Cliquez ici",
+						desc: "Éléments à considérer lorsque vous magasinez",
+						cta: "Cliquez ici",
 						link: "/pdf/Refer_Buying_Guide_2016_FR.pdf",
-			            type: "cart"
+						type: "cart"
 					},
 					{
 						image: "./public/images/refer-landing-star.png",
@@ -296,7 +296,7 @@ export class AppData {
                         alt: "Réfrigérateur encastré à portes françaises avec congélateur inférieur",
                         desc: "Lorsque vous imaginez la cuisine de vos rêves, vous pouvez être assuré que notre réfrigérateur encastré s'y agencera parfaitement. Conçu pour s'assortir naturellement à votre cuisine, nos options pouvant accueillir des panneaux de recouvrement (vendus séparément) offrent un style épuré et sophistiqué pour s’harmoniser à vos armoires.",
                         link: "http://www.kitchenaid.ca/fr_CA/shop/major-appliances-1/refrigerators-3/102310048/",
-                    	image: "./public/images/products/built-in.png",
+						image: "./public/images/products/built-in.png",
 						id: "built-in",
 						ctaText: "En savoir plus"
                     },
@@ -309,7 +309,7 @@ export class AppData {
                         id: "french-door",
                         ctaText: "En savoir plus"
                     },
-            		{
+					{
                         title: "Côte à côte",
                         alt: "Réfrigérateur à portes françaises",
                         desc: "La conception pure et intemporelle de nos modèles côte à côte vous permet de garder les ingrédients du réfrigérateur aussi bien que du congélateur au niveau des yeux tout en conservant les articles que vous utilisez le plus fréquemment au frais et à portée de main.",
@@ -336,3 +336,4 @@ export class AppData {
 		if (url.indexOf('/fr_CA') > -1) return 'fr'
 		return 'en'
 	}
+}

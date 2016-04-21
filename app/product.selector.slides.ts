@@ -59,9 +59,10 @@ export class ProductSlides extends TimelineController {
       private ngOnChanges(changes) {
           var self = this
           if ("selectedProduct" in changes && !this.animating) {
+            if ('prodId' in changes.selectedProduct.previousValue) {
               this.playOut(changes.selectedProduct.previousValue.prodId, function() {
 
-                 //just get it done
+                //just get it done
                 if (changes.selectedProduct.currentValue.prodId == 'under-counter' && $('product-selector').hasClass('fr') && $(window).innerWidth() > 820) {
                   self.descTop = 265;
                 } else {
@@ -70,6 +71,9 @@ export class ProductSlides extends TimelineController {
 
                 self.playIn(self, false, changes.selectedProduct.currentValue.prodId)
               })
+            } else {
+              self.playIn(self, false, changes.selectedProduct.currentValue.prodId)
+            }
           }
       }
 

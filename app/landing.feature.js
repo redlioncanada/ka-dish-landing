@@ -28,7 +28,7 @@ System.register(['angular2/core', './landing.feature.button', './models/features
             Features = (function () {
                 function Features(appdata) {
                     this.appdata = appdata;
-                    this.featureButtons = [];
+                    this.featureButtons = new Array();
                     this.enabled = true;
                     var data = appdata.get();
                     this.enabled = data.features.enabled;

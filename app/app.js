@@ -70,7 +70,7 @@ System.register(['angular2/platform/browser', 'angular2/http', './services/logge
                 ], AppComponent);
                 return AppComponent;
             })();
-            browser_1.bootstrap(AppComponent, [http_1.HTTP_PROVIDERS, logger_service_1.Logger, googleapi_service_1.GoogleApi, appdata_service_1.AppData]);
+            browser_1.bootstrap(AppComponent, [http_1.HTTP_PROVIDERS, logger_service_1.LoggerService, googleapi_service_1.GoogleApiService, appdata_service_1.AppData]);
         }
     }
 });

@@ -1,8 +1,8 @@
 ///<reference path="../node_modules/angular2/typings/browser.d.ts"/>
 import {bootstrap}    from 'angular2/platform/browser'
 import {HTTP_PROVIDERS} from 'angular2/http'
-import {Logger} from './services/logger.service'
-import {GoogleApi} from './services/googleapi.service'
+import {LoggerService} from './services/logger.service'
+import {GoogleApiService} from './services/googleapi.service'
 import {AppData} from './services/appdata.service'
 import {Component} from 'angular2/core';
 
@@ -38,4 +38,4 @@ class AppComponent {
     }
  }
 
-bootstrap(AppComponent, [HTTP_PROVIDERS, Logger, GoogleApi, AppData])
+bootstrap(AppComponent, [HTTP_PROVIDERS, LoggerService, GoogleApiService, AppData])

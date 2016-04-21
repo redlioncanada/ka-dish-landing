@@ -18,7 +18,7 @@ import {ProductModel} from './models/products.model'
     directives: [ProductSlides, ProductSelectorNav],
 })
 export class ProductSelector {
-    public products: [ProductModel];
+    public products: Array<ProductModel>;
     public selectedProduct: ProductModel;
     public animating: Boolean;
     private title: string;
@@ -30,7 +30,7 @@ export class ProductSelector {
 
         this.enabled = data.productselector.enabled
         this.title = data.productselector.title
-		this.products = []
+		this.products = new Array<ProductModel>()
         for (var i in data.productselector.products) {
             var product = data.productselector.products[i]
             this.products.push(

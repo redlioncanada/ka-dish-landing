@@ -60,16 +60,21 @@ System.register(['angular2/core', './product.selector.slide', './landing.timelin
                 ProductSlides.prototype.ngOnChanges = function (changes) {
                     var self = this;
                     if ("selectedProduct" in changes && !this.animating) {
-                        this.playOut(changes.selectedProduct.previousValue.prodId, function () {
-                            //just get it done
-                            if (changes.selectedProduct.currentValue.prodId == 'under-counter' && $('product-selector').hasClass('fr') && $(window).innerWidth() > 820) {
-                                self.descTop = 265;
-                            }
-                            else {
-                                self.descTop = 215;
-                            }
+                        if ('prodId' in changes.selectedProduct.previousValue) {
+                            this.playOut(changes.selectedProduct.previousValue.prodId, function () {
+                                //just get it done
+                                if (changes.selectedProduct.currentValue.prodId == 'under-counter' && $('product-selector').hasClass('fr') && $(window).innerWidth() > 820) {
+                                    self.descTop = 265;
+                                }
+                                else {
+                                    self.descTop = 215;
+                                }
+                                self.playIn(self, false, changes.selectedProduct.currentValue.prodId);
+                            });
+                        }
+                        else {
                             self.playIn(self, false, changes.selectedProduct.currentValue.prodId);
-                        });
+                        }
                     }
                 };
                 ProductSlides.prototype.playOut = function (target, cb) {

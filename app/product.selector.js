@@ -35,7 +35,7 @@ System.register(['angular2/core', './product.selector.slides', './product.select
                     var data = appdata.get();
                     this.enabled = data.productselector.enabled;
                     this.title = data.productselector.title;
-                    this.products = [];
+                    this.products = new Array();
                     for (var i in data.productselector.products) {
                         var product = data.productselector.products[i];
                         this.products.push(new products_model_1.ProductModel(product.image, product.title, product.desc, product.link, product.id, product.ctaText, product.alt));
