@@ -3,7 +3,17 @@ import {AppData} from './services/appdata.service'
 
 @Component({
     selector: 'product-selector-nav',
-    templateUrl: 'app/views/product.selector.nav.view.html'
+    template: `
+    	<div class="row {{!enabled ? 'hide' : ''}}">
+			<div class="ka-dish-landing-product {{selectedProduct.prodId == product.prodId ? 'selected' : ''}}" *ngFor="#product of products; #i = index" (click)="select(product)">
+				<img src="{{product.prodImage}}"/>
+				<div class="ka-dish-landing-button"><p [innerHTML]="product.prodName"></p></div>
+			</div>
+			<a target="_blank" href="{{ctaLink}}"><div class="see-all">
+				<p>{{ctaText}}</p>
+			</div></a>
+		</div>
+    `
 })
 
 export class ProductSelectorNav {

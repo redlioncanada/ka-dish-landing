@@ -5,7 +5,15 @@ import {VideoPlayer} from './landing.video-player'
 
 @Component({
 	selector: 'videoplayer-selector',
-    templateUrl: 'app/views/landing.video-player.selector.view.html'
+    template: `
+    	<div (click)="select()" class="{{selected ? 'selected' : ''}}">
+			<div class="ka-dish-landing-videoplayer-text">
+				<div class="ka-dish-landing-videoplayer-title" [innerHTML]="data.ctaTitle"></div>
+				<div class="ka-dish-landing-videoplayer-button">{{data.cta}}</div>
+			</div>
+			<img src="{{data.thumb}}" alt="{{data.alt}}"/>
+		</div>
+    `
 })
 export class VideoPlayerSelector {
 	@Input() data

@@ -8,7 +8,24 @@ declare var $: JQueryStatic;
 
 @Component({
     selector: 'feature-button',
-    templateUrl: 'app/views/landing.feature.button.view.html',
+    template: `
+        <a href="{{btnLink}}">
+            <div class="ka-landing-feature-button" >
+                <div class="ka-landing-feature-button-up">
+                    <div class="ka-landing-feature-icon ka-landing-innerBtn"><img class="{{btnType}}" src={{btnIcon}} alt="{{btnAlt}}" /></div>
+                    <div class="ka-landing-feature-title ka-landing-innerBtn">{{btnTitle}}</div>
+                    <div class="ka-landing-feature-rule ka-landing-innerBtn"></div>
+                </div>
+                <div class="ka-landing-feature-button-over">
+                    <div class="ka-landing-feature-button-over-background"></div>
+                    <div class="ka-landing-feature-copy-container">
+                        <p class="ka-landing-over-copy">{{btnRollOverCopy}}</p>
+                        <p class="ka-landing-over-cta">{{btnRollOverCTA}}</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+    `,
 })
 
 export class FeatureButton extends TimelineController {

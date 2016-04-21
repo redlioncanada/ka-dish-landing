@@ -62,7 +62,7 @@ System.register(['angular2/core', './product.selector.slides', './product.select
                 ProductSelector = __decorate([
                     core_1.Component({
                         selector: 'product-selector',
-                        templateUrl: 'app/views/product.selector.view.html',
+                        template: "\n        <div class=\"row\" class=\"{{!enabled ? 'hide' : ''}}\">\n            <div>\n                <h2 class=\"title\">{{title}}</h2>\n            </div>\n            <product-slides [products]=\"products\" [selectedProduct]=\"selectedProduct\" (isAnimating)=\"isAnimating($event)\"></product-slides>\n            <product-selector-nav [products]=\"products\" [selectedProduct]=\"selectedProduct\" (productSelected)=\"productSelected($event)\"></product-selector-nav>\n        </div>\n    ",
                         directives: [product_selector_slides_1.ProductSlides, product_selector_nav_1.ProductSelectorNav],
                     }), 
                     __metadata('design:paramtypes', [appdata_service_1.AppData])

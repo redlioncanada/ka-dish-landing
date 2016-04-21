@@ -136,7 +136,7 @@ System.register(['angular2/core', './landing.timeline-controller'], function(exp
                 FeatureButton = __decorate([
                     core_1.Component({
                         selector: 'feature-button',
-                        templateUrl: 'app/views/landing.feature.button.view.html',
+                        template: "\n        <a href=\"{{btnLink}}\">\n            <div class=\"ka-landing-feature-button\" >\n                <div class=\"ka-landing-feature-button-up\">\n                    <div class=\"ka-landing-feature-icon ka-landing-innerBtn\"><img class=\"{{btnType}}\" src={{btnIcon}} alt=\"{{btnAlt}}\" /></div>\n                    <div class=\"ka-landing-feature-title ka-landing-innerBtn\">{{btnTitle}}</div>\n                    <div class=\"ka-landing-feature-rule ka-landing-innerBtn\"></div>\n                </div>\n                <div class=\"ka-landing-feature-button-over\">\n                    <div class=\"ka-landing-feature-button-over-background\"></div>\n                    <div class=\"ka-landing-feature-copy-container\">\n                        <p class=\"ka-landing-over-copy\">{{btnRollOverCopy}}</p>\n                        <p class=\"ka-landing-over-cta\">{{btnRollOverCTA}}</p>\n                    </div>\n                </div>\n            </div>\n        </a>\n    ",
                     }),
                     __param(0, core_1.Inject(core_1.ElementRef)), 
                     __metadata('design:paramtypes', [core_1.ElementRef])

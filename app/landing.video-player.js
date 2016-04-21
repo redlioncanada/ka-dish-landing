@@ -45,7 +45,7 @@ System.register(['angular2/core', './landing.video-player.selector', './landing.
                 VideoPlayer = __decorate([
                     core_1.Component({
                         selector: 'videoplayer',
-                        templateUrl: 'app/views/landing.video-player.view.html',
+                        template: "\n    \t<h2 class=\"{{!enabled ? 'hide': ''}}\">{{title}}</h2>\n\t\t<videoplayer-player class=\"{{!enabled ? 'hide': ''}}\" [data]=\"videos\" [currentId]=\"currentId\"></videoplayer-player>\n\t\t<ul class=\"{{!enabled ? 'hide': ''}}\">\n\t\t\t<li *ngFor=\"#video of videos; #i=index\">\n\t\t\t\t<videoplayer-selector (selectedVideo)=\"select($event)\" [data]=\"video\" [id]=\"i\" [selected]=\"currentId == i\"></videoplayer-selector>\n\t\t\t</li>\n\t\t</ul>\n    ",
                         directives: [landing_video_player_player_1.VideoPlayerPlayer, landing_video_player_selector_1.VideoPlayerSelector]
                     }), 
                     __metadata('design:paramtypes', [appdata_service_1.AppData, logger_service_1.Logger])

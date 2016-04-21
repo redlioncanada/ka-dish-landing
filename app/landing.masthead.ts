@@ -3,7 +3,12 @@ import {AppData} from './services/appdata.service'
 
 @Component({
     selector: 'masthead',
-    templateUrl:'app/views/masthead.view.html'
+    template: `
+    	<div class="{{!enabled ? 'hide': ''}}">
+			<div class="ka-landing-title"><h1>{{title}}</h1></div>
+			<div id="ka-landing-masthead"><img src="{{image}}" alt="{{alt}}" /></div>
+		</div>
+    `
 })
 export class AppMasthead {
 	private image: string

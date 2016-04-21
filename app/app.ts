@@ -18,7 +18,16 @@ import {Footer} from './landing.footer'
 
 @Component({
     selector: 'rl-ka-dish-landing',
-    templateUrl: 'app/views/app.view.html',
+    template: `
+    	<header class="{{language}}"></header>
+		<masthead class="{{language}}"></masthead>
+		<features class="{{language}}"></features>
+		<product-selector class="{{language}}"></product-selector>
+		<videoplayer class="{{language}}"></videoplayer>
+		<more-features class="{{language}}"></more-features>
+		<banner class="{{language}}"></banner>
+		<footer class="{{language}}"></footer>
+    `,
     directives: [VideoPlayer, AppMasthead, Features, ProductSelector, Banner, MoreFeatures, Header, Footer]
 })
 class AppComponent {

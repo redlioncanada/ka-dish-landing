@@ -4,11 +4,9 @@ more-features {
 
 	h2 {
 		@include header-text;
-		padding: 50px;
+		padding: 50px 0 10px 0;
         @media screen and (max-width: 685px) {
-        
                 font-size: 2em;
-         
         }
 	}
 

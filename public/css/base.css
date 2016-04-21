@@ -444,7 +444,7 @@ rl-ka-dish-landing {
       font-weight: 800;
       width: 100%;
       margin-top: 50px;
-      margin-bottom: 50px; }
+      margin-bottom: 10px; }
       @media screen and (max-width: 820px) {
         rl-ka-dish-landing videoplayer > h2 {
           font-size: 2em; } }
@@ -756,7 +756,7 @@ rl-ka-dish-landing {
       font-weight: 800;
       width: 100%;
       margin-top: 50px;
-      margin-bottom: 50px; }
+      margin-bottom: 10px; }
       @media screen and (max-width: 1366px) {
         rl-ka-dish-landing product-selector h2 {
           font-size: 2em;
@@ -813,7 +813,7 @@ rl-ka-dish-landing {
       position: absolute;
       left: 490px;
       top: 170px;
-      width: 300px;
+      width: 340px;
       font-weight: 300;
       font-size: 32px;
       color: #000000 !important;
@@ -897,7 +897,7 @@ rl-ka-dish-landing {
     rl-ka-dish-landing product-selector-nav .ka-dish-landing-product, rl-ka-dish-landing product-selector-nav .see-all {
       float: left;
       width: 14.28571428571429%;
-      padding: 0 2px; }
+      margin-right: 5%; }
       rl-ka-dish-landing product-selector-nav .ka-dish-landing-product img, rl-ka-dish-landing product-selector-nav .see-all img {
         width: 100%; }
     @media screen and (max-width: 820px) {
@@ -912,9 +912,11 @@ rl-ka-dish-landing {
       opacity: 0.6; }
     rl-ka-dish-landing product-selector-nav .ka-dish-landing-product:not(.selected) .ka-dish-landing-button {
       color: #000000; }
+    rl-ka-dish-landing product-selector-nav .ka-dish-landing-product:first-child {
+      margin-left: 4%; }
     rl-ka-dish-landing product-selector-nav .ka-dish-landing-button {
       margin-top: 20px;
-      height: 25px;
+      height: 38px;
       display: table;
       color: #000000;
       border: 2px solid #cc0000;
@@ -945,9 +947,9 @@ rl-ka-dish-landing {
       border: 3px solid #959595;
       text-transform: uppercase;
       display: table;
-      height: 100%;
       padding: 0;
-      height: 190px;
+      height: 202px;
+      margin-right: 0;
       -webkit-transition: all 0.2s ease;
       -moz-transition: all 0.2s ease;
       -o-transition: all 0.2s ease;
@@ -1024,7 +1026,7 @@ rl-ka-dish-landing {
       text-align: center;
       font-weight: 800;
       width: 100%;
-      padding: 50px; }
+      padding: 50px 0 10px 0; }
       @media screen and (max-width: 685px) {
         rl-ka-dish-landing more-features h2 {
           font-size: 2em; } }
@@ -1093,7 +1095,7 @@ rl-ka-dish-landing {
       width: 100%; }
     rl-ka-dish-landing banner learn-more-button {
       right: 7%;
-      width: 22%; }
+      width: 15%; }
       @media screen and (max-width: 685px) {
         rl-ka-dish-landing banner learn-more-button {
           font-size: small; } }

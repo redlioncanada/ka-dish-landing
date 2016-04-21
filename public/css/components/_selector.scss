@@ -13,7 +13,7 @@ product-selector {
         font-weight: 800;
         width: 100%;
         margin-top: 50px;
-        margin-bottom: 50px;
+        margin-bottom: 10px;
         @media screen and (max-width: 1366px) {
                 font-size: 2em;
                 margin-top: 35px;
@@ -84,7 +84,7 @@ product-selector {
         position: absolute;
         left: 490px;
         top: 170px;
-        width: 300px;
+        width: 340px;
         font-weight: 300;
         font-size: 32px;
         color: #000000!important;
@@ -180,8 +180,7 @@ product-selector-nav {
     .ka-dish-landing-product,.see-all {
         float: left;
         width: 14.28571428571429%;
-        padding: 0 2px;
-        
+        margin-right: 5%;
 
         img {
             width: 100%;
@@ -208,9 +207,13 @@ product-selector-nav {
         }
     }
 
+    .ka-dish-landing-product:first-child {
+        margin-left: 4%;
+    }
+
     .ka-dish-landing-button {
         margin-top: 20px;
-        height: 25px;
+        height: 38px;
         display: table;
         color: $selectorTextColor;
         border: 2px solid $selectorBackgroundColor;
@@ -250,9 +253,9 @@ product-selector-nav {
         border: 3px solid $selectorCTAColor;
         text-transform: uppercase;
         display: table;
-        height: 100%;
         padding: 0;
-        height: 190px;
+        height: 202px;
+        margin-right: 0;
         @include transition(0.2s);
 
         p {

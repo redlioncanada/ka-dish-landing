@@ -28,8 +28,8 @@ System.register(['angular2/core', './logger.service'], function(exports_1) {
                         masthead: {
                             enabled: true,
                             image: "./public/images/refer-landing-masthead.jpg",
-                            alt: "5-door refrigerator exterior",
-                            title: "Refrigerators"
+                            alt: "test",
+                            title: "Dishwashers"
                         },
                         banner: {
                             enabled: true,
@@ -43,9 +43,10 @@ System.register(['angular2/core', './logger.service'], function(exports_1) {
                                 {
                                     image: "./public/images/refer-landing-shopping-cart.png",
                                     title: "Buying Guide",
+                                    alt: "Buying Guide",
                                     desc: "What to look for when you are buying",
                                     cta: "Click Here",
-                                    link: "http://blog.kitchenaid.ca/kitchenaid-refrigerator-buying-guide/",
+                                    link: "https://www.google.ca/webhp?hl=en#hl=en&q=placeholder",
                                     type: "cart"
                                 },
                                 {
@@ -73,27 +74,27 @@ System.register(['angular2/core', './logger.service'], function(exports_1) {
                             title: "More Fresh Features",
                             features: [
                                 {
-                                    title: "Measured Water Fill",
+                                    title: "Clean Water Wash System",
                                     image: "./public/images/more-features-1.jpg",
-                                    link: "http://kitchenaid.ca",
-                                    alt: "Refrigerator ice dispensor",
-                                    text: "Displays and automatically dispenses water in ounces, cups, or liters.",
+                                    link: false,
+                                    alt: "test",
+                                    text: "Continuously filters the wash water for outstanding results. Plus, thanks to the innovative filter design there's no need to ever remove and clean the filter.",
                                     cta: ""
                                 },
                                 {
-                                    title: "Platinum Interior",
+                                    title: "Bottle Wash",
                                     image: "./public/images/more-features-2.jpg",
-                                    link: "http://kitchenaid.ca",
+                                    link: false,
                                     alt: "Refrigerator interior with assorted foods",
-                                    text: "Provides a premium look with silver glossy walls that complement the metallic accents found inside the refrigerator.",
+                                    text: "Dedicated and adjustable spray nozzles designed for tall glasses and bottles provide a high-powered spray wash for hard-to-reach places.",
                                     cta: ""
                                 },
                                 {
-                                    title: "Three-Tier Freezer Drawer",
+                                    title: "Advanced ProDry<sup>&trade;</sup> System",
                                     image: "./public/images/more-features-3.jpg",
-                                    link: "http://kitchenaid.ca",
+                                    link: false,
                                     alt: "Opened bottom freezer",
-                                    text: "Gives you easy access to frozen items with a three-level drawer, plus a divider in the lower basket to help you keep smaller items readily at hand.",
+                                    text: "The best drying performance without using a rinse aid delivered through an innovative system that draws moisture out of the wash tub to ensure dry dishes at the end of each cycle.",
                                     cta: ""
                                 }
                             ]
@@ -103,31 +104,31 @@ System.register(['angular2/core', './logger.service'], function(exports_1) {
                             title: "Designed To Inspire",
                             videos: [
                                 {
-                                    id: '9IFIdkLo29Y',
+                                    id: 'Jnosm33VWtE',
                                     thumb: './public/images/video-select-1.jpg',
-                                    title: 'Design: A revolutionary Mark On A Revolutionary New Line',
-                                    ctaTitle: 'Design',
-                                    alt: '5-door refrigerator exterior',
+                                    title: 'Revolutionary Dynamic Wash Arms | KitchenAid<sup>&reg;</sup>',
+                                    ctaTitle: 'Revolutionary',
+                                    alt: 'test',
                                     cta: 'Play Video',
-                                    desc: false
+                                    desc: 'Behold, our new line of dishwashers with revolutionary Dynamic Wash Arms. They blast water in every direction, giving every inch of each dish a powerful clean so you can start on your next creation.'
                                 },
                                 {
                                     id: 'fWbEHxpUEwM',
                                     thumb: './public/images/video-select-2.jpg',
-                                    title: 'Food Care: KitchenAid<sup>&reg;</sup> Preserva<sup>&reg;</sup> Food Care System',
-                                    ctaTitle: 'Food Care',
-                                    alt: 'Fruits within refrigerator',
+                                    title: 'A Revolutionary Mark On A Revolutionary New Line | The KitchenAid<sup>&reg;</sup> Medallion',
+                                    ctaTitle: 'Design',
+                                    alt: 'test',
                                     cta: 'Play Video',
-                                    desc: false
+                                    desc: 'Behold the KitchenAid<sup>®</sup> Medallion, the iconic finishing stamp on all of our revolutionary new refrigerators, wall-ovens, dishwashers, microwaves and ranges. It’s a mark that lets you know you’re cooking with a suite of chef-inspired, premium appliances.'
                                 },
                                 {
                                     id: 'RxnPMBOUWfk',
                                     thumb: './public/images/video-select-3.jpg',
-                                    title: '5-Door: Revolutionary Five-Door Refrigerator',
-                                    ctaTitle: '5-Door',
-                                    alt: 'Opened bottom freezer',
+                                    title: 'Revolutionary Five-Door Refrigerator | KitchenAid<sup>&reg;</sup>',
+                                    ctaTitle: 'Proscrub<sup>&trade;</sup>',
+                                    alt: 'test',
                                     cta: 'Play Video',
-                                    desc: false
+                                    desc: 'Skip the soaping, the soaking, and the pre-scrubbing. Send your pots and pans straight in to the dishwasher no matter the mess.'
                                 }
                             ]
                         },
@@ -141,56 +142,38 @@ System.register(['angular2/core', './logger.service'], function(exports_1) {
                             products: [
                                 {
                                     image: "./public/images/products/5-door.png",
-                                    title: "5-door",
-                                    alt: "5-Door Refrigerator",
-                                    desc: "The revolutionary, first-ever 5-Door freestanding refrigerator is designed for optimal organization and food freshness. Learn more about our versatile soft-close drawers, designed to help keep your favourite foods visible and easy to reach.",
-                                    link: "http://www.kitchenaid.ca/en_CA/shop/major-appliances-1/refrigerators-3/102310048+105000817/",
-                                    id: "five-door",
+                                    title: "Dishwasher<br/>With Window",
+                                    alt: "test",
+                                    desc: "Introducing an innovative new design, this dishwasher with window is a great aesthetic enhancement to your kitchen and allows you see when your dishes are done so you can move on to what’s next.",
+                                    link: "http://www.kitchenaid.ca/en_CA/shop/major-appliances-1/dishwashers-3/102310014+105000792/",
+                                    id: "dish-with-window",
                                     ctaText: "Learn More"
                                 },
                                 {
                                     image: "./public/images/products/built-in.png",
-                                    title: "Built-in",
-                                    alt: "Built-In, French-Door Refrigerator with bottom freezer",
-                                    desc: "When you picture your dream kitchen, you can bet our Built-in Refrigerator goes with it. Designed to fit your kitchen seamlessly, our panel ready options sold separately provide a sleek, premium look to complement your cabinets.",
-                                    link: "http://www.kitchenaid.ca/en_CA/shop/major-appliances-1/refrigerators-3/102310048+105000258/",
-                                    id: "built-in",
+                                    title: "Fully Integrated",
+                                    alt: "test",
+                                    desc: "The controls are discreetly placed at the top of the dishwasher and remain hidden when the door is closed to provide a sleek and clean looking front. The sleek bar handle perfectly complements the design and provides easy access to open your dishwasher.",
+                                    link: "http://www.kitchenaid.ca/en_CA/shop/major-appliances-1/dishwashers-3/102310014+105000265/",
+                                    id: "fully-integrated",
                                     ctaText: "Learn More"
                                 },
                                 {
                                     image: "./public/images/products/french-door.png",
-                                    title: "French Door",
-                                    alt: "French-door refrigerator with bottom freezer and exterior ice dispensor",
-                                    desc: "Need to get organized? Our French Door Refrigerators provide excellent space and organizing options for your culinary needs. With features like the humidity-controlled crispers, pantry drawer, and tiered drawer freezers, French Door Refrigerators are a contemporary fit for any kitchen.",
-                                    link: "http://www.kitchenaid.ca/en_CA/shop/major-appliances-1/refrigerators-3/102310048+105000377/",
-                                    id: "french-door",
+                                    title: "Front Control",
+                                    alt: "test",
+                                    desc: "The controls are located on the front and are easily accessible for use after you load your dishes. This model also comes with a pocket handle for a smoother finish and is great for smaller kitchens to allow for more space flexibility in front of the dishwasher.",
+                                    link: "http://www.kitchenaid.ca/en_CA/shop/major-appliances-1/dishwashers-3/102310014+105000266/",
+                                    id: "front-control",
                                     ctaText: "Learn More"
                                 },
                                 {
                                     image: "./public/images/products/side-by-side.png",
-                                    title: "Side-By-Side",
-                                    alt: "French-door refrigerator",
-                                    desc: "The clean, timeless design of our Side-by-Side Refrigerators gives you eye-level access to both refrigerator and freezer, while keeping the ingredients you use most often fresh and at your fingertips.",
-                                    link: "http://www.kitchenaid.ca/en_CA/shop/major-appliances-1/refrigerators-3/102310048+105000379/",
-                                    id: "side-by-side",
-                                    ctaText: "Learn More"
-                                },
-                                {
-                                    image: "./public/images/products/bottom-freezer.png",
-                                    title: "Bottom Freezer",
-                                    alt: "Single door refrigerator with bottom freezer",
-                                    desc: "Beautifully designed, inside and out. Our Bottom Freezer Refrigerators are made to give you easy access to your favourite foods. They also feature humidity-controlled crispers that create the perfect environment for keeping ingredients fresh.",
-                                    link: "http://www.kitchenaid.ca/en_CA/shop/major-appliances-1/refrigerators-3/102310048+105000376/",
-                                    id: "bottom-freezer",
-                                    ctaText: "Learn More"
-                                },
-                                {
-                                    image: "./public/images/products/under-counter.png",
-                                    title: "Under Counter",
-                                    alt: "Undercounter refrigerator",
-                                    desc: "Looking for a great addition to your kitchen? Our wide selection of Undercounter Refrigerators, Wine Cellars, and Ice Makers are a must have for entertaining, or providing another way to keep your beverages at the perfect temperature at all times.",
-                                    link: "http://www.kitchenaid.ca/en_CA/shop/major-appliances-1/refrigerators-2/undercounter-refrigerators-3/102310356/",
-                                    id: "under-counter",
+                                    title: "Panel Ready",
+                                    alt: "test",
+                                    desc: "The premium look to go with your dream kitchen. Custom panel-ready dishwashers have an unfinished door, so you can seamlessly match the custom panel to your cabinetry to give your kitchen a stylish and coordinated look.",
+                                    link: "http://www.kitchenaid.ca/en_CA/shop/major-appliances-1/dishwashers-3/102310014+4294967137/",
+                                    id: "panel-ready",
                                     ctaText: "Learn More"
                                 }
                             ]
@@ -345,24 +328,6 @@ System.register(['angular2/core', './logger.service'], function(exports_1) {
                                     link: "http://www.kitchenaid.ca/fr_CA/shop/major-appliances-1/refrigerators-3/102310048+105001144/",
                                     image: "./public/images/products/side-by-side.png",
                                     id: "side-by-side",
-                                    ctaText: "En savoir plus"
-                                },
-                                {
-                                    title: "Congélateur inférieur",
-                                    alt: "Réfrigérateur à porte simple avec congélateur inférieur",
-                                    desc: "D’une conception élégante à l'intérieur comme à l'extérieur, nos réfrigérateurs à congélateur inférieur sont conçus pour vous fournir un accès facile à tous vos articles favoris. Ils sont également dotés de bacs à légumes à humidité contrôlée, qui procurent un environnement idéal pour préserver la fraîcheur des produits.",
-                                    link: "http://www.kitchenaid.ca/fr_CA/shop/major-appliances-1/refrigerators-3/102310048/",
-                                    image: "./public/images/products/bottom-freezer.png",
-                                    id: "bottom-freezer",
-                                    ctaText: "En savoir plus"
-                                },
-                                {
-                                    title: "Réfrigérateurs sous le comptoir et machines à glaçons",
-                                    alt: "Réfrigérateur sous le comptoir",
-                                    desc: "Vous souhaitez rehausser le style de votre cuisine? Notre vaste choix de réfrigérateurs sous le comptoir, celliers et machines à glaçons sont très pratiques pour organiser des réceptions ou bien procurer une autre façon de conserver vos boissons à la température idéale, en tout temps.",
-                                    link: "http://www.kitchenaid.ca/fr_CA/shop/major-appliances-1/refrigerators-2/undercounter-refrigerators-3/102310356/",
-                                    image: "./public/images/products/under-counter.png",
-                                    id: "under-counter",
                                     ctaText: "En savoir plus"
                                 }
                             ]

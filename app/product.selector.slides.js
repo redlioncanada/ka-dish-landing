@@ -39,7 +39,7 @@ System.register(['angular2/core', './product.selector.slide', './landing.timelin
                     this.animating = false;
                     this.imageTop = 155;
                     this.titleTop = 170;
-                    this.descTop = 215;
+                    this.descTop = 238;
                     this.learnTop = 500;
                 }
                 Object.defineProperty(ProductSlides.prototype, "animating", {
@@ -173,7 +173,7 @@ System.register(['angular2/core', './product.selector.slide', './landing.timelin
                 ProductSlides = __decorate([
                     core_1.Component({
                         selector: 'product-slides',
-                        templateUrl: 'app/views/product.selector.slides.view.html',
+                        template: "\n      <div class=\"row\">\n          <product-slide class=\"{{selectedProduct.prodId == product.prodId ? 'selected' : ''}}\" *ngFor=\"#product of products; #i=index\" [selected]=\"selectedProduct.prodId == product.prodId\" [fridge]= \"product.prodImage\" [fridgeTitle]= \"product.prodName\" [fridgeDescription]=\"product.prodDescription\" [fridgeUrl]=\"product.prodUrl\" [fridgeAlt]=\"product.prodAlt\" [fridgeId]=\"product.prodId\" [ctaText]=\"product.ctaText\">\n\n          </product-slide>\n      </div>\n    ",
                         directives: [product_selector_slide_1.ProductSlide]
                     }),
                     __param(0, core_1.Inject(core_1.ElementRef)), 

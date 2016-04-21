@@ -9,35 +9,27 @@ System.register(['angular2/core'], function(exports_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var LearnMoreButton;
+    var RemoveHTML;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            LearnMoreButton = (function () {
-                function LearnMoreButton() {
+            RemoveHTML = (function () {
+                function RemoveHTML() {
                 }
-                __decorate([
-                    core_1.Input(), 
-                    __metadata('design:type', Object)
-                ], LearnMoreButton.prototype, "link", void 0);
-                __decorate([
-                    core_1.Input(), 
-                    __metadata('design:type', Object)
-                ], LearnMoreButton.prototype, "text", void 0);
-                LearnMoreButton = __decorate([
-                    core_1.Component({
-                        selector: 'learn-more-button',
-                        template: "\n    \t<a href=\"{{link}}\" target=\"_blank\"><div class=\"learn-more-button {{arrow ? 'learn-more-arrow': ''}}\">\n\t\t\t<p>{{text}} &gt;</p>\n\t\t</div></a>\n    "
-                    }), 
+                RemoveHTML.prototype.transform = function (text) {
+                    return text.replace(/<[^>]*>/g, " ");
+                };
+                RemoveHTML = __decorate([
+                    core_1.Pipe({ name: 'removeHTML' }), 
                     __metadata('design:paramtypes', [])
-                ], LearnMoreButton);
-                return LearnMoreButton;
+                ], RemoveHTML);
+                return RemoveHTML;
             })();
-            exports_1("LearnMoreButton", LearnMoreButton);
+            exports_1("RemoveHTML", RemoveHTML);
         }
     }
 });
-//# sourceMappingURL=landing.learn-more.button.js.map
+//# sourceMappingURL=remove.html.pipe.js.map

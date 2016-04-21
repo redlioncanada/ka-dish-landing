@@ -1,4 +1,4 @@
-System.register(['angular2/core', './landing.learn-more.button'], function(exports_1) {
+System.register(['angular2/core', './landing.learn-more.button', './pipes/remove.html.pipe'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,7 +8,7 @@ System.register(['angular2/core', './landing.learn-more.button'], function(expor
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, landing_learn_more_button_1;
+    var core_1, landing_learn_more_button_1, remove_html_pipe_1;
     var ProductSlide;
     return {
         setters:[
@@ -17,6 +17,9 @@ System.register(['angular2/core', './landing.learn-more.button'], function(expor
             },
             function (landing_learn_more_button_1_1) {
                 landing_learn_more_button_1 = landing_learn_more_button_1_1;
+            },
+            function (remove_html_pipe_1_1) {
+                remove_html_pipe_1 = remove_html_pipe_1_1;
             }],
         execute: function() {
             ProductSlide = (function () {
@@ -62,8 +65,9 @@ System.register(['angular2/core', './landing.learn-more.button'], function(expor
                 ProductSlide = __decorate([
                     core_1.Component({
                         selector: 'product-slide',
-                        templateUrl: 'app/views/product.selector.singleSlide.view.html',
-                        directives: [landing_learn_more_button_1.LearnMoreButton]
+                        template: "\n        <div id=\"{{fridgeId}}\" class=\"rl-ka-lndng-side\">\n            <div class=\"rl-ka-lndng-fridge\"><img class=\"{{fridge}}\" src=\"{{fridge}}\" alt=\"{{fridgeAlt}}\" /></div>\n            <div class=\"rl-ka-lndng-fridge-title mobile\">{{fridgeTitle | removeHTML}}</div>\n            <div class=\"rl-ka-lndng-fridge-title\">{{fridgeTitle | removeHTML}}</div>\n            <div class=\"rl-ka-lndng-fridge-desc\">{{fridgeDescription}}</div>\n            <learn-more-button [link]=\"fridgeUrl\" [text]=\"ctaText\"></learn-more-button>\n        </div>\n    ",
+                        directives: [landing_learn_more_button_1.LearnMoreButton],
+                        pipes: [remove_html_pipe_1.RemoveHTML]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], ProductSlide);

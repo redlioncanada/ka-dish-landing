@@ -38,7 +38,7 @@ System.register(['angular2/core', './landing.morefeatures.feature', './services/
                 MoreFeatures = __decorate([
                     core_1.Component({
                         selector: 'more-features',
-                        templateUrl: 'app/views/landing.morefeatures.view.html',
+                        template: "\n    \t<div class=\"row {{!enabled ? 'hide' : ''}}\">\n\t\t\t<h2>{{title}}</h2>\n\t\t    <more-features-feature *ngFor=\"#feature of moreFeatures; #i=index\" [cta]=\"feature.cta\" [text]=\"feature.text\" [link]=\"feature.link\" [title]=\"feature.title\" [image]=\"feature.image\" [alt]=\"feature.alt\">\n\t\t    </more-features-feature>\n\t\t</div>\n    ",
                         directives: [landing_morefeatures_feature_1.MoreFeaturesFeature],
                     }), 
                     __metadata('design:paramtypes', [appdata_service_1.AppData, logger_service_1.Logger])

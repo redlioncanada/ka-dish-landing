@@ -40,7 +40,7 @@ System.register(['angular2/core', './landing.feature.button', './models/features
                 Features = __decorate([
                     core_1.Component({
                         selector: 'features',
-                        templateUrl: 'app/views/landing.feature.view.html',
+                        template: "\n        <div class=\"row {{!enabled ? 'hide': ''}}\">\n            <feature-button *ngFor=\"#feature of featureButtons; #i=index\" [timeline]=\"feature.timeline\" [btnIcon]= \"feature.btnIcon\" [btnTitle]= \"feature.btnTitle\" [btnRollOverCopy]=\"feature.btnRollOverCopy\" [btnRollOverCTA]=\"feature.btnRollOverCTA\" [btnAlt]=\"feature.btnAlt\" [btnType]=\"feature.btnType\" [btnLink]=\"feature.btnLink\">\n\n            </feature-button>\n        </div>\n    ",
                         directives: [landing_feature_button_1.FeatureButton],
                     }), 
                     __metadata('design:paramtypes', [appdata_service_1.AppData])
