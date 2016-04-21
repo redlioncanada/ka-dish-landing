@@ -17,7 +17,7 @@ import {Footer} from './landing.footer'
 
 
 @Component({
-    selector: 'rl-ka-refer-landing',
+    selector: 'rl-ka-dish-landing',
     templateUrl: 'app/views/app.view.html',
     directives: [VideoPlayer, AppMasthead, Features, ProductSelector, Banner, MoreFeatures, Header, Footer]
 })

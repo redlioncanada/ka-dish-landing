@@ -14,7 +14,7 @@ videoplayer {
         }
 	}
     
-    h2.ka-refer-landing-videoplayer-title{
+    h2.ka-dish-landing-videoplayer-title{
          @media screen and (max-width: $mobileBreakpoint) {
                 font-size: 1em;
          }
@@ -64,23 +64,23 @@ videoplayer-player {
 	}
 
 
-	.ka-refer-landing-videoplayer-text {
+	.ka-dish-landing-videoplayer-text {
 		width: 100%;
 		padding: 28px 40px;
 		background-color: $videoPlayer-backgroundColor;
 		color: $videoPlayer-copyColor;
 		margin-top: -5px;
 
-		.ka-refer-landing-videoplayer-title {
+		.ka-dish-landing-videoplayer-title {
 			font-weight: 800;
 			text-transform: uppercase;
 		}
 
-		.ka-refer-landing-videoplayer-description, .ka-refer-landing-videoplayer-title {
+		.ka-dish-landing-videoplayer-description, .ka-dish-landing-videoplayer-title {
 			text-align: center;
 		}
         
-        .ka-refer-landing-videoplayer-description{
+        .ka-dish-landing-videoplayer-description{
             @media screen and (max-width: $mobileBreakpoint) {
                 font-size: 66%;
          }
@@ -91,7 +91,7 @@ videoplayer-player {
 videoplayer-selector {
 	width: 100%;
 
-	.ka-refer-landing-videoplayer-text {
+	.ka-dish-landing-videoplayer-text {
 		height: 100%;
 		width: 100%;
 		position: absolute;
@@ -101,14 +101,14 @@ videoplayer-selector {
         }
 
 
-		.ka-refer-landing-videoplayer-title, .ka-refer-landing-videoplayer-button {
+		.ka-dish-landing-videoplayer-title, .ka-dish-landing-videoplayer-button {
 			top: 50%;
 			text-align: center;
 			color: $videoPlayer-copyColor;
 			text-transform: uppercase;
 		}
 
-		.ka-refer-landing-videoplayer-title {
+		.ka-dish-landing-videoplayer-title {
 			font-size: 2em;
 			font-weight: 800;
 			margin-top: -20px;
@@ -120,7 +120,7 @@ videoplayer-selector {
 	        }
 		}
 
-		.ka-refer-landing-videoplayer-button {
+		.ka-dish-landing-videoplayer-button {
 			font-size: 0.8em;
 			position: relative;
 			top: 60%;
@@ -135,12 +135,12 @@ videoplayer-selector {
 		}
 	}
 
-	.ka-refer-landing-videoplayer-text h2, .ka-refer-landing-videoplayer-text div {
+	.ka-dish-landing-videoplayer-text h2, .ka-dish-landing-videoplayer-text div {
 		position: absolute;
 	}
 
 	videoplayer-selector:hover {
-		.ka-refer-landing-videoplayer-button {
+		.ka-dish-landing-videoplayer-button {
 			@include grow(1.2);
 		}
 	}
@@ -164,7 +164,7 @@ videoplayer-selector {
 			cursor: default;
 		}
 
-		.ka-refer-landing-videoplayer-button, .ka-refer-landing-videoplayer-title {
+		.ka-dish-landing-videoplayer-button, .ka-dish-landing-videoplayer-title {
 			opacity: 0;
 		}
 
@@ -177,7 +177,7 @@ videoplayer-selector {
 videoplayer.fr {
 	ul li:nth-child(2) {
 		videoplayer-selector {
-			.ka-refer-landing-videoplayer-title {
+			.ka-dish-landing-videoplayer-title {
 				line-height: 35px;
 				margin-top: -50px;
 
@@ -192,7 +192,7 @@ videoplayer.fr {
 
 	videoplayer-selector {
 		@media screen and (max-width: $mobileBreakpoint) {
-			.ka-refer-landing-videoplayer-title {
+			.ka-dish-landing-videoplayer-title {
 				font-size: 1em;
 				margin-top: -8px;
 			}

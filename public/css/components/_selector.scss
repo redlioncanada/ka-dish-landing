@@ -32,7 +32,7 @@ product-selector {
         display: block;
         width: 100%;
     }
-    .ka-refer-landing-product-slide{
+    .ka-dish-landing-product-slide{
         position: absolute;
         width: 943px;
     }
@@ -177,7 +177,7 @@ product-selector-nav {
         position: relative;
     }
     
-    .ka-refer-landing-product,.see-all {
+    .ka-dish-landing-product,.see-all {
         float: left;
         width: 14.28571428571429%;
         padding: 0 2px;
@@ -188,7 +188,7 @@ product-selector-nav {
         }
     }
 
-    .ka-refer-landing-product{
+    .ka-dish-landing-product{
         @media screen and (max-width: $mobileBreakpoint) {
             width: 16.5%;
         }
@@ -198,17 +198,17 @@ product-selector-nav {
         }
     }
 
-    .ka-refer-landing-product:not(.selected) {
+    .ka-dish-landing-product:not(.selected) {
         > img {
             opacity: 0.6;
         }
 
-        .ka-refer-landing-button {
+        .ka-dish-landing-button {
             color: $selectorTextColor;
         }
     }
 
-    .ka-refer-landing-button {
+    .ka-dish-landing-button {
         margin-top: 20px;
         height: 25px;
         display: table;
@@ -225,19 +225,19 @@ product-selector-nav {
         }
     }
 
-    .ka-refer-landing-product:hover {
+    .ka-dish-landing-product:hover {
         > img {
             opacity: 0.75;
         }
 
-        .ka-refer-landing-button {
+        .ka-dish-landing-button {
             background-color: $selectorBackgroundColor;
             color: $selectorHighlightedTextColor !important;
         }
     }
 
-    .ka-refer-landing-product.selected {
-        .ka-refer-landing-button {
+    .ka-dish-landing-product.selected {
+        .ka-dish-landing-button {
             background-color: $selectorBackgroundColor;
             color: $selectorHighlightedTextColor;
         }
@@ -296,7 +296,7 @@ product-selector.fr {
 
     product-selector-nav {
         @media screen and (max-width: $mobileBreakpoint) {
-            div .ka-refer-landing-button p {
+            div .ka-dish-landing-button p {
                 font-size: 0.6em;
             }
         }
