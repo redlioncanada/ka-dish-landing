@@ -35,7 +35,7 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                         self.update.call(self, e);
                     };
                 }
-                BreakpointService.prototype.initialize = function () {
+                BreakpointService.prototype.afterViewInit = function () {
                     this.update(undefined);
                 };
                 BreakpointService.prototype.debugMode = function (b) {

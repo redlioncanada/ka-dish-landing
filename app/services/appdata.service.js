@@ -344,7 +344,7 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                     return this.contents[this.language];
                 };
                 AppDataService.prototype.getLanguage = function () {
-                    var url = window.location.href;
+                    var url = this.window.location.href;
                     if (url.indexOf('/fr_CA') > -1)
                         return 'fr';
                     return 'en';

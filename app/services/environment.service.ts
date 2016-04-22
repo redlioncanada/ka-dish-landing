@@ -7,7 +7,7 @@ export class EnvironmentService {
 
 	constructor(private window: Window) {}
 
-	public initialize() {
+	public afterViewInit() {
 		if (this.hosts.indexOf(this.window.location.hostname) > -1) {
 			this._environment = modes.DEVELOPMENT
 		} else {

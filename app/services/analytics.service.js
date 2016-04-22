@@ -1,4 +1,4 @@
-System.register(['angular2/core', './logger.service'], function(exports_1, context_1) {
+System.register(['angular2/core', './logger.service', './environment.service'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, logger_service_1;
+    var core_1, logger_service_1, environment_service_1;
     var AnalyticsService;
     return {
         setters:[
@@ -19,17 +19,21 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
             },
             function (logger_service_1_1) {
                 logger_service_1 = logger_service_1_1;
+            },
+            function (environment_service_1_1) {
+                environment_service_1 = environment_service_1_1;
             }],
         execute: function() {
             AnalyticsService = (function () {
-                function AnalyticsService(logger, window) {
+                function AnalyticsService(logger, window, env) {
                     this.logger = logger;
                     this.window = window;
+                    this.env = env;
                     this.enabled = this.gaObjectExists();
                     this.debug = false;
                     this.bindings = [];
                 }
-                AnalyticsService.prototype.ngAfterViewInit = function () {
+                AnalyticsService.prototype.afterViewInit = function () {
                     if (!this.enabled)
                         this.enabled = this.gaObjectExists();
                 };
@@ -102,7 +106,7 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                 };
                 AnalyticsService = __decorate([
                     core_1.Injectable(), 
-                    __metadata('design:paramtypes', [logger_service_1.LoggerService, Window])
+                    __metadata('design:paramtypes', [logger_service_1.LoggerService, Window, environment_service_1.EnvironmentService])
                 ], AnalyticsService);
                 return AnalyticsService;
             }());

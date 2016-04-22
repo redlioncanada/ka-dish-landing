@@ -86,9 +86,9 @@ System.register(['angular2/platform/browser', 'angular2/http', './services/logge
                     breakpoint.add('desktop', 820);
                 }
                 AppComponent.prototype.ngAfterViewInit = function () {
-                    //initialize() relies on global window object, so we have to wait for ViewInit
-                    this.breakpoint.initialize();
-                    this.env.initialize();
+                    this.breakpoint.afterViewInit();
+                    this.env.afterViewInit();
+                    this.analytics.afterViewInit();
                     if (this.env.isDev()) {
                         this.analytics.debugMode(true);
                         this.breakpoint.debugMode(true);

@@ -54,9 +54,9 @@ class AppComponent {
     }
 
     ngAfterViewInit() {
-    	//initialize() relies on global window object, so we have to wait for ViewInit
-    	this.breakpoint.initialize()
-    	this.env.initialize()
+    	this.breakpoint.afterViewInit()
+		this.env.afterViewInit()
+		this.analytics.afterViewInit()
 
     	if (this.env.isDev()) {
 			this.analytics.debugMode(true)

@@ -28,22 +28,37 @@ System.register(['angular2/core', './landing.morefeatures.feature', './services/
             }],
         execute: function() {
             MoreFeatures = (function () {
-                function MoreFeatures(appdata, logger) {
+                function MoreFeatures(appdata, logger, elementRef) {
                     this.appdata = appdata;
                     this.logger = logger;
+                    this.elementRef = elementRef;
+                    this._lastHeight = -1;
                     this.enabled = true;
                     var data = appdata.get();
                     this.enabled = data.morefeatures.enabled;
                     this.title = data.morefeatures.title;
                     this.moreFeatures = data.morefeatures.features;
                 }
+                MoreFeatures.prototype.ngAfterViewInit = function () {
+                    var self = this;
+                    this._resizeInterval = setInterval(function () { self.onResize.call(self); }, 250);
+                };
+                MoreFeatures.prototype.onResize = function () {
+                    //make sure the second image is the same height as the others
+                    var element = this.elementRef.nativeElement;
+                    var height = $(element).find('more-features-feature .hover img').first().height();
+                    $(element).find('more-features-feature .hover img').eq(1).css('height', height);
+                    if (this._lastHeight == height && height != 0)
+                        clearInterval(this._resizeInterval);
+                    this._lastHeight = height;
+                };
                 MoreFeatures = __decorate([
                     core_1.Component({
                         selector: 'more-features',
-                        template: "\n    \t<div class=\"row {{!enabled ? 'hide' : ''}}\">\n\t\t\t<h2>{{title}}</h2>\n\t\t    <more-features-feature *ngFor=\"#feature of moreFeatures; #i=index\" [cta]=\"feature.cta\" [text]=\"feature.text\" [link]=\"feature.link\" [title]=\"feature.title\" [image]=\"feature.image\" [alt]=\"feature.alt\">\n\t\t    </more-features-feature>\n\t\t</div>\n    ",
-                        directives: [landing_morefeatures_feature_1.MoreFeaturesFeature],
+                        template: "\n    \t<div (window:resize)=\"onResize()\" class=\"row {{!enabled ? 'hide' : ''}}\">\n\t\t\t<h2>{{title}}</h2>\n\t\t    <more-features-feature *ngFor=\"#feature of moreFeatures; #i=index\" [cta]=\"feature.cta\" [text]=\"feature.text\" [link]=\"feature.link\" [title]=\"feature.title\" [image]=\"feature.image\" [alt]=\"feature.alt\">\n\t\t    </more-features-feature>\n\t\t</div>\n    ",
+                        directives: [landing_morefeatures_feature_1.MoreFeaturesFeature]
                     }), 
-                    __metadata('design:paramtypes', [appdata_service_1.AppDataService, logger_service_1.LoggerService])
+                    __metadata('design:paramtypes', [appdata_service_1.AppDataService, logger_service_1.LoggerService, core_1.ElementRef])
                 ], MoreFeatures);
                 return MoreFeatures;
             }());

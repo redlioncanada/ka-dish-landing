@@ -79,4 +79,5 @@ export class FeatureButton {
         this.targetWidth = $(this.rootElement).find('img').parent().width()
         this.targetHeight = $(this.rootElement).find('img').parent().height()
        this.resetAnimations()
+   }
 }

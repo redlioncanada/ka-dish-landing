@@ -1,4 +1,4 @@
-System.register(['angular2/core', './product.selector.slide'], function(exports_1, context_1) {
+System.register(['angular2/core', './product.selector.slide', './services/logger.service', './services/breakpoint.service'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -13,7 +13,7 @@ System.register(['angular2/core', './product.selector.slide'], function(exports_
     var __param = (this && this.__param) || function (paramIndex, decorator) {
         return function (target, key) { decorator(target, key, paramIndex); }
     };
-    var core_1, product_selector_slide_1;
+    var core_1, product_selector_slide_1, logger_service_1, breakpoint_service_1;
     var ProductSlides;
     return {
         setters:[
@@ -22,10 +22,19 @@ System.register(['angular2/core', './product.selector.slide'], function(exports_
             },
             function (product_selector_slide_1_1) {
                 product_selector_slide_1 = product_selector_slide_1_1;
+            },
+            function (logger_service_1_1) {
+                logger_service_1 = logger_service_1_1;
+            },
+            function (breakpoint_service_1_1) {
+                breakpoint_service_1 = breakpoint_service_1_1;
             }],
         execute: function() {
             ProductSlides = (function () {
-                function ProductSlides(elementRef) {
+                function ProductSlides(elementRef, logger, breakpoint) {
+                    var _this = this;
+                    this.logger = logger;
+                    this.breakpoint = breakpoint;
                     this.isAnimating = new core_1.EventEmitter();
                     this.elementRef = elementRef;
                     this.animating = false;
@@ -33,6 +42,7 @@ System.register(['angular2/core', './product.selector.slide'], function(exports_
                     this.titleTop = 170;
                     this.descTop = 238;
                     this.learnTop = 500;
+                    this.breakpointChanged = this.breakpoint.event$.subscribe(function (breakpoint) { return _this.onBreakpointChange(breakpoint); });
                 }
                 Object.defineProperty(ProductSlides.prototype, "animating", {
                     set: function (a) {
@@ -44,6 +54,11 @@ System.register(['angular2/core', './product.selector.slide'], function(exports_
                     enumerable: true,
                     configurable: true
                 });
+                ProductSlides.prototype.onBreakpointChange = function (evt) {
+                    console.log('product.selector.onBreakpointChange');
+                    var target = this.selectedProduct.prodId;
+                    this.playIn(this, true, target);
+                };
                 ProductSlides.prototype.ngAfterViewInit = function () {
                     this.rootElement = $(this.elementRef.nativeElement);
                     var target = this.selectedProduct.prodId;
@@ -174,7 +189,7 @@ System.register(['angular2/core', './product.selector.slide'], function(exports_
                         directives: [product_selector_slide_1.ProductSlide]
                     }),
                     __param(0, core_1.Inject(core_1.ElementRef)), 
-                    __metadata('design:paramtypes', [core_1.ElementRef])
+                    __metadata('design:paramtypes', [core_1.ElementRef, logger_service_1.LoggerService, breakpoint_service_1.BreakpointService])
                 ], ProductSlides);
                 return ProductSlides;
             }());

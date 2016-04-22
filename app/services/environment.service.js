@@ -23,7 +23,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                     this.window = window;
                     this.hosts = ['localhost', '127.0.0.1'];
                 }
-                EnvironmentService.prototype.initialize = function () {
+                EnvironmentService.prototype.afterViewInit = function () {
                     if (this.hosts.indexOf(this.window.location.hostname) > -1) {
                         this._environment = modes.DEVELOPMENT;
                     }

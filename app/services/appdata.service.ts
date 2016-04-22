@@ -332,7 +332,7 @@ export class AppDataService {
 	}
 
 	getLanguage() {
-		var url = window.location.href
+		var url = this.window.location.href
 		if (url.indexOf('/fr_CA') > -1) return 'fr'
 		return 'en'
 	}

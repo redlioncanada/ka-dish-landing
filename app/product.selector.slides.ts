@@ -1,7 +1,8 @@
-import {bootstrap}    from 'angular2/platform/browser'
 import {Component, Input, Output, Inject, ElementRef, EventEmitter} from 'angular2/core'
 import {ProductSlide} from './product.selector.slide'
 import {ProductModel} from './models/products.model'
+import {LoggerService} from './services/logger.service'
+import {BreakpointService} from './services/breakpoint.service'
 
 declare var $: JQueryStatic;
 
@@ -21,6 +22,8 @@ export class ProductSlides {
     @Input() selectedProduct;
     @Output() isAnimating = new EventEmitter();
 
+    private breakpointChanged
+
     private rootElement;
     private elementRef: ElementRef;
     private _animating: boolean;
@@ -37,13 +40,22 @@ export class ProductSlides {
         }
     }
 
-    public constructor(@Inject(ElementRef) elementRef: ElementRef) {
+    public constructor(@Inject(ElementRef) elementRef: ElementRef, private logger: LoggerService, private breakpoint: BreakpointService) {
         this.elementRef = elementRef
         this.animating = false
         this.imageTop = 155;
         this.titleTop = 170;
         this.descTop = 238;
         this.learnTop = 500;
+        this.breakpointChanged = this.breakpoint.event$.subscribe(
+          breakpoint => this.onBreakpointChange(breakpoint)
+        )
+    }
+
+    private onBreakpointChange(evt) {
+      console.log('product.selector.onBreakpointChange')
+      var target = this.selectedProduct.prodId
+      this.playIn(this, true, target)
     }
 
      private ngAfterViewInit() {

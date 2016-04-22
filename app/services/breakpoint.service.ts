@@ -9,7 +9,7 @@ export class BreakpointService {
 	private debug
 	private init
 
-	private event$: EventEmitter<any>
+	public event$: EventEmitter<any>
 
 	constructor(private logger: LoggerService, private window: Window) {
 		let self = this
@@ -24,7 +24,7 @@ export class BreakpointService {
 		}
 	}
 
-	public initialize() {
+	public afterViewInit() {
 		this.update(undefined)
 	}
 
