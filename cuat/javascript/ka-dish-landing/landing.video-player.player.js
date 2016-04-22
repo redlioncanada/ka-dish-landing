@@ -39,10 +39,10 @@ System.register(['angular2/core', './services/logger.service.js', './landing.vid
                 VideoPlayerPlayer = __decorate([
                     core_1.Component({
                         selector: 'videoplayer-player',
-                        templateUrl: '/javascript/ka-dish-landing/views/landing.video-player.player.view.html',
+                        template: "\n    \t<div>\n\t\t\t<ul>\n\t\t\t\t<li *ngFor=\"#video of data; #i=index\" class=\"{{currentId !== i ? 'hide' : 'show'}}\">\n\t\t\t\t\t<videoplayer-video [image]=\"video.image\" [id]=\"video.id\" [selected]=\"currentId == i\" [width]=\"video.width\" [height]=\"video.height\"></videoplayer-video>\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t    <div class=\"ka-dish-landing-videoplayer-text\">\n\t\t    \t<h2 class=\"ka-dish-landing-videoplayer-title\" [innerHTML]=\"data[currentId].title\">\n\t\t    \t</h2>\n\t\t    \t<div class=\"ka-dish-landing-videoplayer-description\" [innerHTML]=\"!!data[currentId].desc ? data[currentId].desc : ''\">\n\t\t        </div>\n\t\t    </div>\n\t\t</div>\n    ",
                         directives: [landing_video_player_video_1.VideoPlayerVideo]
                     }), 
-                    __metadata('design:paramtypes', [logger_service_1.Logger])
+                    __metadata('design:paramtypes', [logger_service_1.LoggerService])
                 ], VideoPlayerPlayer);
                 return VideoPlayerPlayer;
             }());

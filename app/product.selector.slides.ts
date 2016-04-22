@@ -53,7 +53,6 @@ export class ProductSlides {
     }
 
     private onBreakpointChange(evt) {
-      console.log('product.selector.onBreakpointChange')
       var target = this.selectedProduct.prodId
       this.playIn(this, true, target)
     }

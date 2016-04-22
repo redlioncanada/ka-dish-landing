@@ -1,11 +1,6 @@
-System.register(['angular2/core', './product.selector.slide.js', './landing.timeline-controller.js'], function(exports_1, context_1) {
+System.register(['angular2/core', './product.selector.slide.js', './services/logger.service.js', './services/breakpoint.service.js'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
-    var __extends = (this && this.__extends) || function (d, b) {
-        for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,7 +13,7 @@ System.register(['angular2/core', './product.selector.slide.js', './landing.time
     var __param = (this && this.__param) || function (paramIndex, decorator) {
         return function (target, key) { decorator(target, key, paramIndex); }
     };
-    var core_1, product_selector_slide_1, landing_timeline_controller_1;
+    var core_1, product_selector_slide_1, logger_service_1, breakpoint_service_1;
     var ProductSlides;
     return {
         setters:[
@@ -28,21 +23,26 @@ System.register(['angular2/core', './product.selector.slide.js', './landing.time
             function (product_selector_slide_1_1) {
                 product_selector_slide_1 = product_selector_slide_1_1;
             },
-            function (landing_timeline_controller_1_1) {
-                landing_timeline_controller_1 = landing_timeline_controller_1_1;
+            function (logger_service_1_1) {
+                logger_service_1 = logger_service_1_1;
+            },
+            function (breakpoint_service_1_1) {
+                breakpoint_service_1 = breakpoint_service_1_1;
             }],
         execute: function() {
-            ProductSlides = (function (_super) {
-                __extends(ProductSlides, _super);
-                function ProductSlides(elementRef) {
-                    _super.call(this);
+            ProductSlides = (function () {
+                function ProductSlides(elementRef, logger, breakpoint) {
+                    var _this = this;
+                    this.logger = logger;
+                    this.breakpoint = breakpoint;
                     this.isAnimating = new core_1.EventEmitter();
                     this.elementRef = elementRef;
                     this.animating = false;
                     this.imageTop = 155;
                     this.titleTop = 170;
-                    this.descTop = 215;
+                    this.descTop = 238;
                     this.learnTop = 500;
+                    this.breakpointChanged = this.breakpoint.event$.subscribe(function (breakpoint) { return _this.onBreakpointChange(breakpoint); });
                 }
                 Object.defineProperty(ProductSlides.prototype, "animating", {
                     set: function (a) {
@@ -54,6 +54,10 @@ System.register(['angular2/core', './product.selector.slide.js', './landing.time
                     enumerable: true,
                     configurable: true
                 });
+                ProductSlides.prototype.onBreakpointChange = function (evt) {
+                    var target = this.selectedProduct.prodId;
+                    this.playIn(this, true, target);
+                };
                 ProductSlides.prototype.ngAfterViewInit = function () {
                     this.rootElement = $(this.elementRef.nativeElement);
                     var target = this.selectedProduct.prodId;
@@ -62,16 +66,21 @@ System.register(['angular2/core', './product.selector.slide.js', './landing.time
                 ProductSlides.prototype.ngOnChanges = function (changes) {
                     var self = this;
                     if ("selectedProduct" in changes && !this.animating) {
-                        this.playOut(changes.selectedProduct.previousValue.prodId, function () {
-                            //just get it done
-                            if (changes.selectedProduct.currentValue.prodId == 'under-counter' && $('product-selector').hasClass('fr') && $(window).innerWidth() > 820) {
-                                self.descTop = 265;
-                            }
-                            else {
-                                self.descTop = 215;
-                            }
+                        if ('prodId' in changes.selectedProduct.previousValue) {
+                            this.playOut(changes.selectedProduct.previousValue.prodId, function () {
+                                //just get it done
+                                if (changes.selectedProduct.currentValue.prodId == 'under-counter' && $('product-selector').hasClass('fr') && $(window).innerWidth() > 820) {
+                                    self.descTop = 265;
+                                }
+                                else {
+                                    self.descTop = 215;
+                                }
+                                self.playIn(self, false, changes.selectedProduct.currentValue.prodId);
+                            });
+                        }
+                        else {
                             self.playIn(self, false, changes.selectedProduct.currentValue.prodId);
-                        });
+                        }
                     }
                 };
                 ProductSlides.prototype.playOut = function (target, cb) {
@@ -175,14 +184,14 @@ System.register(['angular2/core', './product.selector.slide.js', './landing.time
                 ProductSlides = __decorate([
                     core_1.Component({
                         selector: 'product-slides',
-                        templateUrl: '/javascript/ka-dish-landing/views/product.selector.slides.view.html',
+                        template: "\n      <div class=\"row\">\n          <product-slide class=\"{{selectedProduct.prodId == product.prodId ? 'selected' : ''}}\" *ngFor=\"#product of products; #i=index\" [selected]=\"selectedProduct.prodId == product.prodId\" [fridge]= \"product.prodImage\" [fridgeTitle]= \"product.prodName\" [fridgeDescription]=\"product.prodDescription\" [fridgeUrl]=\"product.prodUrl\" [fridgeAlt]=\"product.prodAlt\" [fridgeId]=\"product.prodId\" [ctaText]=\"product.ctaText\">\n\n          </product-slide>\n      </div>\n    ",
                         directives: [product_selector_slide_1.ProductSlide]
                     }),
                     __param(0, core_1.Inject(core_1.ElementRef)), 
-                    __metadata('design:paramtypes', [core_1.ElementRef])
+                    __metadata('design:paramtypes', [core_1.ElementRef, logger_service_1.LoggerService, breakpoint_service_1.BreakpointService])
                 ], ProductSlides);
                 return ProductSlides;
-            }(landing_timeline_controller_1.TimelineController));
+            }());
             exports_1("ProductSlides", ProductSlides);
         }
     }

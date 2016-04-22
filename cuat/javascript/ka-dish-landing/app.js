@@ -1,4 +1,4 @@
-System.register(['angular2/platform/browser', 'angular2/http', './services/logger.service.js', './services/googleapi.service.js', './services/appdata.service.js', 'angular2/core', './landing.video-player.js', './landing.masthead.js', './landing.feature.js', './product.selector.js', './landing.morefeatures.js', './landing.banner.js', './landing.header.js', './landing.footer.js'], function(exports_1, context_1) {
+System.register(['angular2/platform/browser', 'angular2/http', './services/logger.service.js', './services/googleapi.service.js', './services/analytics.service.js', './services/breakpoint.service.js', './services/appdata.service.js', './services/environment.service.js', './providers/window.provider.js', 'angular2/core', './landing.video-player.js', './landing.masthead.js', './landing.feature.js', './product.selector.js', './landing.morefeatures.js', './landing.banner.js', './landing.header.js', './landing.footer.js'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/platform/browser', 'angular2/http', './services/logge
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var browser_1, http_1, logger_service_1, googleapi_service_1, appdata_service_1, core_1, landing_video_player_1, landing_masthead_1, landing_feature_1, product_selector_1, landing_morefeatures_1, landing_banner_1, landing_header_1, landing_footer_1;
+    var browser_1, http_1, logger_service_1, googleapi_service_1, analytics_service_1, breakpoint_service_1, appdata_service_1, environment_service_1, window_provider_1, core_1, landing_video_player_1, landing_masthead_1, landing_feature_1, product_selector_1, landing_morefeatures_1, landing_banner_1, landing_header_1, landing_footer_1;
     var AppComponent;
     return {
         setters:[
@@ -26,8 +26,20 @@ System.register(['angular2/platform/browser', 'angular2/http', './services/logge
             function (googleapi_service_1_1) {
                 googleapi_service_1 = googleapi_service_1_1;
             },
+            function (analytics_service_1_1) {
+                analytics_service_1 = analytics_service_1_1;
+            },
+            function (breakpoint_service_1_1) {
+                breakpoint_service_1 = breakpoint_service_1_1;
+            },
             function (appdata_service_1_1) {
                 appdata_service_1 = appdata_service_1_1;
+            },
+            function (environment_service_1_1) {
+                environment_service_1 = environment_service_1_1;
+            },
+            function (window_provider_1_1) {
+                window_provider_1 = window_provider_1_1;
             },
             function (core_1_1) {
                 core_1 = core_1_1;
@@ -58,21 +70,41 @@ System.register(['angular2/platform/browser', 'angular2/http', './services/logge
             }],
         execute: function() {
             AppComponent = (function () {
-                function AppComponent(appdata) {
+                function AppComponent(appdata, analytics, breakpoint, env) {
                     this.appdata = appdata;
-                    this.language = appdata.language;
+                    this.analytics = analytics;
+                    this.breakpoint = breakpoint;
+                    this.env = env;
+                    analytics.bind('language', function (str) {
+                        return window.location.href.indexOf('fr_CA/') > -1 ? 'FR' : 'EN';
+                    });
+                    analytics.bind('category', function (str) {
+                        return 'Refer Landing Page';
+                    });
+                    breakpoint.add('mobile', 480);
+                    breakpoint.add('tablet', 481);
+                    breakpoint.add('desktop', 820);
                 }
+                AppComponent.prototype.ngAfterViewInit = function () {
+                    this.breakpoint.afterViewInit();
+                    this.env.afterViewInit();
+                    this.analytics.afterViewInit();
+                    if (this.env.isDev()) {
+                        this.analytics.debugMode(true);
+                        this.breakpoint.debugMode(true);
+                    }
+                };
                 AppComponent = __decorate([
                     core_1.Component({
-                        selector: 'rl-ka-refer-landing',
-                        templateUrl: '/javascript/ka-dish-landing/views/app.view.html',
+                        selector: 'rl-ka-dish-landing',
+                        template: "\n    \t\n\t\t<masthead class=\"{{language}}\"></masthead>\n\t\t<features class=\"{{language}}\"></features>\n\t\t<product-selector class=\"{{language}}\"></product-selector>\n\t\t<videoplayer class=\"{{language}}\"></videoplayer>\n\t\t<more-features class=\"{{language}}\"></more-features>\n\t\t<banner class=\"{{language}}\"></banner>\n\t\t\n    ",
                         directives: [landing_video_player_1.VideoPlayer, landing_masthead_1.AppMasthead, landing_feature_1.Features, product_selector_1.ProductSelector, landing_banner_1.Banner, landing_morefeatures_1.MoreFeatures, landing_header_1.Header, landing_footer_1.Footer]
                     }), 
-                    __metadata('design:paramtypes', [appdata_service_1.AppData])
+                    __metadata('design:paramtypes', [appdata_service_1.AppDataService, analytics_service_1.AnalyticsService, breakpoint_service_1.BreakpointService, environment_service_1.EnvironmentService])
                 ], AppComponent);
                 return AppComponent;
             }());
-            browser_1.bootstrap(AppComponent, [http_1.HTTP_PROVIDERS, logger_service_1.Logger, googleapi_service_1.GoogleApi, appdata_service_1.AppData]);
+            browser_1.bootstrap(AppComponent, [http_1.HTTP_PROVIDERS, logger_service_1.LoggerService, googleapi_service_1.GoogleApiService, appdata_service_1.AppDataService, analytics_service_1.AnalyticsService, breakpoint_service_1.BreakpointService, environment_service_1.EnvironmentService, window_provider_1.WindowProvider]);
         }
     }
 });

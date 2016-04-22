@@ -10,11 +10,19 @@ videoplayer {
         @media screen and (max-width: $mobileBreakpoint) {
         	font-size: 2em;
         }
+        @media screen and (max-width: 479px) {
+        	font-size: 1.5em;
+        	margin-top: 10px;
+        }
 	}
     
     h2.ka-dish-landing-videoplayer-title{
          @media screen and (max-width: $mobileBreakpoint) {
                 font-size: 1em;
+         }
+         @media screen and (max-width: 479px) {
+         	font-size: 0.7em;
+
          }
     }
 
@@ -115,6 +123,10 @@ videoplayer-selector {
 
 			@media screen and (max-width: $mobileBreakpoint) {
 	        	font-size: 1.2em;
+	        }
+	        @media screen and (max-width: 479px) {
+	        	margin-top: -5px;
+	        	font-size: 0.7em;
 	        }
 		}
 

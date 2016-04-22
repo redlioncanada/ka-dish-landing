@@ -22,6 +22,9 @@ product-selector {
         @media screen and (max-width: $mobileBreakpoint) {
             margin-bottom: 0px;
         }
+        @media screen and (max-width: 479px) {
+            font-size: 1.5em;
+        }
     }
     
    #french-door, #side-by-side, #bottom-freezer, #under-counter, #built-in{
@@ -70,6 +73,7 @@ product-selector {
     .rl-ka-lndng-fridge-title.mobile {
         display: none;
         margin-bottom: 20px;
+        font-size: 1.5em;
 
         @media screen and (max-width: $mobileBreakpoint) {
             @include mobile-block-element;
@@ -173,6 +177,10 @@ product-selector-nav {
     display: block;
     top: 70px;
 
+    @media screen and (max-width: 479px) {
+        top: 50px;
+    }
+
     .row {
         position: relative;
     }
@@ -188,6 +196,8 @@ product-selector-nav {
     }
 
     .ka-dish-landing-product{
+        font-size: 0.8em;
+
         @media screen and (max-width: $mobileBreakpoint) {
             width: 16.5%;
         }
@@ -228,7 +238,8 @@ product-selector-nav {
             width: 100%;
             @include centered-table-cell;
             line-height: 13px;
-            font-size: 0.8em;
+            
+            @media(max-width: 479px) {font-size: 0.8em;}
         }
     }
 
@@ -306,6 +317,9 @@ product-selector.fr {
             div .ka-dish-landing-button p {
                 font-size: 0.6em;
             }
+        }
+        @media screen and (max-width: 479px) {
+            top: 50px;
         }
     }
 

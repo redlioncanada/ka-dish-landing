@@ -38,7 +38,8 @@ rl-ka-dish-landing {
   font-family: 'Avenir-Light', Helvetica, Arial, sans-serif;
   font-size: 12pt;
   position: relative;
-  display: block; }
+  display: block;
+  margin-top: 117px; }
   rl-ka-dish-landing html, rl-ka-dish-landing body, rl-ka-dish-landing div, rl-ka-dish-landing span, rl-ka-dish-landing applet, rl-ka-dish-landing object, rl-ka-dish-landing iframe, rl-ka-dish-landing h1, rl-ka-dish-landing h2, rl-ka-dish-landing h3, rl-ka-dish-landing h4, rl-ka-dish-landing h5, rl-ka-dish-landing h6, rl-ka-dish-landing p, rl-ka-dish-landing blockquote, rl-ka-dish-landing pre, rl-ka-dish-landing a, rl-ka-dish-landing abbr, rl-ka-dish-landing acronym, rl-ka-dish-landing address, rl-ka-dish-landing big, rl-ka-dish-landing cite, rl-ka-dish-landing code, rl-ka-dish-landing del, rl-ka-dish-landing dfn, rl-ka-dish-landing em, rl-ka-dish-landing img, rl-ka-dish-landing ins, rl-ka-dish-landing kbd, rl-ka-dish-landing q, rl-ka-dish-landing s, rl-ka-dish-landing samp, rl-ka-dish-landing small, rl-ka-dish-landing strike, rl-ka-dish-landing strong, rl-ka-dish-landing sub, rl-ka-dish-landing sup, rl-ka-dish-landing tt, rl-ka-dish-landing var, rl-ka-dish-landing b, rl-ka-dish-landing u, rl-ka-dish-landing i, rl-ka-dish-landing center, rl-ka-dish-landing dl, rl-ka-dish-landing dt, rl-ka-dish-landing dd, rl-ka-dish-landing ol, rl-ka-dish-landing ul, rl-ka-dish-landing li, rl-ka-dish-landing fieldset, rl-ka-dish-landing form, rl-ka-dish-landing label, rl-ka-dish-landing legend, rl-ka-dish-landing table, rl-ka-dish-landing caption, rl-ka-dish-landing tbody, rl-ka-dish-landing tfoot, rl-ka-dish-landing thead, rl-ka-dish-landing tr, rl-ka-dish-landing th, rl-ka-dish-landing td, rl-ka-dish-landing article, rl-ka-dish-landing aside, rl-ka-dish-landing canvas, rl-ka-dish-landing details, rl-ka-dish-landing embed, rl-ka-dish-landing figure, rl-ka-dish-landing figcaption, rl-ka-dish-landing footer, rl-ka-dish-landing header, rl-ka-dish-landing hgroup, rl-ka-dish-landing menu, rl-ka-dish-landing nav, rl-ka-dish-landing output, rl-ka-dish-landing ruby, rl-ka-dish-landing section, rl-ka-dish-landing summary, rl-ka-dish-landing time, rl-ka-dish-landing mark, rl-ka-dish-landing audio, rl-ka-dish-landing video {
     margin: 0;
     padding: 0;
@@ -448,9 +449,16 @@ rl-ka-dish-landing {
       @media screen and (max-width: 820px) {
         rl-ka-dish-landing videoplayer > h2 {
           font-size: 2em; } }
+      @media screen and (max-width: 479px) {
+        rl-ka-dish-landing videoplayer > h2 {
+          font-size: 1.5em;
+          margin-top: 10px; } }
     @media screen and (max-width: 820px) {
       rl-ka-dish-landing videoplayer h2.ka-dish-landing-videoplayer-title {
         font-size: 1em; } }
+    @media screen and (max-width: 479px) {
+      rl-ka-dish-landing videoplayer h2.ka-dish-landing-videoplayer-title {
+        font-size: 0.7em; } }
     rl-ka-dish-landing videoplayer > ul {
       overflow: hidden; }
       rl-ka-dish-landing videoplayer > ul li {
@@ -512,6 +520,10 @@ rl-ka-dish-landing {
         @media screen and (max-width: 820px) {
           rl-ka-dish-landing videoplayer-selector .ka-dish-landing-videoplayer-text .ka-dish-landing-videoplayer-title {
             font-size: 1.2em; } }
+        @media screen and (max-width: 479px) {
+          rl-ka-dish-landing videoplayer-selector .ka-dish-landing-videoplayer-text .ka-dish-landing-videoplayer-title {
+            margin-top: -5px;
+            font-size: 0.7em; } }
       rl-ka-dish-landing videoplayer-selector .ka-dish-landing-videoplayer-text .ka-dish-landing-videoplayer-button {
         font-size: 0.8em;
         position: relative;
@@ -593,7 +605,7 @@ rl-ka-dish-landing {
       font-weight: 100;
       font-size: 32px;
       letter-spacing: 1px;
-      margin-top: 125px; }
+      margin-top: 20px; }
       @media screen and (max-width: 1275px) {
         rl-ka-dish-landing masthead .ka-landing-title h1 {
           position: relative;
@@ -604,6 +616,9 @@ rl-ka-dish-landing {
           padding-bottom: 10px;
           left: 0;
           margin-top: 0px; } }
+      @media screen and (max-width: 479px) {
+        rl-ka-dish-landing masthead .ka-landing-title h1 {
+          font-size: 1.5em; } }
   rl-ka-dish-landing features .row {
     width: 100%;
     height: 300px;
@@ -710,7 +725,8 @@ rl-ka-dish-landing {
     rl-ka-dish-landing features feature-button .ka-landing-feature-button {
       border: solid;
       border-color: #aaaaaa;
-      border-width: 4px; }
+      border-width: 4px;
+      height: 100%; }
     @media screen and (max-width: 1275px) {
       rl-ka-dish-landing features feature-button {
         height: 150px; } }
@@ -756,6 +772,9 @@ rl-ka-dish-landing {
       @media screen and (max-width: 820px) {
         rl-ka-dish-landing product-selector h2 {
           margin-bottom: 0px; } }
+      @media screen and (max-width: 479px) {
+        rl-ka-dish-landing product-selector h2 {
+          font-size: 1.5em; } }
     rl-ka-dish-landing product-selector #french-door, rl-ka-dish-landing product-selector #side-by-side, rl-ka-dish-landing product-selector #bottom-freezer, rl-ka-dish-landing product-selector #under-counter, rl-ka-dish-landing product-selector #built-in {
       opacity: 0; }
     rl-ka-dish-landing product-selector product-slides {
@@ -788,7 +807,8 @@ rl-ka-dish-landing {
           background-position-y: -30px; } }
     rl-ka-dish-landing product-selector .rl-ka-lndng-fridge-title.mobile {
       display: none;
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      font-size: 1.5em; }
       @media screen and (max-width: 820px) {
         rl-ka-dish-landing product-selector .rl-ka-lndng-fridge-title.mobile {
           position: relative;
@@ -884,6 +904,9 @@ rl-ka-dish-landing {
     position: relative;
     display: block;
     top: 70px; }
+    @media screen and (max-width: 479px) {
+      rl-ka-dish-landing product-selector-nav {
+        top: 50px; } }
     rl-ka-dish-landing product-selector-nav .row {
       position: relative; }
     rl-ka-dish-landing product-selector-nav .ka-dish-landing-product, rl-ka-dish-landing product-selector-nav .see-all {
@@ -892,14 +915,16 @@ rl-ka-dish-landing {
       margin-right: 5%; }
       rl-ka-dish-landing product-selector-nav .ka-dish-landing-product img, rl-ka-dish-landing product-selector-nav .see-all img {
         width: 100%; }
-    @media screen and (max-width: 820px) {
-      rl-ka-dish-landing product-selector-nav .ka-dish-landing-product {
-        width: 16.5%; } }
-    rl-ka-dish-landing product-selector-nav .ka-dish-landing-product > img {
-      -webkit-transition: all 0.2s ease;
-      -moz-transition: all 0.2s ease;
-      -o-transition: all 0.2s ease;
-      transition: all 0.2s ease; }
+    rl-ka-dish-landing product-selector-nav .ka-dish-landing-product {
+      font-size: 0.8em; }
+      @media screen and (max-width: 820px) {
+        rl-ka-dish-landing product-selector-nav .ka-dish-landing-product {
+          width: 16.5%; } }
+      rl-ka-dish-landing product-selector-nav .ka-dish-landing-product > img {
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        transition: all 0.2s ease; }
     rl-ka-dish-landing product-selector-nav .ka-dish-landing-product:not(.selected) > img {
       opacity: 0.6; }
     rl-ka-dish-landing product-selector-nav .ka-dish-landing-product:not(.selected) .ka-dish-landing-button {
@@ -925,8 +950,10 @@ rl-ka-dish-landing {
         display: table-cell;
         vertical-align: middle;
         text-align: center;
-        line-height: 13px;
-        font-size: 0.8em; }
+        line-height: 13px; }
+        @media (max-width: 479px) {
+          rl-ka-dish-landing product-selector-nav .ka-dish-landing-button p {
+            font-size: 0.8em; } }
     rl-ka-dish-landing product-selector-nav .ka-dish-landing-product:hover > img {
       opacity: 0.75; }
     rl-ka-dish-landing product-selector-nav .ka-dish-landing-product:hover .ka-dish-landing-button {
@@ -979,6 +1006,9 @@ rl-ka-dish-landing {
   @media screen and (max-width: 820px) {
     rl-ka-dish-landing product-selector.fr product-selector-nav div .ka-dish-landing-button p {
       font-size: 0.6em; } }
+  @media screen and (max-width: 479px) {
+    rl-ka-dish-landing product-selector.fr product-selector-nav {
+      top: 50px; } }
   rl-ka-dish-landing product-selector.fr product-slides product-slide .rl-ka-lndng-fridge-title.mobile {
     font-size: 18px;
     line-height: 20px; }
@@ -1015,24 +1045,31 @@ rl-ka-dish-landing {
   rl-ka-dish-landing more-features {
     padding: 50px 0 70px 0;
     overflow: hidden; }
+    @media screen and (max-width: 479px) {
+      rl-ka-dish-landing more-features {
+        padding: 50px 0 20px 0; } }
     rl-ka-dish-landing more-features h2 {
       font-size: 3em;
       text-transform: uppercase;
       text-align: center;
       font-weight: 800;
       width: 100%;
-      padding: 50px 0 10px 0; }
+      padding: 50px 0 30px 0; }
       @media screen and (max-width: 685px) {
         rl-ka-dish-landing more-features h2 {
           font-size: 2em; } }
+      @media screen and (max-width: 479px) {
+        rl-ka-dish-landing more-features h2 {
+          font-size: 1.5em;
+          padding: 50px 0 10px 0; } }
     rl-ka-dish-landing more-features more-features-feature {
-      margin: 0 2px; }
+      padding: 0 2px; }
     rl-ka-dish-landing more-features more-features-feature:first-of-type {
       margin-left: initial; }
     rl-ka-dish-landing more-features more-features-feature:last-of-type {
       margin-right: initial; }
   rl-ka-dish-landing more-features-feature {
-    width: 32.5%;
+    width: 33.33333333%;
     float: left;
     display: table;
     cursor: default; }
@@ -1084,6 +1121,10 @@ rl-ka-dish-landing {
       text-align: center;
       margin-top: 15px;
       color: #000000; }
+      @media screen and (max-width: 479px) {
+        rl-ka-dish-landing more-features-feature .bottom-text {
+          font-size: 0.8em;
+          margin-top: 9px; } }
   rl-ka-dish-landing banner {
     cursor: default; }
     rl-ka-dish-landing banner img {
@@ -1165,6 +1206,9 @@ rl-ka-dish-landing {
     margin: 0 auto;
     position: relative;
     display: block; }
+
+.device-mobile rl-ka-dish-landing {
+  margin-top: 0; }
 
 [class*="explorer"] features .ka-landing-feature-button-over:hover {
   opacity: 1; }

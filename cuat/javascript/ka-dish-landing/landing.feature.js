@@ -30,7 +30,7 @@ System.register(['angular2/core', './landing.feature.button.js', './models/featu
             Features = (function () {
                 function Features(appdata) {
                     this.appdata = appdata;
-                    this.featureButtons = [];
+                    this.featureButtons = new Array();
                     this.enabled = true;
                     var data = appdata.get();
                     this.enabled = data.features.enabled;
@@ -42,10 +42,10 @@ System.register(['angular2/core', './landing.feature.button.js', './models/featu
                 Features = __decorate([
                     core_1.Component({
                         selector: 'features',
-                        templateUrl: '/javascript/ka-dish-landing/views/landing.feature.view.html',
+                        template: "\n        <div class=\"row {{!enabled ? 'hide': ''}}\">\n            <feature-button *ngFor=\"#feature of featureButtons; #i=index\" [timeline]=\"feature.timeline\" [btnIcon]= \"feature.btnIcon\" [btnTitle]= \"feature.btnTitle\" [btnRollOverCopy]=\"feature.btnRollOverCopy\" [btnRollOverCTA]=\"feature.btnRollOverCTA\" [btnAlt]=\"feature.btnAlt\" [btnType]=\"feature.btnType\" [btnLink]=\"feature.btnLink\">\n\n            </feature-button>\n        </div>\n    ",
                         directives: [landing_feature_button_1.FeatureButton],
                     }), 
-                    __metadata('design:paramtypes', [appdata_service_1.AppData])
+                    __metadata('design:paramtypes', [appdata_service_1.AppDataService])
                 ], Features);
                 return Features;
             }());

@@ -53,6 +53,7 @@ rl-ka-dish-landing {
 	font-size: 12pt;
 	position: relative;
 	display: block;
+	margin-top: 117px;
 
 	h1,h2,h3,h4,h5,[class*='title'] {
 		color: $titleColor !important;
@@ -79,6 +80,12 @@ rl-ka-dish-landing {
 		margin: 0 auto;
 		position: relative;
 		display: block;
+	}
+}
+
+.device-mobile {
+	rl-ka-dish-landing {
+		margin-top: 0;
 	}
 }
 

@@ -34,9 +34,9 @@ System.register(['angular2/core', './services/appdata.service.js'], function(exp
                 AppMasthead = __decorate([
                     core_1.Component({
                         selector: 'masthead',
-                        templateUrl: '/javascript/ka-dish-landing/views/masthead.view.html'
+                        template: "\n    \t<div class=\"{{!enabled ? 'hide': ''}}\">\n\t\t\t<div class=\"ka-landing-title\"><h1>{{title}}</h1></div>\n\t\t\t<div id=\"ka-landing-masthead\"><img src=\"{{image}}\" alt=\"{{alt}}\" /></div>\n\t\t</div>\n    "
                     }), 
-                    __metadata('design:paramtypes', [appdata_service_1.AppData])
+                    __metadata('design:paramtypes', [appdata_service_1.AppDataService])
                 ], AppMasthead);
                 return AppMasthead;
             }());

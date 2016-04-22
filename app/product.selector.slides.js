@@ -55,7 +55,6 @@ System.register(['angular2/core', './product.selector.slide', './services/logger
                     configurable: true
                 });
                 ProductSlides.prototype.onBreakpointChange = function (evt) {
-                    console.log('product.selector.onBreakpointChange');
                     var target = this.selectedProduct.prodId;
                     this.playIn(this, true, target);
                 };

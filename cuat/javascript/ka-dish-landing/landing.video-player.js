@@ -31,10 +31,12 @@ System.register(['angular2/core', './landing.video-player.selector.js', './landi
             }],
         execute: function() {
             VideoPlayer = (function () {
-                function VideoPlayer(appdata, logger) {
+                function VideoPlayer(appdata, logger, elementRef) {
                     this.appdata = appdata;
                     this.logger = logger;
+                    this.elementRef = elementRef;
                     this.currentId = 0;
+                    this._lastHeight = -1;
                     this.enabled = true;
                     var data = appdata.get();
                     this.enabled = data.videoplayer.enabled;
@@ -44,13 +46,26 @@ System.register(['angular2/core', './landing.video-player.selector.js', './landi
                 VideoPlayer.prototype.select = function (id) {
                     this.currentId = id;
                 };
+                VideoPlayer.prototype.ngAfterViewInit = function () {
+                    var self = this;
+                    this._resizeInterval = setInterval(function () { self.onResize.call(self); }, 250);
+                };
+                VideoPlayer.prototype.onResize = function () {
+                    //make sure the second image is the same height as the others
+                    var element = this.elementRef.nativeElement;
+                    var height = $(element).find('videoplayer-selector img').first().height();
+                    $(element).find('videoplayer-selector img').eq(1).css('height', height);
+                    if (this._lastHeight == height && height != 0)
+                        clearInterval(this._resizeInterval);
+                    this._lastHeight = height;
+                };
                 VideoPlayer = __decorate([
                     core_1.Component({
                         selector: 'videoplayer',
-                        templateUrl: '/javascript/ka-dish-landing/views/landing.video-player.view.html',
+                        template: "\n    \t<h2 (window:resize)=\"onResize()\" class=\"{{!enabled ? 'hide': ''}}\">{{title}}</h2>\n\t\t<videoplayer-player class=\"{{!enabled ? 'hide': ''}}\" [data]=\"videos\" [currentId]=\"currentId\"></videoplayer-player>\n\t\t<ul class=\"{{!enabled ? 'hide': ''}}\">\n\t\t\t<li *ngFor=\"#video of videos; #i=index\">\n\t\t\t\t<videoplayer-selector (selectedVideo)=\"select($event)\" [data]=\"video\" [id]=\"i\" [selected]=\"currentId == i\"></videoplayer-selector>\n\t\t\t</li>\n\t\t</ul>\n    ",
                         directives: [landing_video_player_player_1.VideoPlayerPlayer, landing_video_player_selector_1.VideoPlayerSelector]
                     }), 
-                    __metadata('design:paramtypes', [appdata_service_1.AppData, logger_service_1.Logger])
+                    __metadata('design:paramtypes', [appdata_service_1.AppDataService, logger_service_1.LoggerService, core_1.ElementRef])
                 ], VideoPlayer);
                 return VideoPlayer;
             }());
