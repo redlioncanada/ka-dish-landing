@@ -18,58 +18,52 @@ export class VideoPlayerVideo {
 	public ready: boolean
 	public ended: boolean
 
-	constructor(private logger: LoggerService, private window: Window) {
+	constructor(private logger: LoggerService) {
 		this.ready = false
 		this.selected = true
 		this.ended = false
 	}
 
 	ngAfterViewInit() {
-		if (this.hasVideo()) this.waitForYoutube()
-	}
-
-	waitForYoutube() {
-		if (YT && YT.Player) {
-			this.initYoutube()
-		} else {
-			setTimeout(this.waitForYoutube.bind(this), 500)
-		}
-	}
-
-	initYoutube() {
 		let self = this
-
-		this.player = new YT.Player(this.id, {
-			events: {
-				onReady: function() {
-					self._onReady(self)
-				},
-				onStateChanged: function(state) {
-					switch (state) {
-						case 0:
-							//ended
-							self._onEnded(self)
-							break;
-						case 1:
-						//playing
-						case 2:
-						//paused
-						case 3:
-						//buffering
-						case 4:
-						//video cued
+		if (this.hasVideo()) {
+			this.player = new YT.Player(this.id, {
+				events: {
+					onReady: function() {
+						self._onReady(self)
+					},
+					onStateChanged: function(state) {
+						switch (state) {
+							case 0:
+								//ended
+								self._onEnded(self)
+								break;
+							case 1:
+							//playing
+							case 2:
+							//paused
+							case 3:
+							//buffering
+							case 4:
+							//video cued
+						}
 					}
 				}
-			}
-		})
+			})
+		}
 	}
 
 	ngOnChanges(changes) {
 		if (this.hasVideo()) {
 			if ("selected" in changes) {
+				console.log(changes);
 				if (changes.selected.currentValue) {
+					//if (this.ended) {
 					this.ended = false
 					this.restart(this)
+					//} else {
+					//	this.play(this)
+					//}
 				} else {
 					this.pause(this)
 					this.reset(this)

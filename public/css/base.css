@@ -310,6 +310,7 @@ rl-ka-dish-landing {
     line-height: 17px;
     margin-bottom: 8px; }
   rl-ka-dish-landing #main-nav li.menu-back {
+    background-image: url("../images/template/nav-back-sprite.png");
     background-repeat: no-repeat;
     background-position: 6% 16px;
     border-bottom: 1px solid #D6D6D6;
@@ -319,8 +320,10 @@ rl-ka-dish-landing {
     padding: 10px 10px 10px 17px; }
   rl-ka-dish-landing #main-nav li.menu-back.hold,
   rl-ka-dish-landing #main-nav li.menu-back-light.hold {
+    background-image: url("../images/template/nav-back-sprite.png");
     background-position: 6% -9px; }
   rl-ka-dish-landing #main-nav li.menu-back-light {
+    background-image: url("../images/template/nav-back-sprite.png");
     background-repeat: no-repeat;
     background-position: 6% -33px;
     border-bottom: 1px solid #D6D6D6;
@@ -1160,5 +1163,5 @@ rl-ka-dish-landing {
     position: relative;
     display: block; }
 
-[class*="browser-explorer"] features .ka-landing-feature-button-over:hover {
+[class*="explorer"] features .ka-landing-feature-button-over:hover {
   opacity: 1; }
