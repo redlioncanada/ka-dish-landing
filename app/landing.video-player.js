@@ -1,4 +1,6 @@
-System.register(['angular2/core', './landing.video-player.selector', './landing.video-player.player', './services/logger.service', './services/appdata.service'], function(exports_1) {
+System.register(['angular2/core', './landing.video-player.selector', './landing.video-player.player', './services/logger.service', './services/appdata.service'], function(exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -48,10 +50,10 @@ System.register(['angular2/core', './landing.video-player.selector', './landing.
                         template: "\n    \t<h2 class=\"{{!enabled ? 'hide': ''}}\">{{title}}</h2>\n\t\t<videoplayer-player class=\"{{!enabled ? 'hide': ''}}\" [data]=\"videos\" [currentId]=\"currentId\"></videoplayer-player>\n\t\t<ul class=\"{{!enabled ? 'hide': ''}}\">\n\t\t\t<li *ngFor=\"#video of videos; #i=index\">\n\t\t\t\t<videoplayer-selector (selectedVideo)=\"select($event)\" [data]=\"video\" [id]=\"i\" [selected]=\"currentId == i\"></videoplayer-selector>\n\t\t\t</li>\n\t\t</ul>\n    ",
                         directives: [landing_video_player_player_1.VideoPlayerPlayer, landing_video_player_selector_1.VideoPlayerSelector]
                     }), 
-                    __metadata('design:paramtypes', [appdata_service_1.AppData, logger_service_1.LoggerService])
+                    __metadata('design:paramtypes', [appdata_service_1.AppDataService, logger_service_1.LoggerService])
                 ], VideoPlayer);
                 return VideoPlayer;
-            })();
+            }());
             exports_1("VideoPlayer", VideoPlayer);
         }
     }

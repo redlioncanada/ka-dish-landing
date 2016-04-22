@@ -1,10 +1,16 @@
-///<reference path="../node_modules/angular2/typings/browser.d.ts"/>
+/// <reference path="../node_modules/angular2/typings/browser.d.ts"/>
+/// <reference path="../typings/jquery/jquery.d.ts" />
+/// <reference path="../typings/greensock/greensock.d.ts" />
 import {bootstrap}    from 'angular2/platform/browser'
 import {HTTP_PROVIDERS} from 'angular2/http'
 import {LoggerService} from './services/logger.service'
 import {GoogleApiService} from './services/googleapi.service'
-import {AppData} from './services/appdata.service'
-import {Component} from 'angular2/core';
+import {AnalyticsService} from './services/analytics.service'
+import {BreakpointService} from './services/breakpoint.service'
+import {AppDataService} from './services/appdata.service'
+import {EnvironmentService} from './services/environment.service'
+import {WindowProvider} from './providers/window.provider'
+import {Component, enableProdMode} from 'angular2/core';
 
 import {VideoPlayer} from './landing.video-player';
 import {AppMasthead} from './landing.masthead';
@@ -14,7 +20,6 @@ import {MoreFeatures} from './landing.morefeatures'
 import {Banner} from './landing.banner'
 import {Header} from './landing.header'
 import {Footer} from './landing.footer'
-
 
 @Component({
     selector: 'rl-ka-dish-landing',
@@ -31,11 +36,33 @@ import {Footer} from './landing.footer'
     directives: [VideoPlayer, AppMasthead, Features, ProductSelector, Banner, MoreFeatures, Header, Footer]
 })
 class AppComponent {
-	public language: string;
+    constructor(private appdata: AppDataService,
+    			private analytics: AnalyticsService,
+    			private breakpoint: BreakpointService,
+    			private env: EnvironmentService)
+    {
+		analytics.bind('language', function(str) {
+			return window.location.href.indexOf('fr_CA/') > -1 ? 'FR' : 'EN'
+		})
+        analytics.bind('category', function(str) {
+            return 'Refer Landing Page'
+        })
 
-    constructor(private appdata: AppData) {
-    	this.language = appdata.language
+        breakpoint.add('mobile', 480)
+        breakpoint.add('tablet', 481)
+        breakpoint.add('desktop', 820)
+    }
+
+    ngAfterViewInit() {
+    	//initialize() relies on global window object, so we have to wait for ViewInit
+    	this.breakpoint.initialize()
+    	this.env.initialize()
+
+    	if (this.env.isDev()) {
+			this.analytics.debugMode(true)
+			this.breakpoint.debugMode(true)
+    	}
     }
  }
 
-bootstrap(AppComponent, [HTTP_PROVIDERS, LoggerService, GoogleApiService, AppData])
+bootstrap(AppComponent, [HTTP_PROVIDERS, LoggerService, GoogleApiService, AppDataService, AnalyticsService, BreakpointService, EnvironmentService, WindowProvider])

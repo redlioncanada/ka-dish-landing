@@ -3,12 +3,12 @@ import {Injectable} from 'angular2/core';
 import {LoggerService} from './logger.service'
 
 @Injectable()
-export class AppData {
+export class AppDataService {
 	private contents;
 	public language: string;
 	private init: boolean
 
-	constructor(private logger: LoggerService) {
+	constructor(private logger: LoggerService, private window: Window) {
 		this.language = this.getLanguage()
 		this.contents = {}
 		this.contents.en = {

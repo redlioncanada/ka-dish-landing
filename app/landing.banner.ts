@@ -1,6 +1,6 @@
 import {Component, Input} from 'angular2/core'
 import {LearnMoreButton} from './landing.learn-more.button'
-import {AppData} from './services/appdata.service'
+import {AppDataService} from './services/appdata.service'
 import {LoggerService} from './services/logger.service'
 
 @Component({
@@ -19,7 +19,7 @@ export class Banner {
 	private image: string
 	private enabled: boolean
 
-	constructor(private appdata: AppData, private logger: LoggerService) {
+	constructor(private appdata: AppDataService, private logger: LoggerService) {
 		this.enabled = true
 		var data = appdata.get()
 		this.enabled = data.banner.enabled

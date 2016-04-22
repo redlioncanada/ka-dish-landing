@@ -1,4 +1,6 @@
-System.register(['angular2/core', './logger.service', 'rxjs/Observable', 'rxjs/add/operator/share'], function(exports_1) {
+System.register(['angular2/core', './logger.service'], function(exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,7 +10,7 @@ System.register(['angular2/core', './logger.service', 'rxjs/Observable', 'rxjs/a
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, logger_service_1, Observable_1;
+    var core_1, logger_service_1;
     var BreakpointService;
     return {
         setters:[
@@ -17,15 +19,10 @@ System.register(['angular2/core', './logger.service', 'rxjs/Observable', 'rxjs/a
             },
             function (logger_service_1_1) {
                 logger_service_1 = logger_service_1_1;
-            },
-            function (Observable_1_1) {
-                Observable_1 = Observable_1_1;
-            },
-            function (_1) {}],
+            }],
         execute: function() {
             BreakpointService = (function () {
                 function BreakpointService(logger, window) {
-                    var _this = this;
                     this.logger = logger;
                     this.window = window;
                     var self = this;
@@ -33,7 +30,7 @@ System.register(['angular2/core', './logger.service', 'rxjs/Observable', 'rxjs/a
                     this.widths = {};
                     this.debug = false;
                     this.init = false;
-                    this.event = new Observable_1.Observable(function (observer) { return _this._observer = observer; }).share();
+                    this.event$ = new core_1.EventEmitter();
                     this.window.onresize = function (e) {
                         self.update.call(self, e);
                     };
@@ -68,7 +65,7 @@ System.register(['angular2/core', './logger.service', 'rxjs/Observable', 'rxjs/a
                     }
                 };
                 BreakpointService.prototype.emit = function () {
-                    this._observer.next(this.breakpoint);
+                    this.event$.next(this.breakpoint);
                 };
                 BreakpointService.prototype.update = function (evt) {
                     var window = this.getWindow();
@@ -124,7 +121,7 @@ System.register(['angular2/core', './logger.service', 'rxjs/Observable', 'rxjs/a
                     __metadata('design:paramtypes', [logger_service_1.LoggerService, Window])
                 ], BreakpointService);
                 return BreakpointService;
-            })();
+            }());
             exports_1("BreakpointService", BreakpointService);
         }
     }

@@ -1,4 +1,6 @@
-System.register(['angular2/core', './services/logger.service'], function(exports_1) {
+System.register(['angular2/core', './services/logger.service'], function(exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -56,9 +58,7 @@ System.register(['angular2/core', './services/logger.service'], function(exports
                 VideoPlayerVideo.prototype.ngOnChanges = function (changes) {
                     if (this.hasVideo()) {
                         if ("selected" in changes) {
-                            console.log(changes);
                             if (changes.selected.currentValue) {
-                                //if (this.ended) {
                                 this.ended = false;
                                 this.restart(this);
                             }
@@ -135,7 +135,7 @@ System.register(['angular2/core', './services/logger.service'], function(exports
                     __metadata('design:paramtypes', [logger_service_1.LoggerService])
                 ], VideoPlayerVideo);
                 return VideoPlayerVideo;
-            })();
+            }());
             exports_1("VideoPlayerVideo", VideoPlayerVideo);
         }
     }

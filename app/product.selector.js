@@ -1,4 +1,6 @@
-System.register(['angular2/core', './product.selector.slides', './product.selector.nav', './services/appdata.service', './models/products.model'], function(exports_1) {
+System.register(['angular2/core', './product.selector.slides', './product.selector.nav', './services/appdata.service', './models/products.model'], function(exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -65,10 +67,10 @@ System.register(['angular2/core', './product.selector.slides', './product.select
                         template: "\n        <div class=\"row\" class=\"{{!enabled ? 'hide' : ''}}\">\n            <div>\n                <h2 class=\"title\">{{title}}</h2>\n            </div>\n            <product-slides [products]=\"products\" [selectedProduct]=\"selectedProduct\" (isAnimating)=\"isAnimating($event)\"></product-slides>\n            <product-selector-nav [products]=\"products\" [selectedProduct]=\"selectedProduct\" (productSelected)=\"productSelected($event)\"></product-selector-nav>\n        </div>\n    ",
                         directives: [product_selector_slides_1.ProductSlides, product_selector_nav_1.ProductSelectorNav],
                     }), 
-                    __metadata('design:paramtypes', [appdata_service_1.AppData])
+                    __metadata('design:paramtypes', [appdata_service_1.AppDataService])
                 ], ProductSelector);
                 return ProductSelector;
-            })();
+            }());
             exports_1("ProductSelector", ProductSelector);
         }
     }

@@ -1,9 +1,6 @@
-System.register(['angular2/core', './product.selector.slide', './landing.timeline-controller'], function(exports_1) {
-    var __extends = (this && this.__extends) || function (d, b) {
-        for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
+System.register(['angular2/core', './product.selector.slide'], function(exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -16,7 +13,7 @@ System.register(['angular2/core', './product.selector.slide', './landing.timelin
     var __param = (this && this.__param) || function (paramIndex, decorator) {
         return function (target, key) { decorator(target, key, paramIndex); }
     };
-    var core_1, product_selector_slide_1, landing_timeline_controller_1;
+    var core_1, product_selector_slide_1;
     var ProductSlides;
     return {
         setters:[
@@ -25,15 +22,10 @@ System.register(['angular2/core', './product.selector.slide', './landing.timelin
             },
             function (product_selector_slide_1_1) {
                 product_selector_slide_1 = product_selector_slide_1_1;
-            },
-            function (landing_timeline_controller_1_1) {
-                landing_timeline_controller_1 = landing_timeline_controller_1_1;
             }],
         execute: function() {
-            ProductSlides = (function (_super) {
-                __extends(ProductSlides, _super);
+            ProductSlides = (function () {
                 function ProductSlides(elementRef) {
-                    _super.call(this);
                     this.isAnimating = new core_1.EventEmitter();
                     this.elementRef = elementRef;
                     this.animating = false;
@@ -185,7 +177,7 @@ System.register(['angular2/core', './product.selector.slide', './landing.timelin
                     __metadata('design:paramtypes', [core_1.ElementRef])
                 ], ProductSlides);
                 return ProductSlides;
-            })(landing_timeline_controller_1.TimelineController);
+            }());
             exports_1("ProductSlides", ProductSlides);
         }
     }

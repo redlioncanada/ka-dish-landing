@@ -1,7 +1,7 @@
 import {Component} from 'angular2/core'
 import {ProductSlides} from './product.selector.slides'
 import {ProductSelectorNav} from './product.selector.nav'
-import {AppData} from './services/appdata.service'
+import {AppDataService} from './services/appdata.service'
 import {ProductModel} from './models/products.model'
 
 @Component({
@@ -24,7 +24,7 @@ export class ProductSelector {
     private title: string;
     private enabled: boolean
 
-    constructor(private appdata:AppData) {
+    constructor(private appdata: AppDataService) {
         this.enabled = true
         var data = appdata.get()
 

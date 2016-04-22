@@ -1,6 +1,6 @@
 import {Component} from 'angular2/core'
 import {MoreFeaturesFeature} from './landing.morefeatures.feature'
-import {AppData} from './services/appdata.service'
+import {AppDataService} from './services/appdata.service'
 import {LoggerService} from './services/logger.service'
 
 @Component({
@@ -19,7 +19,7 @@ export class MoreFeatures {
 	public title
 	private enabled
 
-	constructor(private appdata: AppData, private logger: LoggerService) {
+	constructor(private appdata: AppDataService, private logger: LoggerService) {
 		this.enabled = true
 		var data = appdata.get()
 		this.enabled = data.morefeatures.enabled

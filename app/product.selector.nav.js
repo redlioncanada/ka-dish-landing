@@ -1,4 +1,6 @@
-System.register(['angular2/core', './services/appdata.service'], function(exports_1) {
+System.register(['angular2/core', './services/appdata.service'], function(exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -49,10 +51,10 @@ System.register(['angular2/core', './services/appdata.service'], function(export
                         selector: 'product-selector-nav',
                         template: "\n    \t<div class=\"row {{!enabled ? 'hide' : ''}}\">\n\t\t\t<div class=\"ka-dish-landing-product {{selectedProduct.prodId == product.prodId ? 'selected' : ''}}\" *ngFor=\"#product of products; #i = index\" (click)=\"select(product)\">\n\t\t\t\t<img src=\"{{product.prodImage}}\"/>\n\t\t\t\t<div class=\"ka-dish-landing-button\"><p [innerHTML]=\"product.prodName\"></p></div>\n\t\t\t</div>\n\t\t\t<a target=\"_blank\" href=\"{{ctaLink}}\"><div class=\"see-all\">\n\t\t\t\t<p>{{ctaText}}</p>\n\t\t\t</div></a>\n\t\t</div>\n    "
                     }), 
-                    __metadata('design:paramtypes', [appdata_service_1.AppData])
+                    __metadata('design:paramtypes', [appdata_service_1.AppDataService])
                 ], ProductSelectorNav);
                 return ProductSelectorNav;
-            })();
+            }());
             exports_1("ProductSelectorNav", ProductSelectorNav);
         }
     }

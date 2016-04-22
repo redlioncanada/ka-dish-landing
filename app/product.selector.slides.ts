@@ -1,10 +1,7 @@
-/// <reference path="../typings/jquery/jquery.d.ts" />
-/// <reference path="../typings/greensock/greensock.d.ts" />
 import {bootstrap}    from 'angular2/platform/browser'
 import {Component, Input, Output, Inject, ElementRef, EventEmitter} from 'angular2/core'
 import {ProductSlide} from './product.selector.slide'
 import {ProductModel} from './models/products.model'
-import {TimelineController} from './landing.timeline-controller'
 
 declare var $: JQueryStatic;
 
@@ -19,7 +16,7 @@ declare var $: JQueryStatic;
     `,
     directives: [ProductSlide]
 })
-export class ProductSlides extends TimelineController {
+export class ProductSlides {
     @Input() products;
     @Input() selectedProduct;
     @Output() isAnimating = new EventEmitter();
@@ -41,7 +38,6 @@ export class ProductSlides extends TimelineController {
     }
 
     public constructor(@Inject(ElementRef) elementRef: ElementRef) {
-        super()
         this.elementRef = elementRef
         this.animating = false
         this.imageTop = 155;

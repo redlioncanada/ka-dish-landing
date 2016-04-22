@@ -1,4 +1,6 @@
-System.register(['angular2/core', './landing.learn-more.button', './services/appdata.service', './services/logger.service'], function(exports_1) {
+System.register(['angular2/core', './landing.learn-more.button', './services/appdata.service', './services/logger.service'], function(exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -42,10 +44,10 @@ System.register(['angular2/core', './landing.learn-more.button', './services/app
                         template: "\n    \t<div class=\"{{!enabled ? 'hide': ''}}\">\n\t\t\t<img src=\"{{image}}\"/>\n\t\t\t<learn-more-button [link]=\"link\" [text]=\"ctaText\"></learn-more-button>\n\t\t</div>\n    ",
                         directives: [landing_learn_more_button_1.LearnMoreButton],
                     }), 
-                    __metadata('design:paramtypes', [appdata_service_1.AppData, logger_service_1.LoggerService])
+                    __metadata('design:paramtypes', [appdata_service_1.AppDataService, logger_service_1.LoggerService])
                 ], Banner);
                 return Banner;
-            })();
+            }());
             exports_1("Banner", Banner);
         }
     }

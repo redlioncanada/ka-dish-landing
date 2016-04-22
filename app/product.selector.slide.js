@@ -1,4 +1,6 @@
-System.register(['angular2/core', './landing.learn-more.button', './pipes/remove.html.pipe'], function(exports_1) {
+System.register(['angular2/core', './landing.learn-more.button', './pipes/remove.html.pipe'], function(exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -25,11 +27,6 @@ System.register(['angular2/core', './landing.learn-more.button', './pipes/remove
             ProductSlide = (function () {
                 function ProductSlide() {
                 }
-                ProductSlide.prototype.ngOnChanges = function (changes) {
-                    if ("selected" in changes) {
-                        console.log(changes);
-                    }
-                };
                 __decorate([
                     core_1.Input(), 
                     __metadata('design:type', Object)
@@ -72,7 +69,7 @@ System.register(['angular2/core', './landing.learn-more.button', './pipes/remove
                     __metadata('design:paramtypes', [])
                 ], ProductSlide);
                 return ProductSlide;
-            })();
+            }());
             exports_1("ProductSlide", ProductSlide);
         }
     }

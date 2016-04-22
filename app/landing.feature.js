@@ -1,4 +1,6 @@
-System.register(['angular2/core', './landing.feature.button', './models/features.model', './services/appdata.service'], function(exports_1) {
+System.register(['angular2/core', './landing.feature.button', './models/features.model', './services/appdata.service'], function(exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -43,10 +45,10 @@ System.register(['angular2/core', './landing.feature.button', './models/features
                         template: "\n        <div class=\"row {{!enabled ? 'hide': ''}}\">\n            <feature-button *ngFor=\"#feature of featureButtons; #i=index\" [timeline]=\"feature.timeline\" [btnIcon]= \"feature.btnIcon\" [btnTitle]= \"feature.btnTitle\" [btnRollOverCopy]=\"feature.btnRollOverCopy\" [btnRollOverCTA]=\"feature.btnRollOverCTA\" [btnAlt]=\"feature.btnAlt\" [btnType]=\"feature.btnType\" [btnLink]=\"feature.btnLink\">\n\n            </feature-button>\n        </div>\n    ",
                         directives: [landing_feature_button_1.FeatureButton],
                     }), 
-                    __metadata('design:paramtypes', [appdata_service_1.AppData])
+                    __metadata('design:paramtypes', [appdata_service_1.AppDataService])
                 ], Features);
                 return Features;
-            })();
+            }());
             exports_1("Features", Features);
         }
     }

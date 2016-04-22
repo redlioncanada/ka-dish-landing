@@ -1,4 +1,6 @@
-System.register(['angular2/core', './services/appdata.service'], function(exports_1) {
+System.register(['angular2/core', './services/appdata.service'], function(exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -34,10 +36,10 @@ System.register(['angular2/core', './services/appdata.service'], function(export
                         selector: 'masthead',
                         template: "\n    \t<div class=\"{{!enabled ? 'hide': ''}}\">\n\t\t\t<div class=\"ka-landing-title\"><h1>{{title}}</h1></div>\n\t\t\t<div id=\"ka-landing-masthead\"><img src=\"{{image}}\" alt=\"{{alt}}\" /></div>\n\t\t</div>\n    "
                     }), 
-                    __metadata('design:paramtypes', [appdata_service_1.AppData])
+                    __metadata('design:paramtypes', [appdata_service_1.AppDataService])
                 ], AppMasthead);
                 return AppMasthead;
-            })();
+            }());
             exports_1("AppMasthead", AppMasthead);
         }
     }

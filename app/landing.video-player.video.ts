@@ -56,14 +56,9 @@ export class VideoPlayerVideo {
 	ngOnChanges(changes) {
 		if (this.hasVideo()) {
 			if ("selected" in changes) {
-				console.log(changes);
 				if (changes.selected.currentValue) {
-					//if (this.ended) {
 					this.ended = false
 					this.restart(this)
-					//} else {
-					//	this.play(this)
-					//}
 				} else {
 					this.pause(this)
 					this.reset(this)

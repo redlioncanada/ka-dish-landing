@@ -1,4 +1,6 @@
-System.register(['angular2/core', './logger.service'], function(exports_1) {
+System.register(['angular2/core', './logger.service'], function(exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -9,7 +11,7 @@ System.register(['angular2/core', './logger.service'], function(exports_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1, logger_service_1;
-    var AppData;
+    var AppDataService;
     return {
         setters:[
             function (core_1_1) {
@@ -19,9 +21,10 @@ System.register(['angular2/core', './logger.service'], function(exports_1) {
                 logger_service_1 = logger_service_1_1;
             }],
         execute: function() {
-            AppData = (function () {
-                function AppData(logger) {
+            AppDataService = (function () {
+                function AppDataService(logger, window) {
                     this.logger = logger;
+                    this.window = window;
                     this.language = this.getLanguage();
                     this.contents = {};
                     this.contents.en = {
@@ -334,25 +337,25 @@ System.register(['angular2/core', './logger.service'], function(exports_1) {
                         }
                     };
                 }
-                AppData.prototype.get = function () {
+                AppDataService.prototype.get = function () {
                     if (!(this.language in this.contents)) {
                         this.logger.error('Language does not exist');
                     }
                     return this.contents[this.language];
                 };
-                AppData.prototype.getLanguage = function () {
+                AppDataService.prototype.getLanguage = function () {
                     var url = window.location.href;
                     if (url.indexOf('/fr_CA') > -1)
                         return 'fr';
                     return 'en';
                 };
-                AppData = __decorate([
+                AppDataService = __decorate([
                     core_1.Injectable(), 
-                    __metadata('design:paramtypes', [logger_service_1.LoggerService])
-                ], AppData);
-                return AppData;
-            })();
-            exports_1("AppData", AppData);
+                    __metadata('design:paramtypes', [logger_service_1.LoggerService, Window])
+                ], AppDataService);
+                return AppDataService;
+            }());
+            exports_1("AppDataService", AppDataService);
         }
     }
 });

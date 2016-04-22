@@ -1,4 +1,6 @@
-System.register(['angular2/core', './landing.morefeatures.feature', './services/appdata.service', './services/logger.service'], function(exports_1) {
+System.register(['angular2/core', './landing.morefeatures.feature', './services/appdata.service', './services/logger.service'], function(exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -41,10 +43,10 @@ System.register(['angular2/core', './landing.morefeatures.feature', './services/
                         template: "\n    \t<div class=\"row {{!enabled ? 'hide' : ''}}\">\n\t\t\t<h2>{{title}}</h2>\n\t\t    <more-features-feature *ngFor=\"#feature of moreFeatures; #i=index\" [cta]=\"feature.cta\" [text]=\"feature.text\" [link]=\"feature.link\" [title]=\"feature.title\" [image]=\"feature.image\" [alt]=\"feature.alt\">\n\t\t    </more-features-feature>\n\t\t</div>\n    ",
                         directives: [landing_morefeatures_feature_1.MoreFeaturesFeature],
                     }), 
-                    __metadata('design:paramtypes', [appdata_service_1.AppData, logger_service_1.LoggerService])
+                    __metadata('design:paramtypes', [appdata_service_1.AppDataService, logger_service_1.LoggerService])
                 ], MoreFeatures);
                 return MoreFeatures;
-            })();
+            }());
             exports_1("MoreFeatures", MoreFeatures);
         }
     }
