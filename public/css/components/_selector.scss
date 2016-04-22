@@ -209,6 +209,10 @@ product-selector-nav {
 
     .ka-dish-landing-product:first-child {
         margin-left: 4%;
+
+        @media screen and (max-width: $mobileBreakpoint) {
+            margin-left: 8%;
+        }
     }
 
     .ka-dish-landing-button {

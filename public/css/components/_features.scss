@@ -11,7 +11,7 @@ features {
             height: 180px;
             width: 75%;
             position: relative;
-            left: 13%;
+            left: 12.5%;
         }
     }
     @media screen and (max-width: 785px) {
@@ -19,7 +19,7 @@ features {
             height: 180px;
             width: 100%;
             position: relative;
-            left: .3%;
+            left: 0;
         }
     }
     .ka-landing-feature-icon {
@@ -118,34 +118,24 @@ features {
         position: absolute;
     }
 
-    .ka-landing-feature-button {
-        width: 33%;
-        // width: 49.7%;
-        margin: 2px;
+    feature-button {
+        .ka-landing-feature-button {
+            border: solid;
+            border-color: #aaaaaa;
+            border-width: 4px;
+        }
+
+        width: 33.333333333%;
         float: left;
         height: 266px;
-        border: solid;
-        border-color: #aaaaaa;
-        border-width: 4px;
         position: relative;
         box-sizing: border-box;
+        padding-right: 2px;
         @include transition(0.5s);
 
-        @media screen and (min-width: 922px) {
-            width: 33%;
-        }
-        @media screen and (max-width: 770px) {
-            margin: 3px;
-
-            //added for removal of buying guide
-            // width: 49.3%
-        }
         @media screen and (max-width: 1275px) {
             height: 150px;
-            width: 32%;
-            // width: 49%;
         }
-
         .ka-landing-feature-button-up {
             position: relative;
             z-index: 1;
@@ -173,15 +163,7 @@ features {
         }
     }
 
-    feature-button:first-of-type {
-        .ka-landing-feature-button {
-            margin-left: 0px;
-        }
-    }
-
     feature-button:last-of-type {
-        .ka-landing-feature-button {
-            margin-right: 0px;
-        }
+        padding-right: 0;
     }
 }

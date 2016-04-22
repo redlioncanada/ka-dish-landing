@@ -615,13 +615,13 @@ rl-ka-dish-landing {
         height: 180px;
         width: 75%;
         position: relative;
-        left: 13%; } }
+        left: 12.5%; } }
   @media screen and (max-width: 785px) {
     rl-ka-dish-landing features .row {
       height: 180px;
       width: 100%;
       position: relative;
-      left: .3%; } }
+      left: 0; } }
   rl-ka-dish-landing features .ka-landing-feature-icon {
     width: 100px;
     height: 100px;
@@ -696,36 +696,30 @@ rl-ka-dish-landing {
     width: 100%;
     background-color: #cc0000;
     position: absolute; }
-  rl-ka-dish-landing features .ka-landing-feature-button {
-    width: 33%;
-    margin: 2px;
+  rl-ka-dish-landing features feature-button {
+    width: 33.333333333%;
     float: left;
     height: 266px;
-    border: solid;
-    border-color: #aaaaaa;
-    border-width: 4px;
     position: relative;
     box-sizing: border-box;
+    padding-right: 2px;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease; }
-    @media screen and (min-width: 922px) {
-      rl-ka-dish-landing features .ka-landing-feature-button {
-        width: 33%; } }
-    @media screen and (max-width: 770px) {
-      rl-ka-dish-landing features .ka-landing-feature-button {
-        margin: 3px; } }
+    rl-ka-dish-landing features feature-button .ka-landing-feature-button {
+      border: solid;
+      border-color: #aaaaaa;
+      border-width: 4px; }
     @media screen and (max-width: 1275px) {
-      rl-ka-dish-landing features .ka-landing-feature-button {
-        height: 150px;
-        width: 32%; } }
-    rl-ka-dish-landing features .ka-landing-feature-button .ka-landing-feature-button-up {
+      rl-ka-dish-landing features feature-button {
+        height: 150px; } }
+    rl-ka-dish-landing features feature-button .ka-landing-feature-button-up {
       position: relative;
       z-index: 1; }
-    rl-ka-dish-landing features .ka-landing-feature-button .ka-landing-innerBtn {
+    rl-ka-dish-landing features feature-button .ka-landing-innerBtn {
       position: absolute; }
-    rl-ka-dish-landing features .ka-landing-feature-button .ka-landing-feature-rule {
+    rl-ka-dish-landing features feature-button .ka-landing-feature-rule {
       width: 100px;
       height: 5px;
       background-color: #CC0000;
@@ -736,13 +730,11 @@ rl-ka-dish-landing {
       margin-right: auto;
       margin-top: 10px; }
       @media screen and (max-width: 1275px) {
-        rl-ka-dish-landing features .ka-landing-feature-button .ka-landing-feature-rule {
+        rl-ka-dish-landing features feature-button .ka-landing-feature-rule {
           top: 120px;
           width: 60px; } }
-  rl-ka-dish-landing features feature-button:first-of-type .ka-landing-feature-button {
-    margin-left: 0px; }
-  rl-ka-dish-landing features feature-button:last-of-type .ka-landing-feature-button {
-    margin-right: 0px; }
+  rl-ka-dish-landing features feature-button:last-of-type {
+    padding-right: 0; }
   rl-ka-dish-landing product-selector {
     width: 80%;
     position: relative; }
@@ -914,6 +906,9 @@ rl-ka-dish-landing {
       color: #000000; }
     rl-ka-dish-landing product-selector-nav .ka-dish-landing-product:first-child {
       margin-left: 4%; }
+      @media screen and (max-width: 820px) {
+        rl-ka-dish-landing product-selector-nav .ka-dish-landing-product:first-child {
+          margin-left: 8%; } }
     rl-ka-dish-landing product-selector-nav .ka-dish-landing-button {
       margin-top: 20px;
       height: 38px;
@@ -1099,6 +1094,14 @@ rl-ka-dish-landing {
       @media screen and (max-width: 685px) {
         rl-ka-dish-landing banner learn-more-button {
           font-size: small; } }
+      @media screen and (max-width: 600px) {
+        rl-ka-dish-landing banner learn-more-button {
+          width: 18%; } }
+      @media screen and (max-width: 500px) {
+        rl-ka-dish-landing banner learn-more-button {
+          width: 23%;
+          height: 30px;
+          margin-top: -15px; } }
   rl-ka-dish-landing footer {
     font-family: Helvetica, Arial, sans-serif;
     width: 100%;
