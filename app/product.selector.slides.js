@@ -38,7 +38,7 @@ System.register(['angular2/core', './product.selector.slide', './services/logger
                     this.isAnimating = new core_1.EventEmitter();
                     this.elementRef = elementRef;
                     this.animating = false;
-                    this.imageTop = 155;
+                    this.imageTop = 164;
                     this.titleTop = 170;
                     this.descTop = 238;
                     this.learnTop = 500;
@@ -73,7 +73,7 @@ System.register(['angular2/core', './product.selector.slide', './services/logger
                                     self.descTop = 265;
                                 }
                                 else {
-                                    self.descTop = 215;
+                                    self.descTop = 238;
                                 }
                                 self.playIn(self, false, changes.selectedProduct.currentValue.prodId);
                             });

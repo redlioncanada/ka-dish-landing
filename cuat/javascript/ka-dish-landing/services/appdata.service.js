@@ -22,9 +22,8 @@ System.register(['angular2/core', './logger.service.js'], function(exports_1, co
             }],
         execute: function() {
             AppDataService = (function () {
-                function AppDataService(logger, window) {
+                function AppDataService(logger) {
                     this.logger = logger;
-                    this.window = window;
                     this.language = this.getLanguage();
                     this.contents = {};
                     this.contents.en = {
@@ -65,7 +64,7 @@ System.register(['angular2/core', './logger.service.js'], function(exports_1, co
                                     image: "/images/ka-dish-landing/refer-landing-mag-glass.png",
                                     title: "Find Your KitchenAid",
                                     alt: "Find your KitchenAid",
-                                    desc: "Need help finding your refrigerator?",
+                                    desc: "Need help finding your dishwasher?",
                                     cta: "Click Here",
                                     link: "http://findmy.kitchenaid.ca/#/question/Appliance",
                                     type: "magnifier"
@@ -144,7 +143,7 @@ System.register(['angular2/core', './logger.service.js'], function(exports_1, co
                             },
                             products: [
                                 {
-                                    image: "/images/ka-dish-landing/products/5-door.png",
+                                    image: "/images/ka-dish-landing/products/window.png",
                                     title: "Dishwasher<br/>With Window",
                                     alt: "test",
                                     desc: "Introducing an innovative new design, this dishwasher with window is a great aesthetic enhancement to your kitchen and allows you see when your dishes are done so you can move on to what’s next.",
@@ -153,7 +152,7 @@ System.register(['angular2/core', './logger.service.js'], function(exports_1, co
                                     ctaText: "Learn More"
                                 },
                                 {
-                                    image: "/images/ka-dish-landing/products/built-in.png",
+                                    image: "/images/ka-dish-landing/products/top-control.png",
                                     title: "Fully Integrated",
                                     alt: "test",
                                     desc: "The controls are discreetly placed at the top of the dishwasher and remain hidden when the door is closed to provide a sleek and clean looking front. The sleek bar handle perfectly complements the design and provides easy access to open your dishwasher.",
@@ -162,7 +161,7 @@ System.register(['angular2/core', './logger.service.js'], function(exports_1, co
                                     ctaText: "Learn More"
                                 },
                                 {
-                                    image: "/images/ka-dish-landing/products/french-door.png",
+                                    image: "/images/ka-dish-landing/products/front-control.png",
                                     title: "Front Control",
                                     alt: "test",
                                     desc: "The controls are located on the front and are easily accessible for use after you load your dishes. This model also comes with a pocket handle for a smoother finish and is great for smaller kitchens to allow for more space flexibility in front of the dishwasher.",
@@ -171,7 +170,7 @@ System.register(['angular2/core', './logger.service.js'], function(exports_1, co
                                     ctaText: "Learn More"
                                 },
                                 {
-                                    image: "/images/ka-dish-landing/products/side-by-side.png",
+                                    image: "/images/ka-dish-landing/products/panel-ready.png",
                                     title: "Panel Ready",
                                     alt: "test",
                                     desc: "The premium look to go with your dream kitchen. Custom panel-ready dishwashers have an unfinished door, so you can seamlessly match the custom panel to your cabinetry to give your kitchen a stylish and coordinated look.",
@@ -344,14 +343,14 @@ System.register(['angular2/core', './logger.service.js'], function(exports_1, co
                     return this.contents[this.language];
                 };
                 AppDataService.prototype.getLanguage = function () {
-                    var url = this.window.location.href;
+                    var url = window.location.href;
                     if (url.indexOf('/fr_CA') > -1)
                         return 'fr';
                     return 'en';
                 };
                 AppDataService = __decorate([
                     core_1.Injectable(), 
-                    __metadata('design:paramtypes', [logger_service_1.LoggerService, Window])
+                    __metadata('design:paramtypes', [logger_service_1.LoggerService])
                 ], AppDataService);
                 return AppDataService;
             }());

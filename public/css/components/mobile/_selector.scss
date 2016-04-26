@@ -1,0 +1,23 @@
+product-selector {
+	product-selector-nav {
+		.ka-dish-landing-product:first-child {
+			margin-left: 12.5%;
+		}
+
+		@media screen and (max-width: 769px) and (min-width: 479px) {
+			div.see-all {
+				width: 87.3%;
+				margin: 12px 6.3% 0 6.3%;
+			}
+		}
+
+		.see-all {
+			width: 100%;
+		
+			@media (min-width: 821px) {
+				height: 51px;
+				margin-top: 25px;
+			}
+		}
+	}
+}

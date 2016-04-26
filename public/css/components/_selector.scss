@@ -109,11 +109,8 @@ product-selector {
         height: 30px;
         opacity: 0;
 
-        @media screen and (max-width: 1366px) {
-           transform: scale(1.5,1.5);
-           -webkit-transform: scale(1.5,1.5);
-           left: 515px;
-           font-size: .7em;
+        p {
+            line-height: 30px;
         }
 
         @media screen and (max-width: $mobileBreakpoint) {
@@ -136,7 +133,7 @@ product-selector {
     }
     
     .rl-ka-lndng-fridge img{
-        height: 420px;
+        height: 370px;
 
         @media screen and (max-width: $mobileBreakpoint) {
             height: 200px;
@@ -190,6 +187,14 @@ product-selector-nav {
         width: 14.28571428571429%;
         margin-right: 5%;
 
+        @media screen and (max-width: $mobileBreakpoint) {
+            margin-right: 7px;
+        }
+
+        @media screen and (max-width: 769px) and (min-width: 479px) {
+            margin-right: 13.3px
+        }
+
         img {
             width: 100%;
         }
@@ -199,7 +204,7 @@ product-selector-nav {
         font-size: 0.8em;
 
         @media screen and (max-width: $mobileBreakpoint) {
-            width: 16.5%;
+            width: 20.5%;
         }
 
         > img {
@@ -218,10 +223,10 @@ product-selector-nav {
     }
 
     .ka-dish-landing-product:first-child {
-        margin-left: 4%;
+        margin-left: 4.5%;
 
         @media screen and (max-width: $mobileBreakpoint) {
-            margin-left: 8%;
+            margin-left: 6.3% !important;
         }
     }
 
@@ -237,7 +242,7 @@ product-selector-nav {
         p {
             width: 100%;
             @include centered-table-cell;
-            line-height: 13px;
+            line-height: 14px;
             
             @media(max-width: 479px) {font-size: 0.8em;}
         }
@@ -263,13 +268,12 @@ product-selector-nav {
 
     .see-all {
         width: 13%;
-        margin-left: 1%;
         color: $selectorCTAColor;
         border: 3px solid $selectorCTAColor;
         text-transform: uppercase;
         display: table;
         padding: 0;
-        height: 202px;
+        height: 206px;
         margin-right: 0;
         @include transition(0.2s);
 

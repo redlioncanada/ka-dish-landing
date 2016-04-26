@@ -28,6 +28,7 @@ videoplayer {
 
 	> ul {
 		overflow: hidden;
+		width: 101%;
 
 		li {
 			float: left;
@@ -42,10 +43,6 @@ videoplayer {
 
 		li:first-child {
 			padding-left: 0;
-		}
-
-		li:nth-child(2) img {
-			width: 101.5%;
 		}
 	}
 }
@@ -123,6 +120,7 @@ videoplayer-selector {
 
 			@media screen and (max-width: $mobileBreakpoint) {
 	        	font-size: 1.2em;
+	        	margin-top: -12px;
 	        }
 	        @media screen and (max-width: 479px) {
 	        	margin-top: -5px;
@@ -164,7 +162,7 @@ videoplayer-selector {
 		opacity: 0.45;
 		width: 100%;
 		z-index: 1;
-		@include transition(0.2s);
+		@include transition-opacity(0.2s);
 	}
 
 	.selected {

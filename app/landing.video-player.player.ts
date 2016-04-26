@@ -1,11 +1,13 @@
-import {Component, Input} from 'angular2/core'
+import {Component, Input, ElementRef} from 'angular2/core'
 import {LoggerService} from './services/logger.service'
 import {VideoPlayerVideo} from './landing.video-player.video'
+
+declare var $:JQueryStatic
 
 @Component({
 	selector: 'videoplayer-player',
     template: `
-    	<div>
+    	<div (window:resize)="onResize($event,this)">
 			<ul>
 				<li *ngFor="#video of data; #i=index" class="{{currentId !== i ? 'hide' : 'show'}}">
 					<videoplayer-video [image]="video.image" [id]="video.id" [selected]="currentId == i" [width]="video.width" [height]="video.height"></videoplayer-video>
@@ -25,6 +27,23 @@ export class VideoPlayerPlayer {
 	@Input() data
 	@Input() currentId
 
-	constructor(private logger: LoggerService) {
+	private element
+	private aspect
+
+	constructor(private logger: LoggerService, private elementRef: ElementRef) {
+		this.aspect = 16/9
+		this.element = elementRef.nativeElement
+	}
+
+	ngAfterViewInit() {
+		this.onResize(undefined,this)
+	}
+
+	onResize(evt, self) {
+		if (!self) self = this
+
+		let parent = $(this.element).find('> div')
+		let width = $(parent).width()
+		$(this.element).find('iframe').css('height', width / self.aspect)
 	}
 }

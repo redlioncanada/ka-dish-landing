@@ -25,15 +25,14 @@ System.register(['angular2/core', './logger.service', './environment.service'], 
             }],
         execute: function() {
             AnalyticsService = (function () {
-                function AnalyticsService(logger, window, env) {
+                function AnalyticsService(logger, env) {
                     this.logger = logger;
-                    this.window = window;
                     this.env = env;
-                    this.enabled = this.gaObjectExists();
                     this.debug = false;
                     this.bindings = [];
                 }
                 AnalyticsService.prototype.afterViewInit = function () {
+                    this.window = window;
                     if (!this.enabled)
                         this.enabled = this.gaObjectExists();
                 };
@@ -78,7 +77,7 @@ System.register(['angular2/core', './logger.service', './environment.service'], 
                     return true;
                 };
                 AnalyticsService.prototype.gaObjectExists = function () {
-                    return 'ga' in this.window && typeof this.window['ga'] !== 'undefined' && this.window['ga'];
+                    return this.window && 'ga' in this.window && typeof this.window['ga'] !== 'undefined' && this.window['ga'];
                 };
                 AnalyticsService.prototype.fillBindings = function (arr) {
                     for (var i in arr) {
@@ -106,7 +105,7 @@ System.register(['angular2/core', './logger.service', './environment.service'], 
                 };
                 AnalyticsService = __decorate([
                     core_1.Injectable(), 
-                    __metadata('design:paramtypes', [logger_service_1.LoggerService, Window, environment_service_1.EnvironmentService])
+                    __metadata('design:paramtypes', [logger_service_1.LoggerService, environment_service_1.EnvironmentService])
                 ], AnalyticsService);
                 return AnalyticsService;
             }());

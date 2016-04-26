@@ -85,7 +85,21 @@ rl-ka-dish-landing {
 
 .device-mobile {
 	rl-ka-dish-landing {
+		// @import 'components/header.scss';
+		// @import 'components/videoplayer.scss';
+	    @import 'components/mobile/masthead.scss';
+	    @import 'components/mobile/features.scss';
+	    @import 'components/mobile/selector.scss';
+	    // @import 'components/learn-more-button.scss';
+	    // @import 'components/more-features.scss';
+	    // @import 'components/banner.scss';
+	    // @import 'components/footer.scss';
+
 		margin-top: 0;
+	}
+
+	#page {
+		width: 100%;
 	}
 }
 

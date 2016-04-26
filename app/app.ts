@@ -9,7 +9,6 @@ import {AnalyticsService} from './services/analytics.service'
 import {BreakpointService} from './services/breakpoint.service'
 import {AppDataService} from './services/appdata.service'
 import {EnvironmentService} from './services/environment.service'
-import {WindowProvider} from './providers/window.provider'
 import {Component, enableProdMode} from 'angular2/core';
 
 import {VideoPlayer} from './landing.video-player';
@@ -65,4 +64,4 @@ class AppComponent {
     }
  }
 
-bootstrap(AppComponent, [HTTP_PROVIDERS, LoggerService, GoogleApiService, AppDataService, AnalyticsService, BreakpointService, EnvironmentService, WindowProvider])
+bootstrap(AppComponent, [HTTP_PROVIDERS, LoggerService, GoogleApiService, AppDataService, AnalyticsService, BreakpointService, EnvironmentService])

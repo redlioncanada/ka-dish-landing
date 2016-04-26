@@ -6,7 +6,7 @@ declare var YT
 @Component({
 	selector: 'videoplayer-video',
     template: `
-    	<iframe *ngIf="hasVideo()" id="{{id}}" src="http://www.youtube.com/embed/{{id}}?enablejsapi=1&playerapiid={{id}}&rel=0" width="100%" height="425" allowfullscreen frameborder="0"></iframe>
+    	<iframe *ngIf="hasVideo()" id="{{id}}" src="http://www.youtube.com/embed/{{id}}?enablejsapi=1&playerapiid={{id}}&rel=0" width="100%" allowfullscreen frameborder="0"></iframe>
 		<img *ngIf="hasImage()" src="{{image}}"/>
     `
 })
@@ -26,6 +26,7 @@ export class VideoPlayerVideo {
 
 	ngAfterViewInit() {
 		let self = this
+
 		if (this.hasVideo()) {
 			this.player = new YT.Player(this.id, {
 				events: {

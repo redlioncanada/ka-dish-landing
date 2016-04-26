@@ -19,11 +19,11 @@ System.register(['angular2/core'], function(exports_1, context_1) {
             }],
         execute: function() {
             EnvironmentService = (function () {
-                function EnvironmentService(window) {
-                    this.window = window;
+                function EnvironmentService() {
                     this.hosts = ['localhost', '127.0.0.1'];
                 }
                 EnvironmentService.prototype.afterViewInit = function () {
+                    this.window = window;
                     if (this.hosts.indexOf(this.window.location.hostname) > -1) {
                         this._environment = modes.DEVELOPMENT;
                     }
@@ -44,7 +44,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                 EnvironmentService.prototype.mode = function () { return this.environment(); };
                 EnvironmentService = __decorate([
                     core_1.Injectable(), 
-                    __metadata('design:paramtypes', [Window])
+                    __metadata('design:paramtypes', [])
                 ], EnvironmentService);
                 return EnvironmentService;
             }());

@@ -130,7 +130,7 @@ System.register(['angular2/core', './services/logger.service'], function(exports
                 VideoPlayerVideo = __decorate([
                     core_1.Component({
                         selector: 'videoplayer-video',
-                        template: "\n    \t<iframe *ngIf=\"hasVideo()\" id=\"{{id}}\" src=\"http://www.youtube.com/embed/{{id}}?enablejsapi=1&playerapiid={{id}}&rel=0\" width=\"100%\" height=\"425\" allowfullscreen frameborder=\"0\"></iframe>\n\t\t<img *ngIf=\"hasImage()\" src=\"{{image}}\"/>\n    "
+                        template: "\n    \t<iframe *ngIf=\"hasVideo()\" id=\"{{id}}\" src=\"http://www.youtube.com/embed/{{id}}?enablejsapi=1&playerapiid={{id}}&rel=0\" width=\"100%\" allowfullscreen frameborder=\"0\"></iframe>\n\t\t<img *ngIf=\"hasImage()\" src=\"{{image}}\"/>\n    "
                     }), 
                     __metadata('design:paramtypes', [logger_service_1.LoggerService])
                 ], VideoPlayerVideo);

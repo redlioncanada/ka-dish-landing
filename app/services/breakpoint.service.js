@@ -22,20 +22,20 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
             }],
         execute: function() {
             BreakpointService = (function () {
-                function BreakpointService(logger, window) {
+                function BreakpointService(logger) {
                     this.logger = logger;
-                    this.window = window;
-                    var self = this;
                     this.breakpoints = {};
                     this.widths = {};
                     this.debug = false;
                     this.init = false;
                     this.event$ = new core_1.EventEmitter();
+                }
+                BreakpointService.prototype.afterViewInit = function () {
+                    var self = this;
+                    this.window = window;
                     this.window.onresize = function (e) {
                         self.update.call(self, e);
                     };
-                }
-                BreakpointService.prototype.afterViewInit = function () {
                     this.update(undefined);
                 };
                 BreakpointService.prototype.debugMode = function (b) {
@@ -118,7 +118,7 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                 };
                 BreakpointService = __decorate([
                     core_1.Injectable(), 
-                    __metadata('design:paramtypes', [logger_service_1.LoggerService, Window])
+                    __metadata('design:paramtypes', [logger_service_1.LoggerService])
                 ], BreakpointService);
                 return BreakpointService;
             }());

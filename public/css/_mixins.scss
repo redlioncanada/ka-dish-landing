@@ -39,6 +39,20 @@
     transition: initial;
 }
 
+@mixin transition-opacity($time) {
+	-webkit-transition: opacity $time ease;
+    -moz-transition: opacity $time ease;
+    -o-transition: opacity $time ease;
+    transition: opacity $time ease;
+}
+
+@mixin transition-opacity-reset() {
+	-webkit-transition: initial;
+    -moz-transition: initial;
+    -o-transition: initial;
+    transition: initial;
+}
+
 @mixin centered-table-cell() {
 	display: table-cell;
     vertical-align: middle;

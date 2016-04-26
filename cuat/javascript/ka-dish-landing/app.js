@@ -1,4 +1,4 @@
-System.register(['angular2/platform/browser', 'angular2/http', './services/logger.service.js', './services/googleapi.service.js', './services/analytics.service.js', './services/breakpoint.service.js', './services/appdata.service.js', './services/environment.service.js', './providers/window.provider.js', 'angular2/core', './landing.video-player.js', './landing.masthead.js', './landing.feature.js', './product.selector.js', './landing.morefeatures.js', './landing.banner.js', './landing.header.js', './landing.footer.js'], function(exports_1, context_1) {
+System.register(['angular2/platform/browser', 'angular2/http', './services/logger.service.js', './services/googleapi.service.js', './services/analytics.service.js', './services/breakpoint.service.js', './services/appdata.service.js', './services/environment.service.js', 'angular2/core', './landing.video-player.js', './landing.masthead.js', './landing.feature.js', './product.selector.js', './landing.morefeatures.js', './landing.banner.js', './landing.header.js', './landing.footer.js'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/platform/browser', 'angular2/http', './services/logge
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var browser_1, http_1, logger_service_1, googleapi_service_1, analytics_service_1, breakpoint_service_1, appdata_service_1, environment_service_1, window_provider_1, core_1, landing_video_player_1, landing_masthead_1, landing_feature_1, product_selector_1, landing_morefeatures_1, landing_banner_1, landing_header_1, landing_footer_1;
+    var browser_1, http_1, logger_service_1, googleapi_service_1, analytics_service_1, breakpoint_service_1, appdata_service_1, environment_service_1, core_1, landing_video_player_1, landing_masthead_1, landing_feature_1, product_selector_1, landing_morefeatures_1, landing_banner_1, landing_header_1, landing_footer_1;
     var AppComponent;
     return {
         setters:[
@@ -37,9 +37,6 @@ System.register(['angular2/platform/browser', 'angular2/http', './services/logge
             },
             function (environment_service_1_1) {
                 environment_service_1 = environment_service_1_1;
-            },
-            function (window_provider_1_1) {
-                window_provider_1 = window_provider_1_1;
             },
             function (core_1_1) {
                 core_1 = core_1_1;
@@ -104,7 +101,7 @@ System.register(['angular2/platform/browser', 'angular2/http', './services/logge
                 ], AppComponent);
                 return AppComponent;
             }());
-            browser_1.bootstrap(AppComponent, [http_1.HTTP_PROVIDERS, logger_service_1.LoggerService, googleapi_service_1.GoogleApiService, appdata_service_1.AppDataService, analytics_service_1.AnalyticsService, breakpoint_service_1.BreakpointService, environment_service_1.EnvironmentService, window_provider_1.WindowProvider]);
+            browser_1.bootstrap(AppComponent, [http_1.HTTP_PROVIDERS, logger_service_1.LoggerService, googleapi_service_1.GoogleApiService, appdata_service_1.AppDataService, analytics_service_1.AnalyticsService, breakpoint_service_1.BreakpointService, environment_service_1.EnvironmentService]);
         }
     }
 });
