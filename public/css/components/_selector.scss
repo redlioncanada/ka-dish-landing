@@ -253,16 +253,19 @@ product-selector-nav {
             opacity: 0.75;
         }
 
-        .ka-dish-landing-button {
+        div.ka-dish-landing-button {
             background-color: $selectorBackgroundColor;
-            color: $selectorHighlightedTextColor !important;
+            color: $selectorHighlightedTextColor;
         }
     }
 
     .ka-dish-landing-product.selected {
+        > img {
+            opacity: 0.75 !important;
+        }
         .ka-dish-landing-button {
-            background-color: $selectorBackgroundColor;
-            color: $selectorHighlightedTextColor;
+            background-color: $selectorBackgroundColor !important;
+            color: $selectorHighlightedTextColor !important;
         }
     }
 

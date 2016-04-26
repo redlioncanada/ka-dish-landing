@@ -958,12 +958,14 @@ rl-ka-dish-landing {
             font-size: 0.8em; } }
     rl-ka-dish-landing product-selector-nav .ka-dish-landing-product:hover > img {
       opacity: 0.75; }
-    rl-ka-dish-landing product-selector-nav .ka-dish-landing-product:hover .ka-dish-landing-button {
-      background-color: #cc0000;
-      color: #FFFFFF !important; }
-    rl-ka-dish-landing product-selector-nav .ka-dish-landing-product.selected .ka-dish-landing-button {
+    rl-ka-dish-landing product-selector-nav .ka-dish-landing-product:hover div.ka-dish-landing-button {
       background-color: #cc0000;
       color: #FFFFFF; }
+    rl-ka-dish-landing product-selector-nav .ka-dish-landing-product.selected > img {
+      opacity: 0.75 !important; }
+    rl-ka-dish-landing product-selector-nav .ka-dish-landing-product.selected .ka-dish-landing-button {
+      background-color: #cc0000 !important;
+      color: #FFFFFF !important; }
     rl-ka-dish-landing product-selector-nav .see-all {
       width: 13%;
       color: #959595;
@@ -1232,6 +1234,11 @@ rl-ka-dish-landing {
       .device-mobile rl-ka-dish-landing product-selector product-selector-nav .see-all {
         height: 51px;
         margin-top: 25px; } }
+  .device-mobile rl-ka-dish-landing product-selector product-selector-nav div.ka-dish-landing-product:hover > img {
+    opacity: 0.6; }
+  .device-mobile rl-ka-dish-landing product-selector product-selector-nav div.ka-dish-landing-product:hover div.ka-dish-landing-button {
+    background-color: #FFF;
+    color: #000; }
 
 .device-mobile #page {
   width: 100%; }

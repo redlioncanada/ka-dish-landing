@@ -50,17 +50,10 @@ export class ProductSelector {
 		this.animating = false;
     }
 
-    ngOnChanges(changes) {
-    	if ("selectedProduct" in changes) {
-    		console.log('product selector changed product: ',changes.selectedProduct.currentValue)
-    	}
-    }
-
     //@Output on product.selector.nav
     productSelected(product) {
 		if (!this.animating) {
 			this.selectedProduct = product;
-			console.log('product.selector got new product: ' + product.prodId)
 		}
     }
 

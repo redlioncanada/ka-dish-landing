@@ -1,4 +1,4 @@
-System.register(['angular2/core', './landing.video-player.selector.js', './landing.video-player.player.js', './services/logger.service.js', './services/appdata.service.js', './services/breakpoint.service.js'], function(exports_1, context_1) {
+System.register(['angular2/core', './landing.video-player.selector.js', './landing.video-player.player.js', './services/logger.service.js', './services/appdata.service.js'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', './landing.video-player.selector.js', './landi
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, landing_video_player_selector_1, landing_video_player_player_1, logger_service_1, appdata_service_1, breakpoint_service_1;
+    var core_1, landing_video_player_selector_1, landing_video_player_player_1, logger_service_1, appdata_service_1;
     var VideoPlayer;
     return {
         setters:[
@@ -28,18 +28,13 @@ System.register(['angular2/core', './landing.video-player.selector.js', './landi
             },
             function (appdata_service_1_1) {
                 appdata_service_1 = appdata_service_1_1;
-            },
-            function (breakpoint_service_1_1) {
-                breakpoint_service_1 = breakpoint_service_1_1;
             }],
         execute: function() {
             VideoPlayer = (function () {
-                function VideoPlayer(appdata, logger, elementRef, breakpoint) {
-                    var _this = this;
+                function VideoPlayer(appdata, logger, elementRef) {
                     this.appdata = appdata;
                     this.logger = logger;
                     this.elementRef = elementRef;
-                    this.breakpoint = breakpoint;
                     this.currentId = 0;
                     this._lastHeight = -1;
                     this.enabled = true;
@@ -47,7 +42,6 @@ System.register(['angular2/core', './landing.video-player.selector.js', './landi
                     this.enabled = data.videoplayer.enabled;
                     this.title = data.videoplayer.title;
                     this.videos = data.videoplayer.videos;
-                    this.breakpointChanged = this.breakpoint.event$.subscribe(function (breakpoint) { return _this.onBreakpointChange(breakpoint); });
                 }
                 VideoPlayer.prototype.select = function (id) {
                     this.currentId = id;
@@ -57,13 +51,7 @@ System.register(['angular2/core', './landing.video-player.selector.js', './landi
                     this._resizeInterval = setInterval(function () { self.onResize.call(self); }, 250);
                     this.onResize();
                 };
-                VideoPlayer.prototype.onBreakpointChange = function (evt) {
-                };
                 VideoPlayer.prototype.onResize = function () {
-                    // if (this._resizeInterval) {
-                    // 	clearInterval(this._resizeInterval)
-                    // 	this._resizeInterval = undefined
-                    // }
                     //make sure the second image is the same height as the others
                     var element = this.elementRef.nativeElement;
                     var height = $(element).find('videoplayer-selector img').first().height();
@@ -71,10 +59,6 @@ System.register(['angular2/core', './landing.video-player.selector.js', './landi
                     if (this._lastHeight == height && height != 0)
                         clearInterval(this._resizeInterval);
                     this._lastHeight = height;
-                    //explicitly set the width of images thanks to chrome's percentage width rounding errors
-                    // var parentWidth = $(element).find('> ul').width()
-                    // var padding = 5
-                    // $(element).find('videoplayer-selector li').width(parentWidth / 3 - padding)
                 };
                 VideoPlayer = __decorate([
                     core_1.Component({
@@ -82,7 +66,7 @@ System.register(['angular2/core', './landing.video-player.selector.js', './landi
                         template: "\n    \t<h2 (window:resize)=\"onResize()\" class=\"{{!enabled ? 'hide': ''}}\">{{title}}</h2>\n\t\t<videoplayer-player class=\"{{!enabled ? 'hide': ''}}\" [data]=\"videos\" [currentId]=\"currentId\"></videoplayer-player>\n\t\t<ul class=\"{{!enabled ? 'hide': ''}}\">\n\t\t\t<li *ngFor=\"#video of videos; #i=index\">\n\t\t\t\t<videoplayer-selector (selectedVideo)=\"select($event)\" [data]=\"video\" [id]=\"i\" [selected]=\"currentId == i\"></videoplayer-selector>\n\t\t\t</li>\n\t\t</ul>\n    ",
                         directives: [landing_video_player_player_1.VideoPlayerPlayer, landing_video_player_selector_1.VideoPlayerSelector]
                     }), 
-                    __metadata('design:paramtypes', [appdata_service_1.AppDataService, logger_service_1.LoggerService, core_1.ElementRef, breakpoint_service_1.BreakpointService])
+                    __metadata('design:paramtypes', [appdata_service_1.AppDataService, logger_service_1.LoggerService, core_1.ElementRef])
                 ], VideoPlayer);
                 return VideoPlayer;
             }());

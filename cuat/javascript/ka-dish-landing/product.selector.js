@@ -45,16 +45,10 @@ System.register(['angular2/core', './product.selector.slides.js', './product.sel
                     this.selectedProduct = this.products[0];
                     this.animating = false;
                 }
-                ProductSelector.prototype.ngOnChanges = function (changes) {
-                    if ("selectedProduct" in changes) {
-                        console.log('product selector changed product: ', changes.selectedProduct.currentValue);
-                    }
-                };
                 //@Output on product.selector.nav
                 ProductSelector.prototype.productSelected = function (product) {
                     if (!this.animating) {
                         this.selectedProduct = product;
-                        console.log('product.selector got new product: ' + product.prodId);
                     }
                 };
                 //@Output on product.selector.slides

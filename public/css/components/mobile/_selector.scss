@@ -19,5 +19,16 @@ product-selector {
 				margin-top: 25px;
 			}
 		}
+
+        div.ka-dish-landing-product:hover {
+        	> img {
+	            opacity: 0.6;
+	        }
+
+	        div.ka-dish-landing-button {
+	            background-color: #FFF;
+	            color: #000;
+	        }
+	    }
 	}
 }
