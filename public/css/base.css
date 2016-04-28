@@ -471,6 +471,8 @@ rl-ka-dish-landing {
         padding-right: 0; }
       rl-ka-dish-landing videoplayer > ul li:first-child {
         padding-left: 0; }
+      rl-ka-dish-landing videoplayer > ul li:nth-child(2) videoplayer-selector .ka-dish-landing-videoplayer-title {
+        margin-top: -60px; }
   rl-ka-dish-landing videoplayer-player {
     width: 100%; }
     rl-ka-dish-landing videoplayer-player ul {
@@ -1212,6 +1214,8 @@ rl-ka-dish-landing {
 
 .device-mobile rl-ka-dish-landing {
   margin-top: 0; }
+  .device-mobile rl-ka-dish-landing videoplayer > ul li:nth-child(2) videoplayer-selector div.ka-dish-landing-videoplayer-title {
+    margin-top: -12px; }
   .device-mobile rl-ka-dish-landing masthead h1 {
     left: 0; }
   .device-mobile rl-ka-dish-landing masthead div#ka-landing-masthead {

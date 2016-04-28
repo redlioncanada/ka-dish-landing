@@ -42,6 +42,7 @@ export class VideoPlayerPlayer {
 	onResize(evt, self) {
 		if (!self) self = this
 
+		//make sure video maintains it's aspect ratio
 		let parent = $(this.element).find('> div')
 		let width = $(parent).width()
 		$(this.element).find('iframe').css('height', width / self.aspect)

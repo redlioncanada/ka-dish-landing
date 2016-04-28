@@ -37,6 +37,7 @@ System.register(['angular2/core', './services/logger.service', './landing.video-
                 VideoPlayerPlayer.prototype.onResize = function (evt, self) {
                     if (!self)
                         self = this;
+                    //make sure video maintains it's aspect ratio
                     var parent = $(this.element).find('> div');
                     var width = $(parent).width();
                     $(this.element).find('iframe').css('height', width / self.aspect);

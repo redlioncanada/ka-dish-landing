@@ -2,18 +2,20 @@ import {Component, Input, Output, EventEmitter} from 'angular2/core'
 import {LoggerService} from './services/logger.service'
 import {GoogleApiService} from './services/googleapi.service'
 import {VideoPlayer} from './landing.video-player'
+import {AnalyticsServiceOn} from './analytics.directive'
 
 @Component({
 	selector: 'videoplayer-selector',
     template: `
-    	<div (click)="select()" class="{{selected ? 'selected' : ''}}">
+    	<div (click)="select()" class="{{selected ? 'selected' : ''}}" analyticsOn="click" analyticsCategory="{{data.analytics.category}}" analyticsAction="{{data.analytics.action}}" analyticsLabel="{{data.analytics.label}}">
 			<div class="ka-dish-landing-videoplayer-text">
 				<div class="ka-dish-landing-videoplayer-title" [innerHTML]="data.ctaTitle"></div>
 				<div class="ka-dish-landing-videoplayer-button">{{data.cta}}</div>
 			</div>
 			<img src="{{data.thumb}}" alt="{{data.alt}}"/>
 		</div>
-    `
+    `,
+    directives: [AnalyticsServiceOn]
 })
 export class VideoPlayerSelector {
 	@Input() data

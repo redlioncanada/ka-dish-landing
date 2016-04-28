@@ -6,7 +6,7 @@ System.register([], function(exports_1, context_1) {
         setters:[],
         execute: function() {
             ProductModel = (function () {
-                function ProductModel(prodImage, prodName, prodDescription, prodUrl, prodId, ctaText, prodAlt) {
+                function ProductModel(prodImage, prodName, prodDescription, prodUrl, prodId, ctaText, prodAlt, analytics) {
                     if (prodImage === void 0) { prodImage = ""; }
                     if (prodName === void 0) { prodName = ""; }
                     if (prodDescription === void 0) { prodDescription = ""; }
@@ -14,6 +14,7 @@ System.register([], function(exports_1, context_1) {
                     if (prodId === void 0) { prodId = ""; }
                     if (ctaText === void 0) { ctaText = ""; }
                     if (prodAlt === void 0) { prodAlt = ""; }
+                    if (analytics === void 0) { analytics = {}; }
                     this.prodImage = prodImage;
                     this.prodName = prodName;
                     this.prodDescription = prodDescription;
@@ -21,6 +22,7 @@ System.register([], function(exports_1, context_1) {
                     this.prodId = prodId;
                     this.ctaText = ctaText;
                     this.prodAlt = prodAlt;
+                    this.analytics = analytics;
                 }
                 return ProductModel;
             }());

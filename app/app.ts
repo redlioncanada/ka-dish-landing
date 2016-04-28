@@ -35,16 +35,20 @@ import {Footer} from './landing.footer'
     directives: [VideoPlayer, AppMasthead, Features, ProductSelector, Banner, MoreFeatures, Header, Footer]
 })
 class AppComponent {
+	private language: string
+
     constructor(private appdata: AppDataService,
     			private analytics: AnalyticsService,
     			private breakpoint: BreakpointService,
     			private env: EnvironmentService)
     {
+		this.language = appdata.language
+
 		analytics.bind('language', function(str) {
 			return window.location.href.indexOf('fr_CA/') > -1 ? 'FR' : 'EN'
 		})
         analytics.bind('category', function(str) {
-            return 'Refer Landing Page'
+            return 'Dish LP'
         })
 
         breakpoint.add('mobile', 480)

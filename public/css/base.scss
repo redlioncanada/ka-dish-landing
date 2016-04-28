@@ -86,7 +86,7 @@ rl-ka-dish-landing {
 .device-mobile {
 	rl-ka-dish-landing {
 		// @import 'components/header.scss';
-		// @import 'components/videoplayer.scss';
+		@import 'components/mobile/videoplayer.scss';
 	    @import 'components/mobile/masthead.scss';
 	    @import 'components/mobile/features.scss';
 	    @import 'components/mobile/selector.scss';

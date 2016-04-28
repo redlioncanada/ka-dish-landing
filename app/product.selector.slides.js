@@ -184,7 +184,7 @@ System.register(['angular2/core', './product.selector.slide', './services/logger
                 ProductSlides = __decorate([
                     core_1.Component({
                         selector: 'product-slides',
-                        template: "\n      <div class=\"row\">\n          <product-slide class=\"{{selectedProduct.prodId == product.prodId ? 'selected' : ''}}\" *ngFor=\"#product of products; #i=index\" [selected]=\"selectedProduct.prodId == product.prodId\" [fridge]= \"product.prodImage\" [fridgeTitle]= \"product.prodName\" [fridgeDescription]=\"product.prodDescription\" [fridgeUrl]=\"product.prodUrl\" [fridgeAlt]=\"product.prodAlt\" [fridgeId]=\"product.prodId\" [ctaText]=\"product.ctaText\">\n\n          </product-slide>\n      </div>\n    ",
+                        template: "\n      <div class=\"row\">\n          <product-slide class=\"{{selectedProduct.prodId == product.prodId ? 'selected' : ''}}\" *ngFor=\"#product of products; #i=index\" [selected]=\"selectedProduct.prodId == product.prodId\" [fridge]= \"product.prodImage\" [fridgeTitle]= \"product.prodName\" [fridgeDescription]=\"product.prodDescription\" [fridgeUrl]=\"product.prodUrl\" [fridgeAlt]=\"product.prodAlt\" [fridgeId]=\"product.prodId\" [ctaText]=\"product.ctaText\" [analytics]=\"product.analytics\">\n\n          </product-slide>\n      </div>\n    ",
                         directives: [product_selector_slide_1.ProductSlide]
                     }),
                     __param(0, core_1.Inject(core_1.ElementRef)), 

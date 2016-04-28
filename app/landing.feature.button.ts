@@ -1,12 +1,12 @@
-import {bootstrap}    from 'angular2/platform/browser'
 import {Component, Input, Inject, ElementRef} from 'angular2/core'
+import {AnalyticsServiceOn} from './analytics.directive'
 
 declare var $: JQueryStatic
 
 @Component({
     selector: 'feature-button',
     template: `
-        <a href="{{btnLink}}">
+        <a href="{{btnLink}}" analyticsOn="click" analyticsCategory="{{analytics.category}}" analyticsAction="{{analytics.action}}" analyticsLabel="{{analytics.label}}">
             <div class="ka-landing-feature-button" >
                 <div class="ka-landing-feature-button-up">
                     <div class="ka-landing-feature-icon ka-landing-innerBtn"><img class="{{btnType}}" src={{btnIcon}} alt="{{btnAlt}}" /></div>
@@ -23,6 +23,7 @@ declare var $: JQueryStatic
             </div>
         </a>
     `,
+    directives: [AnalyticsServiceOn]
 })
 
 export class FeatureButton {
@@ -33,6 +34,7 @@ export class FeatureButton {
     @Input() btnLink
     @Input() btnType
     @Input() btnAlt
+    @Input() analytics
 
     private rootElement;
     private elementRef: ElementRef

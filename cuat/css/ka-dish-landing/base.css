@@ -471,6 +471,8 @@ rl-ka-dish-landing {
         padding-right: 0; }
       rl-ka-dish-landing videoplayer > ul li:first-child {
         padding-left: 0; }
+      rl-ka-dish-landing videoplayer > ul li:nth-child(2) videoplayer-selector .ka-dish-landing-videoplayer-title {
+        margin-top: -60px; }
   rl-ka-dish-landing videoplayer-player {
     width: 100%; }
     rl-ka-dish-landing videoplayer-player ul {
@@ -958,12 +960,14 @@ rl-ka-dish-landing {
             font-size: 0.8em; } }
     rl-ka-dish-landing product-selector-nav .ka-dish-landing-product:hover > img {
       opacity: 0.75; }
-    rl-ka-dish-landing product-selector-nav .ka-dish-landing-product:hover .ka-dish-landing-button {
-      background-color: #cc0000;
-      color: #FFFFFF !important; }
-    rl-ka-dish-landing product-selector-nav .ka-dish-landing-product.selected .ka-dish-landing-button {
+    rl-ka-dish-landing product-selector-nav .ka-dish-landing-product:hover div.ka-dish-landing-button {
       background-color: #cc0000;
       color: #FFFFFF; }
+    rl-ka-dish-landing product-selector-nav .ka-dish-landing-product.selected > img {
+      opacity: 0.75 !important; }
+    rl-ka-dish-landing product-selector-nav .ka-dish-landing-product.selected .ka-dish-landing-button {
+      background-color: #cc0000 !important;
+      color: #FFFFFF !important; }
     rl-ka-dish-landing product-selector-nav .see-all {
       width: 13%;
       color: #959595;
@@ -1210,6 +1214,8 @@ rl-ka-dish-landing {
 
 .device-mobile rl-ka-dish-landing {
   margin-top: 0; }
+  .device-mobile rl-ka-dish-landing videoplayer > ul li:nth-child(2) videoplayer-selector div.ka-dish-landing-videoplayer-title {
+    margin-top: -12px; }
   .device-mobile rl-ka-dish-landing masthead h1 {
     left: 0; }
   .device-mobile rl-ka-dish-landing masthead div#ka-landing-masthead {
@@ -1232,6 +1238,11 @@ rl-ka-dish-landing {
       .device-mobile rl-ka-dish-landing product-selector product-selector-nav .see-all {
         height: 51px;
         margin-top: 25px; } }
+  .device-mobile rl-ka-dish-landing product-selector product-selector-nav div.ka-dish-landing-product:hover > img {
+    opacity: 0.6; }
+  .device-mobile rl-ka-dish-landing product-selector product-selector-nav div.ka-dish-landing-product:hover div.ka-dish-landing-button {
+    background-color: #FFF;
+    color: #000; }
 
 .device-mobile #page {
   width: 100%; }

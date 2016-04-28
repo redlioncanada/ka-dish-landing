@@ -37,7 +37,12 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                             enabled: true,
                             link: 'http://www.kitchenaid.ca/en_CA/new/',
                             image: './public/images/banner.jpg',
-                            ctaText: 'Learn More'
+                            ctaText: 'Learn More',
+                            analytics: {
+                                category: "@category",
+                                action: "Clicked Dish-Footer Banner",
+                                label: "VBL-Learn More"
+                            }
                         },
                         features: {
                             enabled: true,
@@ -49,7 +54,12 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                                     desc: "What to look for when you are buying",
                                     cta: "Click Here",
                                     link: "https://www.google.ca/webhp?hl=en#hl=en&q=placeholder",
-                                    type: "cart"
+                                    type: "cart",
+                                    analytics: {
+                                        category: "@category",
+                                        action: "Clicked Dish Resources",
+                                        label: "Dish Buying Guide"
+                                    }
                                 },
                                 {
                                     image: "./public/images/refer-landing-star.png",
@@ -58,7 +68,12 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                                     desc: "See what others are saying",
                                     cta: "Click Here",
                                     link: "http://www.kitchenaid.ca/en_CA/2_2_89/global_best-products.content.html",
-                                    type: "star"
+                                    type: "star",
+                                    analytics: {
+                                        category: "@category",
+                                        action: "Clicked Dish Resources",
+                                        label: "Dish Ratings & Reviews"
+                                    }
                                 },
                                 {
                                     image: "./public/images/refer-landing-mag-glass.png",
@@ -67,7 +82,12 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                                     desc: "Need help finding your dishwasher?",
                                     cta: "Click Here",
                                     link: "http://findmy.kitchenaid.ca/#/question/Appliance",
-                                    type: "magnifier"
+                                    type: "magnifier",
+                                    analytics: {
+                                        category: "@category",
+                                        action: "Clicked Dish Resources",
+                                        label: "Dish Find Your KAD"
+                                    }
                                 }
                             ]
                         },
@@ -106,31 +126,46 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                             title: "Designed To Inspire",
                             videos: [
                                 {
-                                    id: 'Jnosm33VWtE',
+                                    id: '1AZPb80TNdc',
                                     thumb: './public/images/video-select-1.jpg',
-                                    title: 'Revolutionary Dynamic Wash Arms | KitchenAid<sup>&reg;</sup>',
-                                    ctaTitle: 'Revolutionary',
-                                    alt: 'test',
-                                    cta: 'Play Video',
-                                    desc: 'Behold, our new line of dishwashers with revolutionary Dynamic Wash Arms. They blast water in every direction, giving every inch of each dish a powerful clean so you can start on your next creation.'
-                                },
-                                {
-                                    id: 'fWbEHxpUEwM',
-                                    thumb: './public/images/video-select-2.jpg',
                                     title: 'A Revolutionary Mark On A Revolutionary New Line | The KitchenAid<sup>&reg;</sup> Medallion',
                                     ctaTitle: 'Design',
                                     alt: 'test',
                                     cta: 'Play Video',
-                                    desc: 'Behold the KitchenAid<sup>®</sup> Medallion, the iconic finishing stamp on all of our revolutionary new refrigerators, wall-ovens, dishwashers, microwaves and ranges. It’s a mark that lets you know you’re cooking with a suite of chef-inspired, premium appliances.'
+                                    desc: 'Behold the KitchenAid<sup>®</sup> Medallion, the iconic finishing stamp on all of our revolutionary new refrigerators, wall-ovens, dishwashers, microwaves and ranges. It’s a mark that lets you know you’re cooking with a suite of chef-inspired, premium appliances.',
+                                    analytics: {
+                                        category: "@category",
+                                        action: "Clicked Dish-Designed to Inspire Media",
+                                        label: "Dish Design Video"
+                                    }
                                 },
                                 {
-                                    id: 'RxnPMBOUWfk',
+                                    id: 'Jnosm33VWtE',
+                                    thumb: './public/images/video-select-2.jpg',
+                                    title: 'Revolutionary Dynamic Wash Arms | KitchenAid<sup>&reg;</sup>',
+                                    ctaTitle: 'Dynamic Wash Arms',
+                                    alt: 'test',
+                                    cta: 'Play Video',
+                                    desc: 'Behold, our new line of dishwashers with revolutionary Dynamic Wash Arms. They blast water in every direction, giving every inch of each dish a powerful clean so you can start on your next creation.',
+                                    analytics: {
+                                        category: "@category",
+                                        action: "Clicked Dish-Designed to Inspire Media",
+                                        label: "Dish Dynamic Wash Arms Video"
+                                    }
+                                },
+                                {
+                                    id: 'wwpCbQn2s4c',
                                     thumb: './public/images/video-select-3.jpg',
-                                    title: 'Revolutionary Five-Door Refrigerator | KitchenAid<sup>&reg;</sup>',
+                                    title: 'Dishwasher with ProScrub<sup>&trade;</sup> Option | KitchenAid<sup>&reg;</sup>',
                                     ctaTitle: 'Proscrub<sup>&trade;</sup>',
                                     alt: 'test',
                                     cta: 'Play Video',
-                                    desc: 'Skip the soaping, the soaking, and the pre-scrubbing. Send your pots and pans straight in to the dishwasher no matter the mess.'
+                                    desc: 'Skip the soaping, the soaking, and the pre-scrubbing. Send your pots and pans straight in to the dishwasher no matter the mess.',
+                                    analytics: {
+                                        category: "@category",
+                                        action: "Clicked Dish-Designed to Inspire Media",
+                                        label: "Dish Proscrub Video"
+                                    }
                                 }
                             ]
                         },
@@ -139,7 +174,12 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                             title: 'Choose your style',
                             nav: {
                                 text: 'See All',
-                                link: 'http://www.kitchenaid.ca/en_CA/shop/major-appliances-1/refrigerators-3/102310048/'
+                                link: 'http://www.kitchenaid.ca/en_CA/shop/major-appliances-1/refrigerators-3/102310048/',
+                                analytics: {
+                                    category: "@category",
+                                    action: "Clicked Choose Your Dish Style",
+                                    label: "See All Dish"
+                                }
                             },
                             products: [
                                 {
@@ -149,7 +189,13 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                                     desc: "Introducing an innovative new design, this dishwasher with window is a great aesthetic enhancement to your kitchen and allows you see when your dishes are done so you can move on to what’s next.",
                                     link: "http://www.kitchenaid.ca/en_CA/shop/major-appliances-1/dishwashers-3/102310014+105000792/",
                                     id: "dish-with-window",
-                                    ctaText: "Learn More"
+                                    ctaText: "Learn More",
+                                    analytics: {
+                                        category: "@category",
+                                        action: "Clicked Choose Your Dish Style",
+                                        label: "Four-door",
+                                        learnMore: 'Learn More'
+                                    }
                                 },
                                 {
                                     image: "./public/images/products/top-control.png",
@@ -158,7 +204,13 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                                     desc: "The controls are discreetly placed at the top of the dishwasher and remain hidden when the door is closed to provide a sleek and clean looking front. The sleek bar handle perfectly complements the design and provides easy access to open your dishwasher.",
                                     link: "http://www.kitchenaid.ca/en_CA/shop/major-appliances-1/dishwashers-3/102310014+105000265/",
                                     id: "fully-integrated",
-                                    ctaText: "Learn More"
+                                    ctaText: "Learn More",
+                                    analytics: {
+                                        category: "@category",
+                                        action: "Clicked Choose Your Dish Style",
+                                        label: "Fully Integrated Dish",
+                                        learnMore: 'Learn More'
+                                    }
                                 },
                                 {
                                     image: "./public/images/products/front-control.png",
@@ -167,7 +219,13 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                                     desc: "The controls are located on the front and are easily accessible for use after you load your dishes. This model also comes with a pocket handle for a smoother finish and is great for smaller kitchens to allow for more space flexibility in front of the dishwasher.",
                                     link: "http://www.kitchenaid.ca/en_CA/shop/major-appliances-1/dishwashers-3/102310014+105000266/",
                                     id: "front-control",
-                                    ctaText: "Learn More"
+                                    ctaText: "Learn More",
+                                    analytics: {
+                                        category: "@category",
+                                        action: "Clicked Choose Your Dish Style",
+                                        label: "Front Control Dish",
+                                        learnMore: 'Learn More'
+                                    }
                                 },
                                 {
                                     image: "./public/images/products/panel-ready.png",
@@ -176,7 +234,13 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                                     desc: "The premium look to go with your dream kitchen. Custom panel-ready dishwashers have an unfinished door, so you can seamlessly match the custom panel to your cabinetry to give your kitchen a stylish and coordinated look.",
                                     link: "http://www.kitchenaid.ca/en_CA/shop/major-appliances-1/dishwashers-3/102310014+4294967137/",
                                     id: "panel-ready",
-                                    ctaText: "Learn More"
+                                    ctaText: "Learn More",
+                                    analytics: {
+                                        category: "@category",
+                                        action: "Clicked Choose Your Dish Style",
+                                        label: "Panel Ready Dish",
+                                        learnMore: 'Learn More'
+                                    }
                                 }
                             ]
                         }
@@ -184,44 +248,65 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                     this.contents.fr = {
                         masthead: {
                             enabled: true,
-                            image: "./public/images/refer-landing-masthead.jpg",
-                            title: "Réfrigérateurs",
-                            alt: "Extérieur de réfrigérateur à 5 portes"
+                            image: "./public/images/refer-landing-masthead-fr.jpg",
+                            alt: "test",
+                            title: "Lave-vaisselle"
                         },
                         banner: {
                             enabled: true,
                             link: 'http://www.kitchenaid.ca/fr_CA/new/',
-                            image: './public/images/banner_fr.jpg',
-                            ctaText: 'En savoir plus'
+                            image: './public/images/banner.jpg',
+                            ctaText: 'En savoir plus',
+                            analytics: {
+                                category: "@category",
+                                action: "Clicked Dish-Footer Banner",
+                                label: "VBL-Learn More"
+                            }
                         },
                         features: {
                             enabled: true,
                             features: [
                                 {
                                     image: "./public/images/refer-landing-shopping-cart.png",
-                                    title: "Guide d’Achat",
+                                    title: "Guide D’achat",
+                                    alt: "Guide D’achat",
                                     desc: "Éléments à considérer lorsque vous magasinez",
                                     cta: "Cliquez ici",
-                                    link: "/pdf/Refer_Buying_Guide_2016_FR.pdf",
-                                    type: "cart"
+                                    link: "https://www.google.ca/webhp?hl=en#hl=en&q=placeholder",
+                                    type: "cart",
+                                    analytics: {
+                                        category: "@category",
+                                        action: "Clicked Dish Resources",
+                                        label: "Dish Buying Guide"
+                                    }
                                 },
                                 {
                                     image: "./public/images/refer-landing-star.png",
                                     title: "Évaluation et Commentaires",
-                                    alt: "Évaluations et commentaires",
+                                    alt: "Évaluation et Commentaires",
                                     desc: "Découvrez ce que nos clients en disent",
                                     cta: "Cliquez ici",
                                     link: "http://www.kitchenaid.ca/fr_CA/2_2_89/global_best-products.content.html",
-                                    type: "star"
+                                    type: "star",
+                                    analytics: {
+                                        category: "@category",
+                                        action: "Clicked Dish Resources",
+                                        label: "Dish Ratings & Reviews"
+                                    }
                                 },
                                 {
                                     image: "./public/images/refer-landing-mag-glass.png",
-                                    title: "Trouver mon KitchenAid",
-                                    alt: "Trouver votre électroménager KitchenAid",
-                                    desc: "Besoin d’aide pour trouver votre réfrigérateur?",
+                                    title: "Trouver Mon Kitchenaid",
+                                    alt: "Trouver Mon Kitchenaid",
+                                    desc: "Vous avez besoin d'aide pour trouver le lave-vaisselle qui vous convient?",
                                     cta: "Cliquez ici",
                                     link: "http://trouvermon.kitchenaid.ca/#/question/Appliance",
-                                    type: "magnifier"
+                                    type: "magnifier",
+                                    analytics: {
+                                        category: "@category",
+                                        action: "Clicked Dish Resources",
+                                        label: "Dish Find Your KAD"
+                                    }
                                 }
                             ]
                         },
@@ -230,61 +315,76 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                             title: "Plus de fonctions fraîcheur",
                             features: [
                                 {
-                                    title: "Remplissage d'eau mesuré",
-                                    text: "Affiche et distribue automatiquement l'eau en onces, tasses ou litres.",
+                                    title: "Système de lavage à l'eau propre",
                                     image: "./public/images/more-features-1.jpg",
-                                    alt: "Distributeur de glaçons du réfrigérateur",
-                                    link: "http://kitchenaid.ca",
+                                    link: false,
+                                    alt: "test",
+                                    text: "Filtre continuellement l'eau de lavage pour des résultats impeccables. Par ailleurs, il n'est plus nécessaire de retirer et nettoyer le filtre grâce à sa conception innovante.",
                                     cta: ""
                                 },
                                 {
-                                    title: "Intérieur platine",
-                                    text: "Offre un aspect haut de gamme, et les parois d'un brillant argenté complètent les accents métalliques que l'on retrouve à l'intérieur du réfrigérateur.",
+                                    title: "Gicleur pour bouteilles",
                                     image: "./public/images/more-features-2.jpg",
-                                    alt: "Fruits à l’intérieur du réfrigérateur",
-                                    link: "http://kitchenaid.ca",
+                                    link: false,
+                                    alt: "test",
+                                    text: "Les buses spécifiques et réglables sont conçues pour les verres hauts et les bouteilles et procurent une pulvérisation puissante dans les endroits difficiles à atteindre.",
                                     cta: ""
                                 },
                                 {
-                                    title: "Tiroir-congélateur à 3 niveaux avec diviseurs de rangement",
-                                    text: "Permet d'accéder facilement aux articles congelés grâce aux trois niveaux; le diviseur dans le panier inférieur aide à garder les petits articles à portée de main.",
+                                    title: "Système perfectionné ProDry<sup>&trade;</sup>",
                                     image: "./public/images/more-features-3.jpg",
-                                    alt: "Congélateur inférieur ouvert",
-                                    link: "http://kitchenaid.ca",
+                                    link: false,
+                                    alt: "test",
+                                    text: "La meilleure performance de séchage sans agent de rinçage, grâce à un système innovant qui élimine l'humidité de la cuve et permet d'obtenir des assiettes parfaitement sèches à la fin de chaque programme.",
                                     cta: ""
                                 }
                             ]
                         },
                         videoplayer: {
                             enabled: true,
-                            title: "Conçu pour inspirer",
+                            title: "Conçu pour Inspirer",
                             videos: [
                                 {
-                                    id: 'lQXv1imsjfA',
+                                    id: '1AZPb80TNdc',
                                     thumb: './public/images/video-select-1.jpg',
-                                    title: 'Un emblème révolutionnaire pour une nouvelle gamme révolutionnaire',
+                                    title: 'A Revolutionary Mark On A Revolutionary New Line | The KitchenAid<sup>&reg;</sup> Medallion(fr)',
                                     ctaTitle: 'Conception',
+                                    alt: 'test',
                                     cta: 'Voir la video',
-                                    alt: 'Distributeur de glaçons du réfrigérateur',
-                                    desc: false
+                                    desc: 'Voici le médaillon KitchenAid®, notre emblème de finition présent sur tous nos nouveaux électroménagers révolutionnaires, qu\'il s\'agisse de réfrigérateurs, fours encastrés, lave-vaisselle, fours à micro-ondes ou cuisinières. C\'est une marque qui indique que vous cuisinez avec une série d\'électroménagers de gamme supérieure, inspirés par des chefs.',
+                                    analytics: {
+                                        category: "@category",
+                                        action: "Clicked Dish-Designed to Inspire Media",
+                                        label: "Dish Design Video"
+                                    }
                                 },
                                 {
-                                    image: './public/images/video-thumb-3.jpg',
+                                    id: 'Jnosm33VWtE',
                                     thumb: './public/images/video-select-2.jpg',
-                                    title: 'Réfrigérateur à 5 portes KitchenAid<sup>&reg;</sup> avec le système de conservation des aliments Préserva<sup>&reg;</sup>',
-                                    ctaTitle: 'Conservation des aliments',
-                                    cta: 'Voir',
-                                    alt: 'Fruits à l’intérieur du réfrigérateur',
-                                    desc: 'Deux systèmes de refroidissement indépendants offrent un espace réfrigéré pour prolonger la fraîcheur des aliments; et un système de congélation séparé, entièrement consacré aux aliments surgelés. Le filtre à air FreshFlow™ contribue à minimiser les odeurs et les 2 conservateurs de fruits et légumes FreshFlow™ permettent de retarder la surmaturation des fruits et légumes.'
+                                    title: 'Bras Gicleurs Dynamiques Révolutionnaires | KitchenAid<sup>&reg;</sup>',
+                                    ctaTitle: 'Bras Gicleurs Dynamiques',
+                                    alt: 'test',
+                                    cta: 'Voir la video',
+                                    desc: 'Découvrez notre nouvelle gamme de lave-vaisselle dotés des bras gicleurs dynamiques révolutionnaires. Ils projettent de l\'eau dans toutes les directions, offrant un nettoyage efficace au moindre recoin de votre vaisselle.Voici donc un souci de moins et plus de temps pour démarrer votre prochaine création culinaire.',
+                                    analytics: {
+                                        category: "@category",
+                                        action: "Clicked Dish-Designed to Inspire Media",
+                                        label: "Dish Dynamic Wash Arms Video"
+                                    }
                                 },
                                 {
-                                    id: 'ySD0Toxf8r0',
+                                    id: 'wwpCbQn2s4c',
                                     thumb: './public/images/video-select-3.jpg',
-                                    title: 'Réfrigérateur à 5 portes KitchenAid<sup>&reg;</sup> avec tiroirs à fermeture amortie',
-                                    ctaTitle: '5 portes',
+                                    title: 'Dishwasher with ProScrub<sup>&trade;</sup> Option | KitchenAid<sup>&reg;</sup>(fr)',
+                                    ctaTitle: 'Proscrub<sup>&trade;</sup>',
+                                    alt: 'test',
                                     cta: 'Voir la video',
-                                    alt: 'Congélateur inférieur ouvert',
-                                    desc: false
+                                    desc: 'Plus besoin de prélaver, faire tremper ni récurer. Placez vos casseroles et poêles directement dans le lave-vaisselle, peu importe leur niveau de saleté.',
+                                    analytics: {
+                                        category: "@category",
+                                        action: "Clicked Dish-Designed to Inspire Media",
+                                        label: "Dish Proscrub Video"
+                                    }
                                 }
                             ]
                         },
@@ -292,45 +392,74 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                             enabled: true,
                             title: 'Choisissez votre style',
                             nav: {
-                                text: 'Voir Tout',
-                                link: 'http://www.kitchenaid.ca/fr_CA/shop/major-appliances-1/refrigerators-3/102310048/'
+                                text: 'Voir tout',
+                                link: 'http://www.kitchenaid.ca/fr_CA/shop/major-appliances-1/refrigerators-3/102310048/',
+                                analytics: {
+                                    category: "@category",
+                                    action: "Clicked Choose Your Dish Style",
+                                    label: "See All Dish"
+                                }
                             },
                             products: [
                                 {
-                                    title: "5 portes",
-                                    alt: "Réfrigérateur à 5 portes",
-                                    desc: "Ce premier réfrigérateur révolutionnaire à 5 portes non encastré est conçu pour une organisation et une préservation des aliments optimales. Découvrez nos tiroirs à fermeture amortie polyvalents, conçus pour maintenir vos aliments favoris au niveau des yeux et à portée de main.",
-                                    link: "http://www.kitchenaid.ca/fr_CA/magasiner/-[KRMF706EBS]-5568100/KRMF706EBS/",
-                                    image: "./public/images/products/5-door.png",
-                                    id: "five-door",
-                                    ctaText: "En savoir plus"
+                                    image: "./public/images/products/window.png",
+                                    title: "Dishwasher<br/>With Window(fr)",
+                                    alt: "test",
+                                    desc: "Introducing an innovative new design, this dishwasher with window is a great aesthetic enhancement to your kitchen and allows you see when your dishes are done so you can move on to what’s next.(fr)",
+                                    link: "http://www.kitchenaid.ca/fr_CA/shop/major-appliances-1/dishwashers-3/102310014+105000792/",
+                                    id: "dish-with-window",
+                                    ctaText: "En savoir plus",
+                                    analytics: {
+                                        category: "@category",
+                                        action: "Clicked Choose Your Dish Style",
+                                        label: "Four-door",
+                                        learnMore: 'Learn More'
+                                    }
                                 },
                                 {
-                                    title: "Encastré",
-                                    alt: "Réfrigérateur encastré à portes françaises avec congélateur inférieur",
-                                    desc: "Lorsque vous imaginez la cuisine de vos rêves, vous pouvez être assuré que notre réfrigérateur encastré s'y agencera parfaitement. Conçu pour s'assortir naturellement à votre cuisine, nos options pouvant accueillir des panneaux de recouvrement (vendus séparément) offrent un style épuré et sophistiqué pour s’harmoniser à vos armoires.",
-                                    link: "http://www.kitchenaid.ca/fr_CA/shop/major-appliances-1/refrigerators-3/102310048/",
-                                    image: "./public/images/products/built-in.png",
-                                    id: "built-in",
-                                    ctaText: "En savoir plus"
+                                    image: "./public/images/products/top-control.png",
+                                    title: "Fully Integrated(fr)",
+                                    alt: "test",
+                                    desc: "The controls are discreetly placed at the top of the dishwasher and remain hidden when the door is closed to provide a sleek and clean looking front. The sleek bar handle perfectly complements the design and provides easy access to open your dishwasher.(fr)",
+                                    link: "http://www.kitchenaid.ca/fr_CA/shop/major-appliances-1/dishwashers-3/102310014+105000265/",
+                                    id: "fully-integrated",
+                                    ctaText: "En savoir plus",
+                                    analytics: {
+                                        category: "@category",
+                                        action: "Clicked Choose Your Dish Style",
+                                        label: "Fully Integrated Dish",
+                                        learnMore: 'Learn More'
+                                    }
                                 },
                                 {
-                                    title: "Portes françaises",
-                                    alt: "Réfrigérateur à portes françaises avec congélateur inférieur et distributeur de glaçons extérieur",
-                                    desc: "Vous avez besoin de mieux vous organiser? Nos réfrigérateurs à portes françaises offrent un espace et des options de rangement idéals pour tous vos besoins culinaires. Les réfrigérateurs à portes françaises s'agencent idéalement à toute cuisine contemporaine, grâce à leurs bacs à légumes à humidité contrôlée, leurs tiroirs garde-manger et leurs tiroirs-congélateurs à trois niveaux.",
-                                    link: "http://www.kitchenaid.ca/fr_CA/shop/major-appliances-1/refrigerators-3/102310048/",
-                                    image: "./public/images/products/french-door.png",
-                                    id: "french-door",
-                                    ctaText: "En savoir plus"
+                                    image: "./public/images/products/front-control.png",
+                                    title: "Front Control(fr)",
+                                    alt: "test",
+                                    desc: "The controls are located on the front and are easily accessible for use after you load your dishes. This model also comes with a pocket handle for a smoother finish and is great for smaller kitchens to allow for more space flexibility in front of the dishwasher.(fr)",
+                                    link: "http://www.kitchenaid.ca/fr_CA/shop/major-appliances-1/dishwashers-3/102310014+105000266/",
+                                    id: "front-control",
+                                    ctaText: "En savoir plus",
+                                    analytics: {
+                                        category: "@category",
+                                        action: "Clicked Choose Your Dish Style",
+                                        label: "Front Control Dish",
+                                        learnMore: 'Learn More'
+                                    }
                                 },
                                 {
-                                    title: "Côte à côte",
-                                    alt: "Réfrigérateur à portes françaises",
-                                    desc: "La conception pure et intemporelle de nos modèles côte à côte vous permet de garder les ingrédients du réfrigérateur aussi bien que du congélateur au niveau des yeux tout en conservant les articles que vous utilisez le plus fréquemment au frais et à portée de main.",
-                                    link: "http://www.kitchenaid.ca/fr_CA/shop/major-appliances-1/refrigerators-3/102310048+105001144/",
-                                    image: "./public/images/products/side-by-side.png",
-                                    id: "side-by-side",
-                                    ctaText: "En savoir plus"
+                                    image: "./public/images/products/panel-ready.png",
+                                    title: "Panel Ready(fr)",
+                                    alt: "test",
+                                    desc: "The premium look to go with your dream kitchen. Custom panel-ready dishwashers have an unfinished door, so you can seamlessly match the custom panel to your cabinetry to give your kitchen a stylish and coordinated look.(fr)",
+                                    link: "http://www.kitchenaid.ca/fr_CA/shop/major-appliances-1/dishwashers-3/102310014+4294967137/",
+                                    id: "panel-ready",
+                                    ctaText: "En savoir plus",
+                                    analytics: {
+                                        category: "@category",
+                                        action: "Clicked Choose Your Dish Style",
+                                        label: "Panel Ready Dish",
+                                        learnMore: 'Learn More'
+                                    }
                                 }
                             ]
                         }

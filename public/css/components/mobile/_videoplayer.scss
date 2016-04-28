@@ -1,0 +1,9 @@
+videoplayer {
+	> ul {
+		li:nth-child(2) videoplayer-selector {
+			div.ka-dish-landing-videoplayer-title {
+				margin-top: -12px;
+			}
+		}
+	}
+}

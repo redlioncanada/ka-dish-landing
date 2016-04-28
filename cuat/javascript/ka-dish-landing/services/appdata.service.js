@@ -106,17 +106,8 @@ System.register(['angular2/core', './logger.service.js'], function(exports_1, co
                             title: "Designed To Inspire",
                             videos: [
                                 {
-                                    id: 'Jnosm33VWtE',
+                                    id: '1AZPb80TNdc',
                                     thumb: '/images/ka-dish-landing/video-select-1.jpg',
-                                    title: 'Revolutionary Dynamic Wash Arms | KitchenAid<sup>&reg;</sup>',
-                                    ctaTitle: 'Revolutionary',
-                                    alt: 'test',
-                                    cta: 'Play Video',
-                                    desc: 'Behold, our new line of dishwashers with revolutionary Dynamic Wash Arms. They blast water in every direction, giving every inch of each dish a powerful clean so you can start on your next creation.'
-                                },
-                                {
-                                    id: 'fWbEHxpUEwM',
-                                    thumb: '/images/ka-dish-landing/video-select-2.jpg',
                                     title: 'A Revolutionary Mark On A Revolutionary New Line | The KitchenAid<sup>&reg;</sup> Medallion',
                                     ctaTitle: 'Design',
                                     alt: 'test',
@@ -124,9 +115,18 @@ System.register(['angular2/core', './logger.service.js'], function(exports_1, co
                                     desc: 'Behold the KitchenAid<sup>®</sup> Medallion, the iconic finishing stamp on all of our revolutionary new refrigerators, wall-ovens, dishwashers, microwaves and ranges. It’s a mark that lets you know you’re cooking with a suite of chef-inspired, premium appliances.'
                                 },
                                 {
-                                    id: 'RxnPMBOUWfk',
+                                    id: 'Jnosm33VWtE',
+                                    thumb: '/images/ka-dish-landing/video-select-2.jpg',
+                                    title: 'Revolutionary Dynamic Wash Arms | KitchenAid<sup>&reg;</sup>',
+                                    ctaTitle: 'Dynamic Wash Arms',
+                                    alt: 'test',
+                                    cta: 'Play Video',
+                                    desc: 'Behold, our new line of dishwashers with revolutionary Dynamic Wash Arms. They blast water in every direction, giving every inch of each dish a powerful clean so you can start on your next creation.'
+                                },
+                                {
+                                    id: 'wwpCbQn2s4c',
                                     thumb: '/images/ka-dish-landing/video-select-3.jpg',
-                                    title: 'Revolutionary Five-Door Refrigerator | KitchenAid<sup>&reg;</sup>',
+                                    title: 'Dishwasher with ProScrub<sup>&trade;</sup> Option | KitchenAid<sup>&reg;</sup>',
                                     ctaTitle: 'Proscrub<sup>&trade;</sup>',
                                     alt: 'test',
                                     cta: 'Play Video',

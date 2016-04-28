@@ -10,7 +10,7 @@ declare var $: JQueryStatic;
     selector: 'product-slides',
     template: `
       <div class="row">
-          <product-slide class="{{selectedProduct.prodId == product.prodId ? 'selected' : ''}}" *ngFor="#product of products; #i=index" [selected]="selectedProduct.prodId == product.prodId" [fridge]= "product.prodImage" [fridgeTitle]= "product.prodName" [fridgeDescription]="product.prodDescription" [fridgeUrl]="product.prodUrl" [fridgeAlt]="product.prodAlt" [fridgeId]="product.prodId" [ctaText]="product.ctaText">
+          <product-slide class="{{selectedProduct.prodId == product.prodId ? 'selected' : ''}}" *ngFor="#product of products; #i=index" [selected]="selectedProduct.prodId == product.prodId" [fridge]= "product.prodImage" [fridgeTitle]= "product.prodName" [fridgeDescription]="product.prodDescription" [fridgeUrl]="product.prodUrl" [fridgeAlt]="product.prodAlt" [fridgeId]="product.prodId" [ctaText]="product.ctaText" [analytics]="product.analytics">
 
           </product-slide>
       </div>

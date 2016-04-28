@@ -44,6 +44,12 @@ videoplayer {
 		li:first-child {
 			padding-left: 0;
 		}
+
+		li:nth-child(2) videoplayer-selector {
+			.ka-dish-landing-videoplayer-title {
+				margin-top: -60px;
+			}
+		}
 	}
 }
 
@@ -181,6 +187,8 @@ videoplayer-selector {
 		}
 	}
 }
+
+
 
 videoplayer.fr {
 	ul li:nth-child(2) {

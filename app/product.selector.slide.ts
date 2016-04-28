@@ -11,7 +11,7 @@ import {RemoveHTML} from './pipes/remove.html.pipe'
             <div class="rl-ka-lndng-fridge-title mobile">{{fridgeTitle | removeHTML}}</div>
             <div class="rl-ka-lndng-fridge-title">{{fridgeTitle | removeHTML}}</div>
             <div class="rl-ka-lndng-fridge-desc">{{fridgeDescription}}</div>
-            <learn-more-button [link]="fridgeUrl" [text]="ctaText"></learn-more-button>
+            <learn-more-button [analytics]="analytics" [link]="fridgeUrl" [text]="ctaText"></learn-more-button>
         </div>
     `,
     directives: [LearnMoreButton],
@@ -28,4 +28,5 @@ export class ProductSlide {
     @Input() selected
     @Input() ctaText
     @Input() fridgeAlt
+    @Input() analytics
 }

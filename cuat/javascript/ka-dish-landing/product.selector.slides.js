@@ -45,9 +45,6 @@ System.register(['angular2/core', './product.selector.slide.js', './services/log
                     this.breakpointChanged = this.breakpoint.event$.subscribe(function (breakpoint) { return _this.onBreakpointChange(breakpoint); });
                 }
                 Object.defineProperty(ProductSlides.prototype, "animating", {
-                    get: function () {
-                        return this._animating;
-                    },
                     set: function (a) {
                         if (this._animating != a) {
                             this._animating = a;
@@ -106,7 +103,6 @@ System.register(['angular2/core', './product.selector.slide.js', './services/log
                     if (delay === void 0) { delay = true; }
                     if (!self)
                         self = this;
-                    self.animating = true;
                     target = $(self.rootElement).find('#' + target);
                     $(self.rootElement).find('product-slide').css('zIndex', 1);
                     $(target).parent().css('zIndex', 2);
