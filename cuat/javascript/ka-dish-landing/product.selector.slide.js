@@ -59,10 +59,14 @@ System.register(['angular2/core', './landing.learn-more.button.js', './pipes/rem
                     core_1.Input(), 
                     __metadata('design:type', Object)
                 ], ProductSlide.prototype, "fridgeAlt", void 0);
+                __decorate([
+                    core_1.Input(), 
+                    __metadata('design:type', Object)
+                ], ProductSlide.prototype, "analytics", void 0);
                 ProductSlide = __decorate([
                     core_1.Component({
                         selector: 'product-slide',
-                        template: "\n        <div id=\"{{fridgeId}}\" class=\"rl-ka-lndng-side\">\n            <div class=\"rl-ka-lndng-fridge\"><img class=\"{{fridge}}\" src=\"{{fridge}}\" alt=\"{{fridgeAlt}}\" /></div>\n            <div class=\"rl-ka-lndng-fridge-title mobile\">{{fridgeTitle | removeHTML}}</div>\n            <div class=\"rl-ka-lndng-fridge-title\">{{fridgeTitle | removeHTML}}</div>\n            <div class=\"rl-ka-lndng-fridge-desc\">{{fridgeDescription}}</div>\n            <learn-more-button [link]=\"fridgeUrl\" [text]=\"ctaText\"></learn-more-button>\n        </div>\n    ",
+                        template: "\n        <div id=\"{{fridgeId}}\" class=\"rl-ka-lndng-side\">\n            <div class=\"rl-ka-lndng-fridge\"><img class=\"{{fridge}}\" src=\"{{fridge}}\" alt=\"{{fridgeAlt}}\" /></div>\n            <div class=\"rl-ka-lndng-fridge-title mobile\">{{fridgeTitle | removeHTML}}</div>\n            <div class=\"rl-ka-lndng-fridge-title\">{{fridgeTitle | removeHTML}}</div>\n            <div class=\"rl-ka-lndng-fridge-desc\">{{fridgeDescription}}</div>\n            <learn-more-button [analytics]=\"analytics\" [link]=\"fridgeUrl\" [text]=\"ctaText\"></learn-more-button>\n        </div>\n    ",
                         directives: [landing_learn_more_button_1.LearnMoreButton],
                         pipes: [remove_html_pipe_1.RemoveHTML]
                     }), 

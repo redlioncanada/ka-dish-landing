@@ -1,4 +1,4 @@
-System.register(['angular2/core', './services/appdata.service.js'], function(exports_1, context_1) {
+System.register(['angular2/core', './services/appdata.service.js', './analytics.directive.js'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', './services/appdata.service.js'], function(exp
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, appdata_service_1;
+    var core_1, appdata_service_1, analytics_directive_1;
     var ProductSelectorNav;
     return {
         setters:[
@@ -19,6 +19,9 @@ System.register(['angular2/core', './services/appdata.service.js'], function(exp
             },
             function (appdata_service_1_1) {
                 appdata_service_1 = appdata_service_1_1;
+            },
+            function (analytics_directive_1_1) {
+                analytics_directive_1 = analytics_directive_1_1;
             }],
         execute: function() {
             ProductSelectorNav = (function () {
@@ -30,6 +33,7 @@ System.register(['angular2/core', './services/appdata.service.js'], function(exp
                     this.enabled = data.productselector.enabled;
                     this.ctaText = data.productselector.nav.text;
                     this.ctaLink = data.productselector.nav.link;
+                    this.analytics = data.productselector.nav.analytics;
                 }
                 ProductSelectorNav.prototype.select = function (product) {
                     this.productSelected.emit(product);
@@ -49,7 +53,8 @@ System.register(['angular2/core', './services/appdata.service.js'], function(exp
                 ProductSelectorNav = __decorate([
                     core_1.Component({
                         selector: 'product-selector-nav',
-                        template: "\n    \t<div class=\"row {{!enabled ? 'hide' : ''}}\">\n\t\t\t<div class=\"ka-dish-landing-product {{selectedProduct.prodId == product.prodId ? 'selected' : ''}}\" *ngFor=\"#product of products; #i = index\" (click)=\"select(product)\">\n\t\t\t\t<img src=\"{{product.prodImage}}\"/>\n\t\t\t\t<div class=\"ka-dish-landing-button\"><p [innerHTML]=\"product.prodName\"></p></div>\n\t\t\t</div>\n\t\t\t<a target=\"_blank\" href=\"{{ctaLink}}\"><div class=\"see-all\">\n\t\t\t\t<p>{{ctaText}}</p>\n\t\t\t</div></a>\n\t\t</div>\n    "
+                        template: "\n    \t<div class=\"row {{!enabled ? 'hide' : ''}}\">\n\t\t\t<div class=\"ka-dish-landing-product {{selectedProduct.prodId == product.prodId ? 'selected' : ''}}\" *ngFor=\"#product of products; #i = index\" analyticsOn=\"click\" analyticsCategory=\"{{product.analytics.category}}\" analyticsAction=\"{{product.analytics.action}}\" analyticsLabel=\"{{product.analytics.label}}\" (click)=\"select(product)\">\n\t\t\t\t<img src=\"{{product.prodImage}}\"/>\n\t\t\t\t<div class=\"ka-dish-landing-button\"><p [innerHTML]=\"product.prodName\"></p></div>\n\t\t\t</div>\n\t\t\t<a target=\"_blank\" href=\"{{ctaLink}}\" analyticsOn=\"click\" analyticsCategory=\"{{analytics.category}}\" analyticsAction=\"{{analytics.action}}\" analyticsLabel=\"{{analytics.label}}\"><div class=\"see-all\">\n\t\t\t\t<p>{{ctaText}}</p>\n\t\t\t</div></a>\n\t\t</div>\n    ",
+                        directives: [analytics_directive_1.AnalyticsServiceOn]
                     }), 
                     __metadata('design:paramtypes', [appdata_service_1.AppDataService])
                 ], ProductSelectorNav);
