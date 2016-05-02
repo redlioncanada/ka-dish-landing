@@ -67,7 +67,7 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                                     alt: "Ratings and reviews",
                                     desc: "See what others are saying",
                                     cta: "Click Here",
-                                    link: "http://www.kitchenaid.ca/en_CA/2_2_89/global_best-products.content.html",
+                                    link: "http://www.kitchenaid.ca/en_CA/2_2_89/global_best-products.content.html#dishwashers",
                                     type: "star",
                                     analytics: {
                                         category: "@category",
@@ -199,7 +199,7 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                                 },
                                 {
                                     image: "./public/images/products/top-control.png",
-                                    title: "Fully Integrated",
+                                    title: "Top Control",
                                     alt: "test",
                                     desc: "The controls are discreetly placed at the top of the dishwasher and remain hidden when the door is closed to provide a sleek and clean looking front. The sleek bar handle perfectly complements the design and provides easy access to open your dishwasher.",
                                     link: "http://www.kitchenaid.ca/en_CA/shop/major-appliances-1/dishwashers-3/102310014+105000265/",
@@ -208,7 +208,7 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                                     analytics: {
                                         category: "@category",
                                         action: "Clicked Choose Your Dish Style",
-                                        label: "Fully Integrated Dish",
+                                        label: "Top Control Dish",
                                         learnMore: 'Learn More'
                                     }
                                 },
