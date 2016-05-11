@@ -248,14 +248,14 @@ System.register(['angular2/core', './logger.service.js'], function(exports_1, co
                     this.contents.fr = {
                         masthead: {
                             enabled: true,
-                            image: "/images/ka-dish-landing/refer-landing-masthead-fr.jpg",
+                            image: "/images/ka-dish-landing/refer-landing-masthead.jpg",
                             alt: "test",
                             title: "Lave-vaisselle"
                         },
                         banner: {
                             enabled: true,
                             link: 'http://www.kitchenaid.ca/fr_CA/new/',
-                            image: '/images/ka-dish-landing/banner.jpg',
+                            image: '/images/ka-dish-landing/banner_fr.jpg',
                             ctaText: 'En savoir plus',
                             analytics: {
                                 category: "@category",
@@ -342,12 +342,12 @@ System.register(['angular2/core', './logger.service.js'], function(exports_1, co
                         },
                         videoplayer: {
                             enabled: true,
-                            title: "Conçu pour Inspirer",
+                            title: "Conçu Pour Inspirer",
                             videos: [
                                 {
-                                    id: '1AZPb80TNdc',
+                                    id: 'lQXv1imsjfA',
                                     thumb: '/images/ka-dish-landing/video-select-1.jpg',
-                                    title: 'A Revolutionary Mark On A Revolutionary New Line | The KitchenAid<sup>&reg;</sup> Medallion(fr)',
+                                    title: 'Un sceau révolutionnaire pour une gamme révolutionnaire | Le médaillon KitchenAid<sup>&reg;</sup>',
                                     ctaTitle: 'Conception',
                                     alt: 'test',
                                     cta: 'Voir la video',
@@ -359,12 +359,12 @@ System.register(['angular2/core', './logger.service.js'], function(exports_1, co
                                     }
                                 },
                                 {
-                                    id: 'Jnosm33VWtE',
+                                    image: '/images/ka-dish-landing/video-thumb-2.jpg',
                                     thumb: '/images/ka-dish-landing/video-select-2.jpg',
                                     title: 'Bras Gicleurs Dynamiques Révolutionnaires | KitchenAid<sup>&reg;</sup>',
                                     ctaTitle: 'Bras Gicleurs Dynamiques',
                                     alt: 'test',
-                                    cta: 'Voir la video',
+                                    cta: 'Voir',
                                     desc: 'Découvrez notre nouvelle gamme de lave-vaisselle dotés des bras gicleurs dynamiques révolutionnaires. Ils projettent de l\'eau dans toutes les directions, offrant un nettoyage efficace au moindre recoin de votre vaisselle.Voici donc un souci de moins et plus de temps pour démarrer votre prochaine création culinaire.',
                                     analytics: {
                                         category: "@category",
@@ -373,12 +373,12 @@ System.register(['angular2/core', './logger.service.js'], function(exports_1, co
                                     }
                                 },
                                 {
-                                    id: 'wwpCbQn2s4c',
+                                    image: '/images/ka-dish-landing/video-thumb-3.jpg',
                                     thumb: '/images/ka-dish-landing/video-select-3.jpg',
-                                    title: 'Dishwasher with ProScrub<sup>&trade;</sup> Option | KitchenAid<sup>&reg;</sup>(fr)',
+                                    title: 'Récurage Proscrub | KitchenAid<sup>&reg;</sup>',
                                     ctaTitle: 'Proscrub<sup>&trade;</sup>',
                                     alt: 'test',
-                                    cta: 'Voir la video',
+                                    cta: 'Voir',
                                     desc: 'Plus besoin de prélaver, faire tremper ni récurer. Placez vos casseroles et poêles directement dans le lave-vaisselle, peu importe leur niveau de saleté.',
                                     analytics: {
                                         category: "@category",
@@ -403,9 +403,9 @@ System.register(['angular2/core', './logger.service.js'], function(exports_1, co
                             products: [
                                 {
                                     image: "/images/ka-dish-landing/products/window.png",
-                                    title: "Dishwasher<br/>With Window(fr)",
+                                    title: "Lave-vaisselle à Hublot",
                                     alt: "test",
-                                    desc: "Introducing an innovative new design, this dishwasher with window is a great aesthetic enhancement to your kitchen and allows you see when your dishes are done so you can move on to what’s next.(fr)",
+                                    desc: "Ce lave-vaisselle à hublot, de conception innovante, rehausse l'allure de votre cuisine et vous permet de voir vos assiettes lorsqu'elles sont propres.",
                                     link: "http://www.kitchenaid.ca/fr_CA/shop/major-appliances-1/dishwashers-3/102310014+105000792/",
                                     id: "dish-with-window",
                                     ctaText: "En savoir plus",
@@ -418,9 +418,9 @@ System.register(['angular2/core', './logger.service.js'], function(exports_1, co
                                 },
                                 {
                                     image: "/images/ka-dish-landing/products/top-control.png",
-                                    title: "Fully Integrated(fr)",
+                                    title: "Commandes Dissimulées",
                                     alt: "test",
-                                    desc: "The controls are discreetly placed at the top of the dishwasher and remain hidden when the door is closed to provide a sleek and clean looking front. The sleek bar handle perfectly complements the design and provides easy access to open your dishwasher.(fr)",
+                                    desc: "Les commandes sont discrètement placées sur le haut du lave-vaisselle et sont invisibles lorsque la porte est fermée, pour une allure épurée et élégante. La poignée transversale rehausse le style et permet un accès facile pour ouvrir votre lave-vaisselle.",
                                     link: "http://www.kitchenaid.ca/fr_CA/shop/major-appliances-1/dishwashers-3/102310014+105000265/",
                                     id: "fully-integrated",
                                     ctaText: "En savoir plus",
@@ -433,9 +433,9 @@ System.register(['angular2/core', './logger.service.js'], function(exports_1, co
                                 },
                                 {
                                     image: "/images/ka-dish-landing/products/front-control.png",
-                                    title: "Front Control(fr)",
+                                    title: "Commandes Frontales",
                                     alt: "test",
-                                    desc: "The controls are located on the front and are easily accessible for use after you load your dishes. This model also comes with a pocket handle for a smoother finish and is great for smaller kitchens to allow for more space flexibility in front of the dishwasher.(fr)",
+                                    desc: "Les commandes sont situées sur le devant et sont facilement accessibles après avoir chargé votre vaisselle. Ce modèle est doté d'une poignée encastrée pour un fini sobre, idéal pour les petites cuisines et les configurations qui exigent un espace plus flexible devant le lave-vaisselle.",
                                     link: "http://www.kitchenaid.ca/fr_CA/shop/major-appliances-1/dishwashers-3/102310014+105000266/",
                                     id: "front-control",
                                     ctaText: "En savoir plus",
@@ -448,9 +448,9 @@ System.register(['angular2/core', './logger.service.js'], function(exports_1, co
                                 },
                                 {
                                     image: "/images/ka-dish-landing/products/panel-ready.png",
-                                    title: "Panel Ready(fr)",
+                                    title: "Prêt à Accueillir le Panneau de Recouvrement",
                                     alt: "test",
-                                    desc: "The premium look to go with your dream kitchen. Custom panel-ready dishwashers have an unfinished door, so you can seamlessly match the custom panel to your cabinetry to give your kitchen a stylish and coordinated look.(fr)",
+                                    desc: "Une allure intemporelle qui s'agence à la cuisine de vos rêves. Les lave-vaisselle prêts à accueillir le panneau de recouvrement sont dotés d'une porte non finie, vous pouvez donc assortir le panneau au reste de vos armoires, et donner à votre cuisine une allure épurée et entièrement intégrée.",
                                     link: "http://www.kitchenaid.ca/fr_CA/shop/major-appliances-1/dishwashers-3/102310014+4294967137/",
                                     id: "panel-ready",
                                     ctaText: "En savoir plus",

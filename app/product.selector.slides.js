@@ -69,7 +69,7 @@ System.register(['angular2/core', './product.selector.slide', './services/logger
                         if ('prodId' in changes.selectedProduct.previousValue) {
                             this.playOut(changes.selectedProduct.previousValue.prodId, function () {
                                 //just get it done
-                                if (changes.selectedProduct.currentValue.prodId == 'under-counter' && $('product-selector').hasClass('fr') && $(window).innerWidth() > 820) {
+                                if (changes.selectedProduct.currentValue.prodId == 'panel-ready' && $('product-selector').hasClass('fr') && $(window).innerWidth() > 820) {
                                     self.descTop = 265;
                                 }
                                 else {

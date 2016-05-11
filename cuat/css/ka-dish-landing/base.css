@@ -1243,6 +1243,8 @@ rl-ka-dish-landing {
   .device-mobile rl-ka-dish-landing product-selector product-selector-nav div.ka-dish-landing-product:hover div.ka-dish-landing-button {
     background-color: #FFF;
     color: #000; }
+  .device-mobile rl-ka-dish-landing more-features more-features-feature .text-container:hover {
+    opacity: 0 !important; }
 
 .device-mobile #page {
   width: 100%; }
