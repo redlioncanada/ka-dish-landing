@@ -38,7 +38,7 @@ export class AppDataService {
 						alt: "Buying Guide",
 						desc: "What to look for when you are buying",
 						cta: "Click Here",
-						link: "https://www.google.ca/webhp?hl=en#hl=en&q=placeholder",
+						link: "/pdf/global/promotions/KA-Dish-Buying-Guide.pdf",
 						type: "cart",
 						analytics: {
 							category: "@category",
@@ -258,7 +258,7 @@ export class AppDataService {
 						alt: "Guide D’achat",
 						desc: "Éléments à considérer lorsque vous magasinez",
 						cta: "Cliquez ici",
-						link: "https://www.google.ca/webhp?hl=en#hl=en&q=placeholder",
+						link: "/pdf/global/promotions/KA-Dish-Buying-Guide-FR.pdf",
 						type: "cart",
 						analytics: {
 							category: "@category",
