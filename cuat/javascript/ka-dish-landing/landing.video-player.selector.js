@@ -77,7 +77,7 @@ System.register(['angular2/core', './services/logger.service.js', './services/go
                 VideoPlayerSelector = __decorate([
                     core_1.Component({
                         selector: 'videoplayer-selector',
-                        template: "\n    \t<div (click)=\"select()\" class=\"{{selected ? 'selected' : ''}}\" analyticsOn=\"click\" analyticsCategory=\"{{data.analytics.category}}\" analyticsAction=\"{{data.analytics.action}}\" analyticsLabel=\"{{data.analytics.label}}\">\n\t\t\t<div class=\"ka-dish-landing-videoplayer-text\">\n\t\t\t\t<div class=\"ka-dish-landing-videoplayer-title\" [innerHTML]=\"data.ctaTitle\"></div>\n\t\t\t\t<div class=\"ka-dish-landing-videoplayer-button\">{{data.cta}}</div>\n\t\t\t</div>\n\t\t\t<img src=\"{{data.thumb}}\" alt=\"{{data.alt}}\"/>\n\t\t</div>\n    ",
+                        template: "\n    \t<div (click)=\"select()\" class=\"{{selected ? 'selected' : ''}}\" analyticsOn=\"click\" analyticsCategory=\"{{data.analytics.category}}\" analyticsAction=\"{{data.analytics.action}}\" analyticsLabel=\"{{data.analytics.label}}\">\n\t\t\t<div class=\"ka-dish-landing-videoplayer-text-wrapper\">\n\t\t\t<div class=\"ka-dish-landing-videoplayer-text\">\n\t\t\t\t<div class=\"ka-dish-landing-videoplayer-title\" [innerHTML]=\"data.ctaTitle\"></div>\n\t\t\t\t<div class=\"ka-dish-landing-videoplayer-button\">{{data.cta}}</div>\n\t\t\t</div>\n\t\t\t</div>\n\t\t\t<img src=\"{{data.thumb}}\" alt=\"{{data.alt}}\"/>\n\t\t</div>\n    ",
                         directives: [analytics_directive_1.AnalyticsServiceOn]
                     }), 
                     __metadata('design:paramtypes', [logger_service_1.LoggerService, googleapi_service_1.GoogleApiService])

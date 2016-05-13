@@ -8,9 +8,11 @@ import {AnalyticsServiceOn} from './analytics.directive'
 	selector: 'videoplayer-selector',
     template: `
     	<div (click)="select()" class="{{selected ? 'selected' : ''}}" analyticsOn="click" analyticsCategory="{{data.analytics.category}}" analyticsAction="{{data.analytics.action}}" analyticsLabel="{{data.analytics.label}}">
+			<div class="ka-dish-landing-videoplayer-text-wrapper">
 			<div class="ka-dish-landing-videoplayer-text">
 				<div class="ka-dish-landing-videoplayer-title" [innerHTML]="data.ctaTitle"></div>
 				<div class="ka-dish-landing-videoplayer-button">{{data.cta}}</div>
+			</div>
 			</div>
 			<img src="{{data.thumb}}" alt="{{data.alt}}"/>
 		</div>

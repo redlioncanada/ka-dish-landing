@@ -71,6 +71,11 @@ more-features-feature {
 	.text-container-cell {
 	  max-width: 50%;
 
+	  @media screen and (max-width: $mobileBreakpoint) {
+	  	max-width: 70%;
+	  	line-height: 14pt;
+	  }
+
 	  .cta {
 	  	@include Avenir-Bold;
 	  	margin-top: 5px;

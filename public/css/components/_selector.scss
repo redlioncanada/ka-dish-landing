@@ -5,7 +5,7 @@ product-selector {
 
 	width: 80%;
 	position: relative;
-    
+
     h2{
         font-size: 3em;
         text-transform: uppercase;
@@ -26,11 +26,11 @@ product-selector {
             font-size: 1.5em;
         }
     }
-    
+
    #french-door, #side-by-side, #bottom-freezer, #under-counter, #built-in{
         opacity: 0;
     }
-    
+
     product-slides {
         display: block;
         width: 100%;
@@ -69,7 +69,7 @@ product-selector {
             background-position-y: -30px;
         }
     }
-    
+
     .rl-ka-lndng-fridge-title.mobile {
         display: none;
         margin-bottom: 20px;
@@ -100,7 +100,7 @@ product-selector {
             display: none;
         }
     }
-    
+
     learn-more-button{
         position: absolute;
         left: 490px;
@@ -117,7 +117,7 @@ product-selector {
             @include mobile-block-element;
         }
     }
-    
+
     .rl-ka-lndng-fridge{
         left: 165px;
         position: absolute;
@@ -131,7 +131,7 @@ product-selector {
             margin-bottom: 20px;
         }
     }
-    
+
     .rl-ka-lndng-fridge img{
         height: 370px;
 
@@ -141,7 +141,7 @@ product-selector {
             margin: 0 auto;
         }
     }
-    
+
     .rl-ka-lndng-fridge-desc{
         position: absolute;
         left: 490px;
@@ -166,7 +166,6 @@ product-selector {
            line-height: 24px;
         }
     }
-    
 }
 
 product-selector-nav {
@@ -181,7 +180,7 @@ product-selector-nav {
     .row {
         position: relative;
     }
-    
+
     .ka-dish-landing-product,.see-all {
         float: left;
         width: 14.28571428571429%;
@@ -243,8 +242,11 @@ product-selector-nav {
             width: 100%;
             @include centered-table-cell;
             line-height: 14px;
-            
-            @media(max-width: 479px) {font-size: 0.8em;}
+
+            @media(max-width: 479px) {
+                font-size: 0.8em;
+                line-height: 10px;
+            }
         }
     }
 
@@ -283,6 +285,7 @@ product-selector-nav {
         p {
             @include centered-table-cell;
             @include transition(0.2s);
+            padding-top: 1px;
         }
         @media screen and (max-width: $mobileBreakpoint) {
             clear: left;
@@ -326,7 +329,7 @@ product-selector.fr {
             }
         }
         @media screen and (max-width: 479px) {
-            top: 50px;
+            top: 85px;
         }
     }
 
@@ -335,6 +338,10 @@ product-selector.fr {
             .rl-ka-lndng-fridge-title.mobile {
                 font-size: 18px;
                 line-height: 20px;
+            }
+
+            learn-more-button {
+                font-size: 0.9em;
             }
         }
     }

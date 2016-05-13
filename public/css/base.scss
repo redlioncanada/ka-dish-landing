@@ -1,3 +1,8 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'utils.scss';
+@import 'animations.scss';
+
 html, body {
 	height: 100%;
 	width: 100%;
@@ -33,10 +38,6 @@ html, body {
 
 rl-ka-dish-landing {
 	@import 'reset.scss';
-	@import 'variables.scss';
-	@import 'mixins.scss';
-	@import 'utils.scss';
-	@import 'animations.scss';
 
 	@import 'components/header.scss';
 	@import 'components/videoplayer.scss';
@@ -86,7 +87,7 @@ rl-ka-dish-landing {
 .device-mobile {
 	rl-ka-dish-landing {
 		// @import 'components/header.scss';
-		@import 'components/mobile/videoplayer.scss';
+		// @import 'components/mobile/videoplayer.scss';
 	    @import 'components/mobile/masthead.scss';
 	    @import 'components/mobile/features.scss';
 	    @import 'components/mobile/selector.scss';

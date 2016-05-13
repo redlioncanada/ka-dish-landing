@@ -55,7 +55,7 @@ features {
             }
         }
     }
-    
+
     .ka-landing-feature-title {
         text-transform: uppercase;
         width: 100%;
@@ -68,9 +68,10 @@ features {
         }
         @media screen and (max-width: 479px) {
             font-size: 12px;
-            
         }
-        
+        @media(max-width: 320px) {
+            font-size: 11px;
+        }
     }
 
     .ka-landing-feature-button-over{
