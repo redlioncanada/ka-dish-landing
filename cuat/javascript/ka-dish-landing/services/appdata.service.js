@@ -364,7 +364,7 @@ System.register(['angular2/core', './logger.service.js'], function(exports_1, co
                                     title: 'Bras Gicleurs Dynamiques Révolutionnaires | KitchenAid<sup>&reg;</sup>',
                                     ctaTitle: 'Bras Gicleurs Dynamiques',
                                     alt: 'test',
-                                    cta: 'Voir',
+                                    cta: 'Voir la video',
                                     desc: 'Découvrez notre nouvelle gamme de lave-vaisselle dotés des bras gicleurs dynamiques révolutionnaires. Ils projettent de l\'eau dans toutes les directions, offrant un nettoyage efficace au moindre recoin de votre vaisselle.Voici donc un souci de moins et plus de temps pour démarrer votre prochaine création culinaire.',
                                     analytics: {
                                         category: "@category",
@@ -392,7 +392,7 @@ System.register(['angular2/core', './logger.service.js'], function(exports_1, co
                             enabled: true,
                             title: 'Choisissez votre style',
                             nav: {
-                                text: 'Voir tout',
+                                text: 'Tout voir',
                                 link: 'http://www.kitchenaid.ca/fr_CA/shop/major-appliances-1/dishwashers-3/102310014/',
                                 analytics: {
                                     category: "@category",
@@ -403,7 +403,7 @@ System.register(['angular2/core', './logger.service.js'], function(exports_1, co
                             products: [
                                 {
                                     image: "/images/ka-dish-landing/products/window.png",
-                                    title: "Lave-vaisselle à Hublot",
+                                    title: "Lave-vaisselle à hublot",
                                     alt: "test",
                                     desc: "Ce lave-vaisselle à hublot, de conception innovante, rehausse l'allure de votre cuisine et vous permet de voir vos assiettes lorsqu'elles sont propres.",
                                     link: "http://www.kitchenaid.ca/fr_CA/shop/major-appliances-1/dishwashers-3/102310014/",
@@ -418,7 +418,7 @@ System.register(['angular2/core', './logger.service.js'], function(exports_1, co
                                 },
                                 {
                                     image: "/images/ka-dish-landing/products/top-control.png",
-                                    title: "Commandes Dissimulées",
+                                    title: "Commandes dissimulées",
                                     alt: "test",
                                     desc: "Les commandes sont discrètement placées sur le haut du lave-vaisselle et sont invisibles lorsque la porte est fermée, pour une allure épurée et élégante. La poignée transversale rehausse le style et permet un accès facile pour ouvrir votre lave-vaisselle.",
                                     link: "http://www.kitchenaid.ca/fr_CA/shop/major-appliances-1/dishwashers-3/102310014/",
@@ -433,7 +433,7 @@ System.register(['angular2/core', './logger.service.js'], function(exports_1, co
                                 },
                                 {
                                     image: "/images/ka-dish-landing/products/front-control.png",
-                                    title: "Commandes Frontales",
+                                    title: "Commandes frontales",
                                     alt: "test",
                                     desc: "Les commandes sont situées sur le devant et sont facilement accessibles après avoir chargé votre vaisselle. Ce modèle est doté d'une poignée encastrée pour un fini sobre, idéal pour les petites cuisines et les configurations qui exigent un espace plus flexible devant le lave-vaisselle.",
                                     link: "http://www.kitchenaid.ca/fr_CA/shop/major-appliances-1/dishwashers-3/102310014/",
@@ -448,7 +448,7 @@ System.register(['angular2/core', './logger.service.js'], function(exports_1, co
                                 },
                                 {
                                     image: "/images/ka-dish-landing/products/panel-ready.png",
-                                    title: "Prêt à Accueillir le Panneau de Recouvrement",
+                                    title: "Prêt à accueillir le panneau de recouvrement",
                                     alt: "test",
                                     desc: "Une allure intemporelle qui s'agence à la cuisine de vos rêves. Les lave-vaisselle prêts à accueillir le panneau de recouvrement sont dotés d'une porte non finie, vous pouvez donc assortir le panneau au reste de vos armoires, et donner à votre cuisine une allure épurée et entièrement intégrée.",
                                     link: "http://www.kitchenaid.ca/fr_CA/shop/major-appliances-1/dishwashers-3/102310014/",
