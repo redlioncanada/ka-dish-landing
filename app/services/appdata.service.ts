@@ -178,7 +178,7 @@ export class AppDataService {
                         analytics: {
 							category: "@category",
 							action: "Clicked Choose Your Dish Style",
-							label: "Four-door",
+							label: "Dish With Window",
 							learnMore: 'Learn More'
 						}
                     },
@@ -398,7 +398,7 @@ export class AppDataService {
                         analytics: {
 							category: "@category",
 							action: "Clicked Choose Your Dish Style",
-							label: "Four-door",
+							label: "Dish With Window",
 							learnMore: 'Learn More'
 						}
                     },
