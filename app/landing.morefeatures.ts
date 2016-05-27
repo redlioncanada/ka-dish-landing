@@ -10,7 +10,7 @@ declare var $: JQueryStatic;
     template: `
     	<div (window:resize)="onResize()" class="row {{!enabled ? 'hide' : ''}}">
 			<h2>{{title}}</h2>
-		    <more-features-feature *ngFor="#feature of moreFeatures; #i=index" [cta]="feature.cta" [text]="feature.text" [analytics]="feature.analytics" [link]="feature.link" [title]="feature.title" [image]="feature.image" [alt]="feature.alt">
+		    <more-features-feature *ngFor="#feature of moreFeatures; #i=index" [analytics]="feature.analytics" [cta]="feature.cta" [text]="feature.text" [analytics]="feature.analytics" [link]="feature.link" [title]="feature.title" [image]="feature.image" [alt]="feature.alt">
 		    </more-features-feature>
 		</div>
     `,

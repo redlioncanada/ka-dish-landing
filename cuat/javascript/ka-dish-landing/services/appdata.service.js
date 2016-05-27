@@ -193,7 +193,7 @@ System.register(['angular2/core', './logger.service.js'], function(exports_1, co
                                     analytics: {
                                         category: "@category",
                                         action: "Clicked Choose Your Dish Style",
-                                        label: "Four-door",
+                                        label: "Dish With Window",
                                         learnMore: 'Learn More'
                                     }
                                 },
@@ -412,7 +412,7 @@ System.register(['angular2/core', './logger.service.js'], function(exports_1, co
                                     analytics: {
                                         category: "@category",
                                         action: "Clicked Choose Your Dish Style",
-                                        label: "Four-door",
+                                        label: "Dish With Window",
                                         learnMore: 'Learn More'
                                     }
                                 },

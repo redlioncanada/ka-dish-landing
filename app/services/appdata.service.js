@@ -101,7 +101,12 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                                     link: false,
                                     alt: "test",
                                     text: "Continuously filters the wash water for outstanding results. Plus, thanks to the innovative filter design there's no need to ever remove and clean the filter.",
-                                    cta: ""
+                                    cta: "",
+                                    analytics: {
+                                        category: '@category',
+                                        action: 'Hovered Over Dish-Features',
+                                        label: 'Dish Clean Water Wash System'
+                                    }
                                 },
                                 {
                                     title: "Bottle Wash",
@@ -109,7 +114,12 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                                     link: false,
                                     alt: "Refrigerator interior with assorted foods",
                                     text: "Dedicated and adjustable spray nozzles designed for tall glasses and bottles provide a high-powered spray wash for hard-to-reach places.",
-                                    cta: ""
+                                    cta: "",
+                                    analytics: {
+                                        category: '@category',
+                                        action: 'Hovered Over Dish-Features',
+                                        label: 'Dish Bottle Wash'
+                                    }
                                 },
                                 {
                                     title: "Advanced ProDry<sup>&trade;</sup> System",
@@ -117,7 +127,12 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                                     link: false,
                                     alt: "Opened bottom freezer",
                                     text: "The best drying performance without using a rinse aid delivered through an innovative system that draws moisture out of the wash tub to ensure dry dishes at the end of each cycle.",
-                                    cta: ""
+                                    cta: "",
+                                    analytics: {
+                                        category: '@category',
+                                        action: 'Hovered Over Dish-Features',
+                                        label: 'Dish ProDry'
+                                    }
                                 }
                             ]
                         },
@@ -320,7 +335,12 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                                     link: false,
                                     alt: "test",
                                     text: "Filtre continuellement l'eau de lavage pour des résultats impeccables. Par ailleurs, il n'est plus nécessaire de retirer et nettoyer le filtre grâce à sa conception innovante.",
-                                    cta: ""
+                                    cta: "",
+                                    analytics: {
+                                        category: '@category',
+                                        action: 'Hovered Over Dish-Features',
+                                        label: 'Dish Clean Water Wash System'
+                                    }
                                 },
                                 {
                                     title: "Gicleur pour bouteilles",
@@ -328,7 +348,12 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                                     link: false,
                                     alt: "test",
                                     text: "Les buses spécifiques et réglables sont conçues pour les verres hauts et les bouteilles et procurent une pulvérisation puissante dans les endroits difficiles à atteindre.",
-                                    cta: ""
+                                    cta: "",
+                                    analytics: {
+                                        category: '@category',
+                                        action: 'Hovered Over Dish-Features',
+                                        label: 'Dish Bottle Wash'
+                                    }
                                 },
                                 {
                                     title: "Système perfectionné ProDry<sup>&trade;</sup>",
@@ -336,7 +361,12 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                                     link: false,
                                     alt: "test",
                                     text: "La meilleure performance de séchage sans agent de rinçage, grâce à un système innovant qui élimine l'humidité de la cuve et permet d'obtenir des assiettes parfaitement sèches à la fin de chaque programme.",
-                                    cta: ""
+                                    cta: "",
+                                    analytics: {
+                                        category: '@category',
+                                        action: 'Hovered Over Dish-Features',
+                                        label: 'Dish ProDry'
+                                    }
                                 }
                             ]
                         },
