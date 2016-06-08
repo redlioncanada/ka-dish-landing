@@ -1107,6 +1107,8 @@ rl-ka-dish-landing {
       -o-transition: all 0.2s ease;
       transition: all 0.2s ease;
       background-color: #cc0000; }
+    rl-ka-dish-landing more-features-feature .text-container-cell, rl-ka-dish-landing more-features-feature .text-container-cell * {
+      pointer-events: none; }
     rl-ka-dish-landing more-features-feature .text-container-cell {
       max-width: 50%; }
       @media screen and (max-width: 820px) {
