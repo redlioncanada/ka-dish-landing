@@ -174,7 +174,7 @@ export class AppDataService {
 				title: 'Choose your style',
 				nav: {
 					text: 'See All',
-					link: 'http://www.kitchenaid.ca/en_CA/shop/major-appliances-1/refrigerators-3/102310048/',
+					link: 'http://www.kitchenaid.ca/en_CA/shop/major-appliances-1/dishwashers-3/102310014/',
 					analytics: {
 						category: "@category",
 						action: "Clicked Choose Your Dish Style",
@@ -409,7 +409,7 @@ export class AppDataService {
 				title: 'Choisissez votre style',
 				nav: {
 					text: 'Tout voir',
-					link: 'http://www.kitchenaid.ca/fr_CA/shop/major-appliances-1/dishwashers-3/102310014/',
+					link: 'http://www.kitchenaid.ca/fr_CA/magasiner/gros-electromenagers-1/lave-vaisselle-3/102310014/',
 					analytics: {
 						category: "@language-@category",
 						action: "Clicked Choose Your Dish Style",
