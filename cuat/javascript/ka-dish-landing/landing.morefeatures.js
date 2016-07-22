@@ -55,7 +55,7 @@ System.register(['angular2/core', './landing.morefeatures.feature.js', './servic
                 MoreFeatures = __decorate([
                     core_1.Component({
                         selector: 'more-features',
-                        template: "\n    \t<div (window:resize)=\"onResize()\" class=\"row {{!enabled ? 'hide' : ''}}\">\n\t\t\t<h2>{{title}}</h2>\n\t\t    <more-features-feature *ngFor=\"#feature of moreFeatures; #i=index\" [cta]=\"feature.cta\" [text]=\"feature.text\" [analytics]=\"feature.analytics\" [link]=\"feature.link\" [title]=\"feature.title\" [image]=\"feature.image\" [alt]=\"feature.alt\">\n\t\t    </more-features-feature>\n\t\t</div>\n    ",
+                        template: "\n    \t<div (window:resize)=\"onResize()\" class=\"row {{!enabled ? 'hide' : ''}}\">\n\t\t\t<h2>{{title}}</h2>\n\t\t    <more-features-feature *ngFor=\"#feature of moreFeatures; #i=index\" [analytics]=\"feature.analytics\" [cta]=\"feature.cta\" [text]=\"feature.text\" [analytics]=\"feature.analytics\" [link]=\"feature.link\" [title]=\"feature.title\" [image]=\"feature.image\" [alt]=\"feature.alt\">\n\t\t    </more-features-feature>\n\t\t</div>\n    ",
                         directives: [landing_morefeatures_feature_1.MoreFeaturesFeature]
                     }), 
                     __metadata('design:paramtypes', [appdata_service_1.AppDataService, logger_service_1.LoggerService, core_1.ElementRef])

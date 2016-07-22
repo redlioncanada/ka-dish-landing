@@ -40,7 +40,8 @@ class AppComponent {
     constructor(private appdata: AppDataService,
     			private analytics: AnalyticsService,
     			private breakpoint: BreakpointService,
-    			private env: EnvironmentService)
+    			private env: EnvironmentService,
+                private logger: LoggerService)
     {
 		this.language = appdata.language
 
@@ -61,10 +62,12 @@ class AppComponent {
 		this.env.afterViewInit()
 		this.analytics.afterViewInit()
 
-    	if (this.env.isDev()) {
+    	if (this.env.isDev() || this.env.isStaging()) {
 			this.analytics.debugMode(true)
 			this.breakpoint.debugMode(true)
     	}
+
+        this.logger.log(`Angular 2 app environment: ${this.env.mode()}`)
     }
  }
 

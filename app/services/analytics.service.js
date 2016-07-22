@@ -48,6 +48,7 @@ System.register(['angular2/core', './logger.service', './environment.service'], 
                     }
                     else {
                         if (this.enabled) {
+                            this.logger.log(this, "got a " + props.eventType + " event, c:" + props.category + ", a:" + props.action + ", l:" + props.label);
                             ga('send', 'event', props.category ? props.category : '', props.action ? props.action : '', props.label ? props.label : '');
                         }
                         else {

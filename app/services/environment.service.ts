@@ -3,15 +3,18 @@ import {Injectable} from 'angular2/core';
 @Injectable()
 export class EnvironmentService {
 	private _environment
-	private hosts = ['localhost', '127.0.0.1']
+	private devHosts = ['localhost', '127.0.0.1']
+	private stagingHosts = ['cuat']
 	private window
 
 	constructor() {}
 
 	public afterViewInit() {
 		this.window = window
-		if (this.hosts.indexOf(this.window.location.hostname) > -1) {
+		if (this.devHosts.indexOf(this.window.location.hostname) > -1) {
 			this._environment = modes.DEVELOPMENT
+		} else if (this.stagingHosts.indexOf(this.window.location.hostname.split('.')[0]) > -1) {
+			this._environment = modes.STAGING
 		} else {
 			this._environment = modes.PRODUCTION
 		}
@@ -22,6 +25,10 @@ export class EnvironmentService {
 
 	public isDev() { return this._environment == modes.DEVELOPMENT }
 	public isDevelopment() { return this.isDev() }
+
+	public setStaging() { this._environment = modes.STAGING }
+
+	public isStaging() { return this._environment == modes.STAGING }
 
 	public setProd() { this._environment = modes.PRODUCTION }
 	public setProduction() { this.setProd() }
@@ -37,4 +44,5 @@ export class EnvironmentService {
 class modes {
 	public static get DEVELOPMENT(): string { return "dev" }
 	public static get PRODUCTION(): string { return "prod" }
+	public static get STAGING(): string { return "staging" }
 }

@@ -20,12 +20,16 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         execute: function() {
             EnvironmentService = (function () {
                 function EnvironmentService() {
-                    this.hosts = ['localhost', '127.0.0.1'];
+                    this.devHosts = ['localhost', '127.0.0.1'];
+                    this.stagingHosts = ['cuat'];
                 }
                 EnvironmentService.prototype.afterViewInit = function () {
                     this.window = window;
-                    if (this.hosts.indexOf(this.window.location.hostname) > -1) {
+                    if (this.devHosts.indexOf(this.window.location.hostname) > -1) {
                         this._environment = modes.DEVELOPMENT;
+                    }
+                    else if (this.stagingHosts.indexOf(this.window.location.hostname.split('.')[0]) > -1) {
+                        this._environment = modes.STAGING;
                     }
                     else {
                         this._environment = modes.PRODUCTION;
@@ -35,6 +39,8 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                 EnvironmentService.prototype.setDevelopment = function () { this.setDev(); };
                 EnvironmentService.prototype.isDev = function () { return this._environment == modes.DEVELOPMENT; };
                 EnvironmentService.prototype.isDevelopment = function () { return this.isDev(); };
+                EnvironmentService.prototype.setStaging = function () { this._environment = modes.STAGING; };
+                EnvironmentService.prototype.isStaging = function () { return this._environment == modes.STAGING; };
                 EnvironmentService.prototype.setProd = function () { this._environment = modes.PRODUCTION; };
                 EnvironmentService.prototype.setProduction = function () { this.setProd(); };
                 EnvironmentService.prototype.isProd = function () { return this._environment == modes.PRODUCTION; };
@@ -59,6 +65,11 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                 });
                 Object.defineProperty(modes, "PRODUCTION", {
                     get: function () { return "prod"; },
+                    enumerable: true,
+                    configurable: true
+                });
+                Object.defineProperty(modes, "STAGING", {
+                    get: function () { return "staging"; },
                     enumerable: true,
                     configurable: true
                 });

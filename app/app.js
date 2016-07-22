@@ -67,11 +67,12 @@ System.register(['angular2/platform/browser', 'angular2/http', './services/logge
             }],
         execute: function() {
             AppComponent = (function () {
-                function AppComponent(appdata, analytics, breakpoint, env) {
+                function AppComponent(appdata, analytics, breakpoint, env, logger) {
                     this.appdata = appdata;
                     this.analytics = analytics;
                     this.breakpoint = breakpoint;
                     this.env = env;
+                    this.logger = logger;
                     this.language = appdata.language;
                     analytics.bind('language', function (str) {
                         return window.location.href.indexOf('fr_CA/') > -1 ? 'FR' : 'EN';
@@ -87,10 +88,11 @@ System.register(['angular2/platform/browser', 'angular2/http', './services/logge
                     this.breakpoint.afterViewInit();
                     this.env.afterViewInit();
                     this.analytics.afterViewInit();
-                    if (this.env.isDev()) {
+                    if (this.env.isDev() || this.env.isStaging()) {
                         this.analytics.debugMode(true);
                         this.breakpoint.debugMode(true);
                     }
+                    this.logger.log("Angular 2 app environment: " + this.env.mode());
                 };
                 AppComponent = __decorate([
                     core_1.Component({
@@ -98,7 +100,7 @@ System.register(['angular2/platform/browser', 'angular2/http', './services/logge
                         template: "\n    \t<header class=\"{{language}}\"></header>\n\t\t<masthead class=\"{{language}}\"></masthead>\n\t\t<features class=\"{{language}}\"></features>\n\t\t<product-selector class=\"{{language}}\"></product-selector>\n\t\t<videoplayer class=\"{{language}}\"></videoplayer>\n\t\t<more-features class=\"{{language}}\"></more-features>\n\t\t<banner class=\"{{language}}\"></banner>\n\t\t<footer class=\"{{language}}\"></footer>\n    ",
                         directives: [landing_video_player_1.VideoPlayer, landing_masthead_1.AppMasthead, landing_feature_1.Features, product_selector_1.ProductSelector, landing_banner_1.Banner, landing_morefeatures_1.MoreFeatures, landing_header_1.Header, landing_footer_1.Footer]
                     }), 
-                    __metadata('design:paramtypes', [appdata_service_1.AppDataService, analytics_service_1.AnalyticsService, breakpoint_service_1.BreakpointService, environment_service_1.EnvironmentService])
+                    __metadata('design:paramtypes', [appdata_service_1.AppDataService, analytics_service_1.AnalyticsService, breakpoint_service_1.BreakpointService, environment_service_1.EnvironmentService, logger_service_1.LoggerService])
                 ], AppComponent);
                 return AppComponent;
             }());

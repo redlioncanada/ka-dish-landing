@@ -259,7 +259,7 @@ export class AppDataService {
 				image: './public/images/banner_fr.jpg',
 				ctaText: 'En savoir plus',
 				analytics: {
-					category: "@category",
+					category: "@language-@category",
 					action: "Clicked Dish-Footer Banner",
 					label: "VBL-Learn More"
 				}
@@ -276,7 +276,7 @@ export class AppDataService {
 						link: "/pdf/global/promotions/KA-Dish-Buying-Guide-FR.pdf",
 						type: "cart",
 						analytics: {
-							category: "@category",
+							category: "@language-@category",
 							action: "Clicked Dish Resources",
 							label: "Dish Buying Guide"
 						}
@@ -290,7 +290,7 @@ export class AppDataService {
 						link: "http://www.kitchenaid.ca/fr_CA/2_2_89/global_best-products.content.html",
 						type: "star",
 						analytics: {
-							category: "@category",
+							category: "@language-@category",
 							action: "Clicked Dish Resources",
 							label: "Dish Ratings & Reviews"
 						}
@@ -304,7 +304,7 @@ export class AppDataService {
 						link: "http://trouvermon.kitchenaid.ca/#/question/Appliance",
 						type: "magnifier",
 						analytics: {
-							category: "@category",
+							category: "@language-@category",
 							action: "Clicked Dish Resources",
 							label: "Dish Find Your KAD"
 						}
@@ -323,7 +323,7 @@ export class AppDataService {
 						text: "Filtre continuellement l'eau de lavage pour des résultats impeccables. Par ailleurs, il n'est plus nécessaire de retirer et nettoyer le filtre grâce à sa conception innovante.",
 						cta: "",
 						analytics: {
-							category: '@category',
+							category: '@language-@category',
 							action: 'Hovered Over Dish-Features',
 							label: 'Dish Clean Water Wash System'
 						}
@@ -336,7 +336,7 @@ export class AppDataService {
 						text: "Les buses spécifiques et réglables sont conçues pour les verres hauts et les bouteilles et procurent une pulvérisation puissante dans les endroits difficiles à atteindre.",
 						cta: "",
 						analytics: {
-							category: '@category',
+							category: '@language-@category',
 							action: 'Hovered Over Dish-Features',
 							label: 'Dish Bottle Wash'
 						}
@@ -349,7 +349,7 @@ export class AppDataService {
 						text: "La meilleure performance de séchage sans agent de rinçage, grâce à un système innovant qui élimine l'humidité de la cuve et permet d'obtenir des assiettes parfaitement sèches à la fin de chaque programme.",
 						cta: "",
 						analytics: {
-							category: '@category',
+							category: '@language-@category',
 							action: 'Hovered Over Dish-Features',
 							label: 'Dish ProDry'
 						}
@@ -369,7 +369,7 @@ export class AppDataService {
 						cta: 'Voir la video',
 						desc: 'Voici le médaillon KitchenAid®, notre emblème de finition présent sur tous nos nouveaux électroménagers révolutionnaires, qu\'il s\'agisse de réfrigérateurs, fours encastrés, lave-vaisselle, fours à micro-ondes ou cuisinières. C\'est une marque qui indique que vous cuisinez avec une série d\'électroménagers de gamme supérieure, inspirés par des chefs.',
 						analytics: {
-							category: "@category",
+							category: "@language-@category",
 							action: "Clicked Dish-Designed to Inspire Media",
 							label: "Dish Design Video"
 						}
@@ -383,7 +383,7 @@ export class AppDataService {
 						cta: 'Voir la video',
 						desc: 'Découvrez notre nouvelle gamme de lave-vaisselle dotés des bras gicleurs dynamiques révolutionnaires. Ils projettent de l\'eau dans toutes les directions, offrant un nettoyage efficace au moindre recoin de votre vaisselle.Voici donc un souci de moins et plus de temps pour démarrer votre prochaine création culinaire.',
 						analytics: {
-							category: "@category",
+							category: "@language-@category",
 							action: "Clicked Dish-Designed to Inspire Media",
 							label: "Dish Dynamic Wash Arms Video"
 						}
@@ -397,7 +397,7 @@ export class AppDataService {
 						cta: 'Voir',
 						desc: 'Plus besoin de prélaver, faire tremper ni récurer. Placez vos casseroles et poêles directement dans le lave-vaisselle, peu importe leur niveau de saleté.',
 						analytics: {
-							category: "@category",
+							category: "@language-@category",
 							action: "Clicked Dish-Designed to Inspire Media",
 							label: "Dish Proscrub Video"
 						}
@@ -411,7 +411,7 @@ export class AppDataService {
 					text: 'Tout voir',
 					link: 'http://www.kitchenaid.ca/fr_CA/shop/major-appliances-1/dishwashers-3/102310014/',
 					analytics: {
-						category: "@category",
+						category: "@language-@category",
 						action: "Clicked Choose Your Dish Style",
 						label: "See All Dish"
 					}
@@ -426,7 +426,7 @@ export class AppDataService {
                         id: "dish-with-window",
                         ctaText: "En savoir plus",
                         analytics: {
-							category: "@category",
+							category: "@language-@category",
 							action: "Clicked Choose Your Dish Style",
 							label: "Dish With Window",
 							learnMore: 'Learn More'
@@ -441,7 +441,7 @@ export class AppDataService {
                         id: "fully-integrated",
                         ctaText: "En savoir plus",
                         analytics: {
-							category: "@category",
+							category: "@language-@category",
 							action: "Clicked Choose Your Dish Style",
 							label: "Fully Integrated Dish",
 							learnMore: 'Learn More'
@@ -456,7 +456,7 @@ export class AppDataService {
                         id: "front-control",
                         ctaText: "En savoir plus",
                         analytics: {
-							category: "@category",
+							category: "@language-@category",
 							action: "Clicked Choose Your Dish Style",
 							label: "Front Control Dish",
 							learnMore: 'Learn More'
@@ -471,7 +471,7 @@ export class AppDataService {
                         id: "panel-ready",
                         ctaText: "En savoir plus",
                         analytics: {
-							category: "@category",
+							category: "@language-@category",
 							action: "Clicked Choose Your Dish Style",
 							label: "Panel Ready Dish",
 							learnMore: 'Learn More'
