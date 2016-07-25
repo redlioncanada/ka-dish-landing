@@ -130,7 +130,7 @@ export class AppDataService {
 						thumb: './public/images/video-select-1.jpg',
 						title: 'A Revolutionary Mark On A Revolutionary New Line | The KitchenAid<sup>&reg;</sup> Medallion',
 						ctaTitle: 'Design',
-						alt: 'test',
+						alt: 'Dishwasher design video content',
 						cta: 'Play Video',
 						desc: 'Behold the KitchenAid<sup>®</sup> Medallion, the iconic finishing stamp on all of our revolutionary new refrigerators, wall-ovens, dishwashers, microwaves and ranges. It’s a mark that lets you know you’re cooking with a suite of chef-inspired, premium appliances.',
 						analytics: {
@@ -144,7 +144,7 @@ export class AppDataService {
 						thumb: './public/images/video-select-2.jpg',
 						title: 'Revolutionary Dynamic Wash Arms | KitchenAid<sup>&reg;</sup>',
 						ctaTitle: 'Dynamic Wash Arms',
-						alt: 'test',
+						alt: 'Dynamic wash arm video content',
 						cta: 'Play Video',
 						desc: 'Behold, our new line of dishwashers with revolutionary Dynamic Wash Arms. They blast water in every direction, giving every inch of each dish a powerful clean so you can start on your next creation.',
 						analytics: {
@@ -158,7 +158,7 @@ export class AppDataService {
 						thumb: './public/images/video-select-3.jpg',
 						title: 'Dishwasher with ProScrub<sup>&trade;</sup> Option | KitchenAid<sup>&reg;</sup>',
 						ctaTitle: 'Proscrub<sup>&trade;</sup>',
-						alt: 'test',
+						alt: 'Proscrub feature video content',
 						cta: 'Play Video',
 						desc: 'Skip the soaping, the soaking, and the pre-scrubbing. Send your pots and pans straight in to the dishwasher no matter the mess.',
 						analytics: {
@@ -200,7 +200,7 @@ export class AppDataService {
 					{
 						image: "./public/images/products/top-control.png",
                         title: "Top Control",
-                        alt: "test",
+                        alt: "Top-control Dishwasher",
                         desc: "The controls are discreetly placed at the top of the dishwasher and remain hidden when the door is closed to provide a sleek and clean looking front. The sleek bar handle perfectly complements the design and provides easy access to open your dishwasher.",
                         link: "http://www.kitchenaid.ca/en_CA/shop/major-appliances-1/dishwashers-3/102310014+105000265/",
                         id: "fully-integrated",
@@ -215,7 +215,7 @@ export class AppDataService {
 					{
 						image: "./public/images/products/front-control.png",
                         title: "Front Control",
-                        alt: "test",
+                        alt: "Front-control Dishwasher",
                         desc: "The controls are located on the front and are easily accessible for use after you load your dishes. This model also comes with a pocket handle for a smoother finish and is great for smaller kitchens to allow for more space flexibility in front of the dishwasher.",
                         link: "http://www.kitchenaid.ca/en_CA/shop/major-appliances-1/dishwashers-3/102310014+105000266/",
                         id: "front-control",
@@ -230,7 +230,7 @@ export class AppDataService {
 					{
 						image: "./public/images/products/panel-ready.png",
                         title: "Panel Ready",
-                        alt: "test",
+                        alt: "Panel ready Dishwasher",
                         desc: "The premium look to go with your dream kitchen. Custom panel-ready dishwashers have an unfinished door, so you can seamlessly match the custom panel to your cabinetry to give your kitchen a stylish and coordinated look.",
                         link: "http://www.kitchenaid.ca/en_CA/shop/major-appliances-1/dishwashers-3/102310014+4294967137/",
                         id: "panel-ready",
@@ -393,7 +393,7 @@ export class AppDataService {
 						thumb: './public/images/video-select-3.jpg',
 						title: 'Récurage Proscrub | KitchenAid<sup>&reg;</sup>',
 						ctaTitle: 'Proscrub<sup>&trade;</sup>',
-						thumbAlt: 'test1',
+						thumbAlt: 'Pulvérisation avec les bras gicleurs dynamiques',
 						alt: 'Vidéo de la fonction de récurage Proscrub®',
 						cta: 'Voir',
 						desc: 'Plus besoin de prélaver, faire tremper ni récurer. Placez vos casseroles et poêles directement dans le lave-vaisselle, peu importe leur niveau de saleté.',
