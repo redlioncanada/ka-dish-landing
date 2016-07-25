@@ -393,6 +393,7 @@ export class AppDataService {
 						thumb: './public/images/video-select-3.jpg',
 						title: 'Récurage Proscrub | KitchenAid<sup>&reg;</sup>',
 						ctaTitle: 'Proscrub<sup>&trade;</sup>',
+						thumbAlt: 'test1',
 						alt: 'Vidéo de la fonction de récurage Proscrub®',
 						cta: 'Voir',
 						desc: 'Plus besoin de prélaver, faire tremper ni récurer. Placez vos casseroles et poêles directement dans le lave-vaisselle, peu importe leur niveau de saleté.',

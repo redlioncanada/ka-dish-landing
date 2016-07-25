@@ -30,7 +30,7 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                         masthead: {
                             enabled: true,
                             image: "./public/images/refer-landing-masthead.jpg",
-                            alt: "test",
+                            alt: "Dynamic wash arms in action",
                             title: "Dishwashers"
                         },
                         banner: {
@@ -99,7 +99,7 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                                     title: "Clean Water Wash System",
                                     image: "./public/images/more-features-1.jpg",
                                     link: false,
-                                    alt: "test",
+                                    alt: "Clean water wash system",
                                     text: "Continuously filters the wash water for outstanding results. Plus, thanks to the innovative filter design there's no need to ever remove and clean the filter.",
                                     cta: "",
                                     analytics: {
@@ -112,7 +112,7 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                                     title: "Bottle Wash",
                                     image: "./public/images/more-features-2.jpg",
                                     link: false,
-                                    alt: "Refrigerator interior with assorted foods",
+                                    alt: "Bottle wash feature",
                                     text: "Dedicated and adjustable spray nozzles designed for tall glasses and bottles provide a high-powered spray wash for hard-to-reach places.",
                                     cta: "",
                                     analytics: {
@@ -125,7 +125,7 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                                     title: "Advanced ProDry<sup>&trade;</sup> System",
                                     image: "./public/images/more-features-3.jpg",
                                     link: false,
-                                    alt: "Opened bottom freezer",
+                                    alt: "ProDry feature",
                                     text: "The best drying performance without using a rinse aid delivered through an innovative system that draws moisture out of the wash tub to ensure dry dishes at the end of each cycle.",
                                     cta: "",
                                     analytics: {
@@ -200,7 +200,7 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                                 {
                                     image: "./public/images/products/window.png",
                                     title: "Dishwasher<br/>With Window",
-                                    alt: "test",
+                                    alt: "Dishwasher with window",
                                     desc: "Introducing an innovative new design, this dishwasher with window is a great aesthetic enhancement to your kitchen and allows you see when your dishes are done so you can move on to what’s next.",
                                     link: "http://www.kitchenaid.ca/en_CA/shop/major-appliances-1/dishwashers-3/102310014+105000792/",
                                     id: "dish-with-window",
@@ -264,7 +264,7 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                         masthead: {
                             enabled: true,
                             image: "./public/images/refer-landing-masthead.jpg",
-                            alt: "test",
+                            alt: "Bras gicleurs dynamiques en marche",
                             title: "Lave-vaisselle"
                         },
                         banner: {
@@ -333,7 +333,7 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                                     title: "Système de lavage à l'eau propre",
                                     image: "./public/images/more-features-1.jpg",
                                     link: false,
-                                    alt: "test",
+                                    alt: "Système de lavage à l'eau propre",
                                     text: "Filtre continuellement l'eau de lavage pour des résultats impeccables. Par ailleurs, il n'est plus nécessaire de retirer et nettoyer le filtre grâce à sa conception innovante.",
                                     cta: "",
                                     analytics: {
@@ -346,7 +346,7 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                                     title: "Gicleur pour bouteilles",
                                     image: "./public/images/more-features-2.jpg",
                                     link: false,
-                                    alt: "test",
+                                    alt: "Gicleurs pour bouteille",
                                     text: "Les buses spécifiques et réglables sont conçues pour les verres hauts et les bouteilles et procurent une pulvérisation puissante dans les endroits difficiles à atteindre.",
                                     cta: "",
                                     analytics: {
@@ -359,7 +359,7 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                                     title: "Système perfectionné ProDry<sup>&trade;</sup>",
                                     image: "./public/images/more-features-3.jpg",
                                     link: false,
-                                    alt: "test",
+                                    alt: "Fonction de séchage ProDry®",
                                     text: "La meilleure performance de séchage sans agent de rinçage, grâce à un système innovant qui élimine l'humidité de la cuve et permet d'obtenir des assiettes parfaitement sèches à la fin de chaque programme.",
                                     cta: "",
                                     analytics: {
@@ -379,7 +379,7 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                                     thumb: './public/images/video-select-1.jpg',
                                     title: 'Un sceau révolutionnaire pour une gamme révolutionnaire | Le médaillon KitchenAid<sup>&reg;</sup>',
                                     ctaTitle: 'Conception',
-                                    alt: 'test',
+                                    alt: 'Vidéo de conception des lave-vaisselle',
                                     cta: 'Voir la video',
                                     desc: 'Voici le médaillon KitchenAid®, notre emblème de finition présent sur tous nos nouveaux électroménagers révolutionnaires, qu\'il s\'agisse de réfrigérateurs, fours encastrés, lave-vaisselle, fours à micro-ondes ou cuisinières. C\'est une marque qui indique que vous cuisinez avec une série d\'électroménagers de gamme supérieure, inspirés par des chefs.',
                                     analytics: {
@@ -393,7 +393,7 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                                     thumb: './public/images/video-select-2.jpg',
                                     title: 'Bras Gicleurs Dynamiques Révolutionnaires | KitchenAid<sup>&reg;</sup>',
                                     ctaTitle: 'Bras Gicleurs Dynamiques',
-                                    alt: 'test',
+                                    alt: 'Vidéo des bras gicleurs dynamiques',
                                     cta: 'Voir la video',
                                     desc: 'Découvrez notre nouvelle gamme de lave-vaisselle dotés des bras gicleurs dynamiques révolutionnaires. Ils projettent de l\'eau dans toutes les directions, offrant un nettoyage efficace au moindre recoin de votre vaisselle.Voici donc un souci de moins et plus de temps pour démarrer votre prochaine création culinaire.',
                                     analytics: {
@@ -407,7 +407,8 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                                     thumb: './public/images/video-select-3.jpg',
                                     title: 'Récurage Proscrub | KitchenAid<sup>&reg;</sup>',
                                     ctaTitle: 'Proscrub<sup>&trade;</sup>',
-                                    alt: 'test',
+                                    thumbAlt: 'test1',
+                                    alt: 'Vidéo de la fonction de récurage Proscrub®',
                                     cta: 'Voir',
                                     desc: 'Plus besoin de prélaver, faire tremper ni récurer. Placez vos casseroles et poêles directement dans le lave-vaisselle, peu importe leur niveau de saleté.',
                                     analytics: {
@@ -434,7 +435,7 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                                 {
                                     image: "./public/images/products/window.png",
                                     title: "Lave-vaisselle à hublot",
-                                    alt: "test",
+                                    alt: "Lave-vaisselle à hublot",
                                     desc: "Ce lave-vaisselle à hublot, de conception innovante, rehausse l'allure de votre cuisine et vous permet de voir vos assiettes lorsqu'elles sont propres.",
                                     link: "http://www.kitchenaid.ca/fr_CA/shop/major-appliances-1/dishwashers-3/102310014/",
                                     id: "dish-with-window",
@@ -449,7 +450,7 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                                 {
                                     image: "./public/images/products/top-control.png",
                                     title: "Commandes dissimulées",
-                                    alt: "test",
+                                    alt: "Lave-vaisselle à commandes dissimulées",
                                     desc: "Les commandes sont discrètement placées sur le haut du lave-vaisselle et sont invisibles lorsque la porte est fermée, pour une allure épurée et élégante. La poignée transversale rehausse le style et permet un accès facile pour ouvrir votre lave-vaisselle.",
                                     link: "http://www.kitchenaid.ca/fr_CA/shop/major-appliances-1/dishwashers-3/102310014/",
                                     id: "fully-integrated",
@@ -464,7 +465,7 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                                 {
                                     image: "./public/images/products/front-control.png",
                                     title: "Commandes frontales",
-                                    alt: "test",
+                                    alt: "Lave-vaisselle à commandes frontales",
                                     desc: "Les commandes sont situées sur le devant et sont facilement accessibles après avoir chargé votre vaisselle. Ce modèle est doté d'une poignée encastrée pour un fini sobre, idéal pour les petites cuisines et les configurations qui exigent un espace plus flexible devant le lave-vaisselle.",
                                     link: "http://www.kitchenaid.ca/fr_CA/shop/major-appliances-1/dishwashers-3/102310014/",
                                     id: "front-control",
@@ -479,7 +480,7 @@ System.register(['angular2/core', './logger.service'], function(exports_1, conte
                                 {
                                     image: "./public/images/products/panel-ready.png",
                                     title: "Prêt à accueillir le panneau de recouvrement",
-                                    alt: "test",
+                                    alt: "Lave-vaisselle prêt à accueillir le panneau de recouvrement",
                                     desc: "Une allure intemporelle qui s'agence à la cuisine de vos rêves. Les lave-vaisselle prêts à accueillir le panneau de recouvrement sont dotés d'une porte non finie, vous pouvez donc assortir le panneau au reste de vos armoires, et donner à votre cuisine une allure épurée et entièrement intégrée.",
                                     link: "http://www.kitchenaid.ca/fr_CA/shop/major-appliances-1/dishwashers-3/102310014/",
                                     id: "panel-ready",
